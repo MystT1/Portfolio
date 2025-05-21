@@ -1,1 +1,203 @@
-bonjour
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrateur Réseaux - Métier</title>
+    <link rel="icon" href="assets/images/imgic.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="javascript/changePhoto.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Administrateur Réseaux</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="bouton" href="#histoire">Histoire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="bouton" href="#etudes">Études</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="bouton" href="#salaire">Salaire</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <h1>Site Des métier du BTS SIO 2024</h1>
+            </div>
+        </header>
+    
+    <hr id="histoire">
+        <!-- Section Histoire -->
+        <section class="section">
+            <div class="container">
+                <h2>Histoire du Métier d'Administrateur Réseaux</h2>
+                <p>Le métier d'administrateur réseaux a émergé dans les années 1980 avec l'essor des réseaux informatiques. À cette époque, les entreprises commençaient à interconnecter leurs ordinateurs pour faciliter la communication interne.</p>
+                <p>Dans les années 1990, avec l'Internet en pleine expansion, le rôle d'administrateur réseaux est devenu crucial pour gérer la sécurité, la stabilité et la performance des systèmes de communication des entreprises.</p>
+                <p>Depuis, le métier continue d'évoluer avec des technologies comme le cloud computing, la cybersécurité, et les réseaux sans fil.</p>
+            </div>
+        </section>
+    
+    
+        <!--Image qui change -->
+        <img src="assets/images/img4.jpg" class="img" id="photo" onclick="changePhoto()"> 
+    
+        <!-- Section Études -->
+        <hr id="etudes">
+        <section class="section">
+            <div class="container">
+                <h2>Études pour devenir Administrateur Réseaux</h2>
+                <p>Pour devenir administrateur réseaux, il est recommandé de suivre un cursus dans le domaine de l'informatique. Voici quelques exemples de diplômes :</p>
+                <ul>
+                    <li>BTS Services Informatiques aux Organisations (SIO)</li>
+                    <li>DUT Réseaux et Télécommunications</li>
+                    <li>Licence Professionnelle en Informatique ou Réseaux</li>
+                    <li>Master en Sécurité des Systèmes Informatiques (optionnel pour des postes avancés)</li>
+                </ul>
+                <p>Des certifications techniques, comme celles proposées par Cisco ou Microsoft, sont également très valorisées dans le domaine.</p>
+            </div>
+        </section>
+    
+        <!-- Partie pour les compétance -->
+        <div class="container footer">
+            <div class="row">
+              <div class="col-12 banner">
+                <h2>Compétences d'un Administrateur Réseaux</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card shadow bg-white rounded espace">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <h7>Gestion des réseaux</h7>:
+                        <P>
+                          <ul>
+                              <li>Maîtrise des architectures réseau (LAN, WAN, VPN) et des équipements (routeurs, commutateurs).</li>
+                          </ul>
+                        </P>
+                    </h6>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card shadow bg-white rounded espace">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <h7>Sécurité</h7>:
+                      <P>
+                        <ul>
+                            <li>Mise en place de solutions de sécurité (pare-feux, VPN, cryptage) et gestion des incidents.</li>
+                        </ul>
+                      </P>
+                    </h6>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card shadow bg-white rounded espace">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <h7>Administration des systèmes</h7>:
+                      <P>
+                        <ul>
+                            <li>Systèmes Windows, Linux, virtualisation (VMware, Hyper-V) et cloud computing (AWS, Azure).</li>
+                        </ul>
+                      </P>
+                    </h6>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card shadow bg-white rounded espace">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <h7>Dépannage</h7>:
+                      <P>
+                        <ul>
+                          
+                            <li>Résolution des pannes et optimisation des performances réseau.</li>
+                        </ul>
+                      </P>
+                    </h6>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card shadow bg-white rounded espace">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <P>
+                        <ul>
+                            <li>Compétences interpersonnelles : Communication, travail en équipe, assistance aux utilisateurs.</li> 
+                            <li>Gestion de projet : Planification, déploiement, documentation technique.</li>
+                        </ul>
+                      </P>
+                    </h6>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card shadow bg-white rounded espace">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <P>
+                        <ul>
+                            <li>Certifications : Cisco CCNA, CompTIA Network+, Microsoft Azure, etc.</li>
+                        </ul>
+                      </P>
+                    </h6>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+    
+        <!-- Section Salaire -->
+        <section id="salaire" class="section">
+            <div class="container">
+                <h2>Salaire d'un Administrateur Réseaux</h2>
+                <p>Le salaire d'un administrateur réseaux varie en fonction de son niveau d'expérience, de sa localisation et de l'entreprise qui l'emploie :</p>
+                <ul>
+                    <li><strong>Débutant :</strong> Entre 2 500 € et 3 000 € brut par mois</li>
+                    <li><strong>Expérimenté :</strong> Entre 3 500 € et 4 500 € brut par mois</li>
+                    <li><strong>Senior :</strong> Plus de 5 000 € brut par mois, surtout pour des postes avec de grandes responsabilités.</li>
+                </ul>
+                <p>Les certifications spécifiques, comme celles de Cisco (CCNA, CCNP) ou de Microsoft, peuvent également influencer les salaires.</p>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 - Administrateur Réseaux. Tous droits réservés.</p>
+            </div>
+            <button class="lienfooter"><a href="https://www.onisep.fr/ressources/univers-metier/metiers/administrateur-administratrice-de-reseaux">Plus d'info</button> 
+       
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>  </body>
+    </body>
+    </html>
+</body>
