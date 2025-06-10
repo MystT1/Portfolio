@@ -14,7 +14,7 @@ body {
 
 /* Style de la navigation */
 .navbar {
-  background-color: #b203e7;
+  background-color: #ff9e29;
   color: white;
   padding: 15px 0;
   scroll-padding: 70px;
@@ -94,7 +94,7 @@ hr{
 }
 /* Changer la couleur en violet lors du survol */
 .footer a:hover {
-  color: rgb(209, 40, 209);
+  color: #ff9e29;
 }
 
 /* Changer la couleur en rouge après avoir visité le lien */
@@ -104,7 +104,7 @@ hr{
 
 /* Facultatif : ajouter des styles pour quand le lien est actif (cliqué) */
 .footer a:active {
-  color: rgb(183, 0, 255);
+  color: #ff9e29;
 }
 
 li{
@@ -113,7 +113,7 @@ li{
   margin-right: 10px;
 }
 .bouton{
-  background-color: rgb(183, 0, 255);
+  background-color: #ff9e29;
   border: 2px solid #000000;
   -webkit-text-fill-color: #f4f4f4;
   padding: 10px;
