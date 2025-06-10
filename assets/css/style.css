@@ -5,14 +5,14 @@ body {
   background-color: #f4f4f4;
 }
 
-
+/* Conteneur central avec marges sur les côtés */
 .container {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 0 20px; 
+  max-width: 1200px; /* Largeur maximale du contenu */
+  margin: 0 auto; /* Centrer le contenu */
+  padding: 0 20px; /* Marges internes pour éviter que le texte soit trop collé sur les bords */
 }
 
-
+/* Style de la navigation */
 .navbar {
   background-color: #b203e7;
   color: white;
@@ -25,12 +25,12 @@ margin-left: auto
 
 .img {
     display: block;
-    margin-left: auto;
+    margin-left: 0.5rem;
     margin-right: auto;
     width: 35%;
   }
 
-
+/* Header */
 .header {
   background-color: #303336;
   color: white;
@@ -54,7 +54,7 @@ hr{
   background-color: white;
   margin: 20px 0;
 }
-
+/* Sections */
 .section {
   padding: 40px 0;
   background-color: white;
@@ -81,6 +81,7 @@ hr{
   margin-left: 20px;
 }
 
+/* Footer */
 .footer {
   background-color: #303336;
   color: white;
@@ -91,15 +92,17 @@ hr{
 .footer a{
   color: #07b91f;
 }
-
+/* Changer la couleur en violet lors du survol */
 .footer a:hover {
   color: rgb(209, 40, 209);
 }
 
+/* Changer la couleur en rouge après avoir visité le lien */
 .footer a:visited {
   color: red;
 }
 
+/* Facultatif : ajouter des styles pour quand le lien est actif (cliqué) */
 .footer a:active {
   color: rgb(183, 0, 255);
 }
