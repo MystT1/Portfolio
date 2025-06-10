@@ -163,34 +163,43 @@ body {
     outline-offset: 2px;
 }
 
-/* --- Boutons en Contour (Plus d'info) --- */
-.btn-outline-secondary {
-    color: var(--color-text-dark); /* **Texte du bouton en contour en noir** */
-    border-color: var(--color-text-dark); /* **Bordure du bouton en contour en noir** */
-    background-color: transparent;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+/* --- Bouton "Retour en haut de page" --- */
+.btn-scroll-to-top {
+    display: inline-flex; /* Permet d'aligner l'icône au centre */
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Taille du bouton */
+    height: 50px;
+    background-color: var(--color-primary); /* Fond violet */
+    color: var(--color-text-light); /* Couleur de la flèche (blanc) */
+    border-radius: 50%; /* Rend le bouton circulaire */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    position: fixed; /* Le rend flottant sur la page */
+    bottom: 20px; /* Distance du bas de l'écran */
+    right: 20px; /* Distance de la droite de l'écran */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre douce */
+    z-index: 100; /* Assure qu'il est au-dessus des autres éléments */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce */
 }
 
-.btn-outline-secondary:hover,
-.btn-outline-secondary:focus {
-    background-color: var(--color-text-dark); /* **Fond noir au survol/focus** */
-    color: var(--color-text-light); /* **Texte devient blanc (sur fond noir)** */
-    border-color: var(--color-text-dark);
-    outline: 2px solid var(--color-focus-outline); /* Contour pour l'accessibilité */
+/* Forme de la flèche (utilisant des bordures) */
+.btn-scroll-to-top::before {
+    content: ''; /* Nécessaire pour les pseudo-éléments */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Moitié gauche de la flèche */
+    border-right: 10px solid transparent; /* Moitié droite de la flèche */
+    border-bottom: 15px solid var(--color-text-light); /* Pointe de la flèche (couleur de la flèche) */
+    transform: translateY(2px); /* Ajustement vertical pour centrer la flèche */
+}
+
+/* États au survol et au focus du bouton "Retour en haut" */
+.btn-scroll-to-top:hover,
+.btn-scroll-to-top:focus {
+    background-color: var(--color-primary-darker); /* Assombrir le fond au survol/focus */
+    transform: translateY(-3px); /* Léger mouvement vers le haut pour l'effet */
+    outline: 3px solid var(--color-focus-outline); /* Contour visible pour l'accessibilité */
     outline-offset: 2px;
-}
-
-/* --- Footer --- */
-.footer {
-    background-color: var(--color-text-dark); /* Fond sombre pour le footer (noir) */
-    color: var(--color-text-light); /* Texte clair (blanc) */
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.footer p {
-    margin-bottom: 0.5rem;
 }
 
 /* --- Règles de Médias (Responsivité) --- */
@@ -210,4 +219,17 @@ body {
 *:focus {
     outline: 3px solid var(--color-focus-outline); /* Un contour de focus bien visible */
     outline-offset: 2px; /* Espacement entre l'élément et le contour */
+}
+
+/* Classe Bootstrap pour cacher visuellement mais pas pour les lecteurs d'écran */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
