@@ -1,23 +1,36 @@
-/* Variables CSS pour gérer les couleurs facilement et assurer la cohérence */
+/* Fichier: assets/css/style.css */
+
+/* --- Variables CSS pour la cohérence des couleurs et tailles --- */
 :root {
-    --color-primary: #6F42C1; /* Votre violet principal, si besoin de le changer, c'est ici */
-    --color-text-dark: #222222; /* **Passé à un noir presque pur pour le texte général** */
-    --color-text-light: #ffffff; /* Le blanc pour le texte sur fond sombre */
-    --color-background-light: #f8f9fa; /* Couleur de fond pour le corps */
-    --color-card-background: #ffffff; /* Fond des cartes */
-    --color-link: #007bff; /* Bleu Bootstrap standard pour les liens */
-    --color-link-hover: #0056b3;
+    /* Couleurs principales */
+    --color-primary: #6F42C1;         /* Violet principal (ex: pour la navbar, boutons) */
+    --color-primary-darker: #5A359A;  /* Une nuance plus foncée du violet pour les états de survol */
+    --color-link-bootstrap: #007bff;  /* Bleu des liens Bootstrap par défaut */
+    --color-link-bootstrap-hover: #0056b3; /* Bleu des liens Bootstrap au survol */
+
+    /* Couleurs de texte */
+    --color-text-dark: #222222;       /* Noir quasi pur pour le texte général */
+    --color-text-light: #ffffff;      /* Blanc pour le texte sur fonds sombres */
+    --color-text-muted: #6c757d;      /* Gris pour le texte muet (similaire à text-muted de Bootstrap) */
+
+    /* Couleurs de fond */
+    --color-background-light: #f8f9fa; /* Fond léger pour le corps du site */
+    --color-card-background: #ffffff;  /* Fond blanc pour les cartes */
+
+    /* Couleurs de focus (pour l'accessibilité) */
+    --color-focus-outline: #007bff;   /* Contour de focus bleu (peut être changé pour le violet principal si préféré) */
 }
 
+/* --- Styles Généraux du Corps (Body) --- */
 body {
     font-family: 'Open Sans', sans-serif; /* Police principale plus lisible */
     font-size: 1rem; /* Taille de base 16px */
     line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
-    color: var(--color-text-dark); /* Couleur de texte générale */
+    color: var(--color-text-dark); /* **Couleur du texte général en noir** */
     background-color: var(--color-background-light); /* Fond léger */
 }
 
-/* Styles pour le lien d'évitement */
+/* --- Lien d'évitement (Skip Link) pour l'accessibilité RGAA --- */
 .sr-only-focusable {
     position: absolute;
     width: 1px;
@@ -39,17 +52,19 @@ body {
     overflow: visible;
     clip: auto;
     white-space: normal;
-    background-color: var(--color-link); /* Couleur de fond au focus */
-    color: var(--color-text-light); /* Couleur du texte au focus */
+    background-color: var(--color-focus-outline); /* Couleur de fond au focus */
+    color: var(--color-text-light); /* Couleur du texte au focus (blanc) */
     padding: 0.5rem 1rem;
-    z-index: 1000; /* Assurez-vous qu'il soit visible */
+    z-index: 1000; /* Assurez-vous qu'il soit au-dessus de tout */
     border-radius: 0.25rem;
     text-decoration: none;
+    outline: 3px solid var(--color-focus-outline); /* Contour pour le focus */
+    outline-offset: 2px;
 }
 
-/* Navigation */
+/* --- Navigation (Navbar) --- */
 .navbar {
-    background-color: var(--color-primary) !important; /* Force la couleur de fond de la nav bar */
+    background-color: var(--color-primary) !important; /* Force la couleur de fond de la nav bar (violet) */
     padding: 1rem 0; /* Espacement vertical */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre douce */
 }
@@ -60,7 +75,7 @@ body {
 }
 
 .nav-link {
-    color: var(--color-text-light) !important; /* Couleur des liens de la nav bar */
+    color: var(--color-text-light) !important; /* **Couleur des liens de la nav bar en blanc (sur fond violet)** */
     font-weight: 700; /* Gras pour la lisibilité */
     padding: 0.5rem 1rem;
     transition: background-color 0.3s, color 0.3s;
@@ -68,17 +83,17 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-    background-color: rgba(255,255,255,0.2); /* Fond léger au survol/focus */
-    color: var(--color-text-light) !important; /* **Assurez-vous que le texte reste clair (blanc ici)** */
+    background-color: rgba(255,255,255,0.2); /* Fond léger transparent au survol/focus */
+    color: var(--color-text-light) !important; /* **Texte reste blanc** */
     border-radius: 0.25rem;
     outline: 2px solid var(--color-text-light); /* Contour visible pour l'accessibilité */
     outline-offset: 2px;
 }
 
-/* Header */
+/* --- Header --- */
 .header {
-    background-color: var(--color-text-dark); /* Fond plus sombre pour le header */
-    color: var(--color-text-light); /* Texte clair */
+    background-color: var(--color-text-dark); /* Fond sombre pour le header (noir) */
+    color: var(--color-text-light); /* Texte clair (blanc) */
     padding: 8rem 0 4rem; /* Plus d'espace pour ne pas être caché par la nav bar fixe */
     text-align: center;
 }
@@ -89,7 +104,7 @@ body {
     margin-bottom: 0;
 }
 
-/* Sections */
+/* --- Sections de Contenu --- */
 .section {
     padding: 4rem 0;
 }
@@ -97,12 +112,12 @@ body {
 .section h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 2.2rem;
-    color: var(--color-primary);
+    color: var(--color-primary); /* Titres de section en violet */
     text-align: center;
     margin-bottom: 3rem;
 }
 
-/* Cartes */
+/* --- Cartes (pour les liens de sites) --- */
 .card {
     border: 1px solid #ddd; /* Bordure légère */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre plus prononcée */
@@ -110,7 +125,7 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Effet au survol */
+    transform: translateY(-5px); /* Effet de léger déplacement au survol */
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
@@ -121,50 +136,55 @@ body {
 .card-title {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: var(--color-text-dark); /* **Titres de carte en noir** */
     margin-bottom: 1rem;
 }
 
 .card-text {
     font-size: 0.95rem;
-    color: #666;
+    color: var(--color-text-dark); /* **Texte descriptif des cartes en noir** */
 }
 
+/* --- Boutons Principaux (Accéder au site) --- */
 .btn-primary {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
+    color: var(--color-text-light); /* **Texte des boutons primaires en blanc sur fond violet** */
     font-weight: bold;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: darken(var(--color-primary), 10%); /* Assurez-vous d'avoir une couleur plus foncée ou utilisez un outil CSS */
-    border-color: darken(var(--color-primary), 10%);
-    outline: 2px solid var(--color-link-hover); /* Contour au focus pour accessibilité */
+    background-color: var(--color-primary-darker); /* Fond violet plus foncé au survol/focus */
+    border-color: var(--color-primary-darker);
+    color: var(--color-text-light); /* **Texte reste blanc** */
+    outline: 2px solid var(--color-focus-outline); /* Contour pour l'accessibilité */
     outline-offset: 2px;
 }
 
+/* --- Boutons en Contour (Plus d'info) --- */
 .btn-outline-secondary {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: var(--color-text-dark); /* **Texte du bouton en contour en noir** */
+    border-color: var(--color-text-dark); /* **Bordure du bouton en contour en noir** */
+    background-color: transparent;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    outline: 2px solid var(--color-primary); /* Contour au focus */
+    background-color: var(--color-text-dark); /* **Fond noir au survol/focus** */
+    color: var(--color-text-light); /* **Texte devient blanc (sur fond noir)** */
+    border-color: var(--color-text-dark);
+    outline: 2px solid var(--color-focus-outline); /* Contour pour l'accessibilité */
     outline-offset: 2px;
 }
 
-
-/* Footer */
+/* --- Footer --- */
 .footer {
-    background-color: var(--color-text-dark); /* Couleur de fond sombre */
-    color: var(--color-text-light); /* Texte clair */
+    background-color: var(--color-text-dark); /* Fond sombre pour le footer (noir) */
+    color: var(--color-text-light); /* Texte clair (blanc) */
     padding: 2rem 0;
     text-align: center;
 }
@@ -173,7 +193,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Règles de médias pour la responsivité, ajustez si nécessaire */
+/* --- Règles de Médias (Responsivité) --- */
 @media (max-width: 768px) {
     .header h1 {
         font-size: 2.5rem;
@@ -186,8 +206,8 @@ body {
     }
 }
 
-/* Assurer un focus visible pour tous les éléments interactifs */
+/* --- Règle Générale pour le Focus Visible (très important pour le RGAA) --- */
 *:focus {
-    outline: 3px solid var(--color-link); /* Un contour de focus plus prononcé */
-    outline-offset: 2px;
+    outline: 3px solid var(--color-focus-outline); /* Un contour de focus bien visible */
+    outline-offset: 2px; /* Espacement entre l'élément et le contour */
 }
