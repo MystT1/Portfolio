@@ -1,127 +1,193 @@
+/* Variables CSS pour gérer les couleurs facilement et assurer la cohérence */
+:root {
+    --color-primary: #6F42C1; /* Exemple de violet pour bg-purple */
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-background-light: #f8f9fa; /* Couleur de fond pour le corps */
+    --color-card-background: #ffffff; /* Fond des cartes */
+    --color-link: #007bff; /* Bleu Bootstrap standard pour les liens */
+    --color-link-hover: #0056b3;
+}
+
 body {
-  color: #333;
-  margin: 0;
-  padding-top: 70px;
-  background-color: #f4f4f4;
+    font-family: 'Open Sans', sans-serif; /* Police principale plus lisible */
+    font-size: 1rem; /* Taille de base 16px */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: var(--color-text-dark); /* Couleur de texte générale */
+    background-color: var(--color-background-light); /* Fond léger */
 }
 
-/* Conteneur central avec marges sur les côtés */
-.container {
-  max-width: 1200px; /* Largeur maximale du contenu */
-  margin: 0 auto; /* Centrer le contenu */
-  padding: 0 20px; /* Marges internes pour éviter que le texte soit trop collé sur les bords */
+/* Styles pour le lien d'évitement */
+.sr-only-focusable {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
 
-/* Style de la navigation */
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    background-color: var(--color-link); /* Couleur de fond au focus */
+    color: var(--color-text-light); /* Couleur du texte au focus */
+    padding: 0.5rem 1rem;
+    z-index: 1000; /* Assurez-vous qu'il soit visible */
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+/* Navigation */
 .navbar {
-  background-color: #ff9e29;
-  color: white;
-  padding: 15px 0;
-  scroll-padding: 70px;
-}
-.navbar nav{
-margin-left: auto
+    background-color: var(--color-primary) !important; /* Force la couleur de fond de la nav bar */
+    padding: 1rem 0; /* Espacement vertical */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre douce */
 }
 
-.img {
-    display: block;
-    margin-left: 0.5rem;
-    margin-right: auto;
-    width: 35%;
-  }
+.navbar-brand img {
+    height: 50px; /* Taille fixe pour le logo, ajustez si besoin */
+    max-width: 100%;
+}
+
+.nav-link {
+    color: var(--color-text-light) !important; /* Couleur des liens de la nav bar */
+    font-weight: 700; /* Gras pour la lisibilité */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: rgba(255,255,255,0.2); /* Fond léger au survol/focus */
+    color: var(--color-text-light) !important;
+    border-radius: 0.25rem;
+    outline: 2px solid var(--color-text-light); /* Contour visible pour l'accessibilité */
+    outline-offset: 2px;
+}
 
 /* Header */
 .header {
-  background-color: #303336;
-  color: white;
-  text-align: center;
-  padding: 50px 0;
+    background-color: var(--color-text-dark); /* Fond plus sombre pour le header */
+    color: var(--color-text-light); /* Texte clair */
+    padding: 8rem 0 4rem; /* Plus d'espace pour ne pas être caché par la nav bar fixe */
+    text-align: center;
 }
 
-.header h2 {
-  font-family: 'Arial';
-  font-size: 2.2rem;
-  margin: 0;
+.header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem; /* Taille du titre principale */
+    margin-bottom: 0;
 }
 
-.header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-hr{
-  padding: 20px 0;
-  background-color: white;
-  margin: 20px 0;
-}
 /* Sections */
 .section {
-  padding: 40px 0;
-  background-color: white;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 4rem 0;
 }
 
 .section h2 {
-  font-family: 'arial', sans-serif;
-  font-size: 1.8rem;
-  color: #303336;
-  margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.section p, .section ul {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
+/* Cartes */
+.card {
+    border: 1px solid #ddd; /* Bordure légère */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre plus prononcée */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.section ul {
-  list-style-type: disc;
-  margin-left: 20px;
+.card:hover {
+    transform: translateY(-5px); /* Effet au survol */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: darken(var(--color-primary), 10%); /* Assurez-vous d'avoir une couleur plus foncée ou utilisez un outil CSS */
+    border-color: darken(var(--color-primary), 10%);
+    outline: 2px solid var(--color-link-hover); /* Contour au focus pour accessibilité */
+    outline-offset: 2px;
+}
+
+.btn-outline-secondary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    outline: 2px solid var(--color-primary); /* Contour au focus */
+    outline-offset: 2px;
+}
+
 
 /* Footer */
 .footer {
-  background-color: #303336;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background-color: var(--color-text-dark); /* Couleur de fond sombre */
+    color: var(--color-text-light); /* Texte clair */
+    padding: 2rem 0;
+    text-align: center;
 }
 
-.footer a{
-  color: #07b91f;
-}
-/* Changer la couleur en violet lors du survol */
-.footer a:hover {
-  color: #ff9e29;
+.footer p {
+    margin-bottom: 0.5rem;
 }
 
-/* Changer la couleur en rouge après avoir visité le lien */
-.footer a:visited {
-  color: red;
+/* Règles de médias pour la responsivité, ajustez si nécessaire */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    .card-title {
+        font-size: 1.3rem;
+    }
 }
 
-/* Facultatif : ajouter des styles pour quand le lien est actif (cliqué) */
-.footer a:active {
-  color: #ff9e29;
-}
-
-li{
-  margin-top: 10px;
-  margin-bottom: 25px;
-  margin-right: 10px;
-}
-.bouton{
-  background-color: #ff9e29;
-  border: 2px solid #000000;
-  -webkit-text-fill-color: #f4f4f4;
-  padding: 10px;
-}
-
-.lienfooter{
-background-color: #303336;
-border: 2px solid #000000;
--webkit-text-fill-color: #f4f4f4;
-padding: 10px;
+/* Assurer un focus visible pour tous les éléments interactifs */
+*:focus {
+    outline: 3px solid var(--color-link); /* Un contour de focus plus prononcé */
+    outline-offset: 2px;
 }
