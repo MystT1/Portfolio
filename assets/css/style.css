@@ -69,7 +69,7 @@ body {
 .nav-link:hover,
 .nav-link:focus {
     background-color: rgba(255,255,255,0.2); /* Fond léger au survol/focus */
-    color: var(--color-text-light) !important;
+    color: var(--color-text-light) !important; /* **Assurez-vous que le texte reste clair (blanc ici)** */
     border-radius: 0.25rem;
     outline: 2px solid var(--color-text-light); /* Contour visible pour l'accessibilité */
     outline-offset: 2px;
