@@ -1,8 +1,8 @@
 /* Variables CSS pour gérer les couleurs facilement et assurer la cohérence */
 :root {
-    --color-primary: #6F42C1; /* Exemple de violet pour bg-purple */
-    --color-text-dark: #333;
-    --color-text-light: #fff;
+    --color-primary: #6F42C1; /* Votre violet principal, si besoin de le changer, c'est ici */
+    --color-text-dark: #222222; /* **Passé à un noir presque pur pour le texte général** */
+    --color-text-light: #ffffff; /* Le blanc pour le texte sur fond sombre */
     --color-background-light: #f8f9fa; /* Couleur de fond pour le corps */
     --color-card-background: #ffffff; /* Fond des cartes */
     --color-link: #007bff; /* Bleu Bootstrap standard pour les liens */
