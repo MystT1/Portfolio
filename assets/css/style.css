@@ -3,7 +3,7 @@
 /* --- Variables CSS pour la cohérence des couleurs et tailles --- */
 :root {
     /* Couleurs principales */
-    --color-primary: #6F42C1;         /* Violet principal (ex: pour la navbar, boutons) */
+    --color-primary: #9873db;         /* Violet principal (ex: pour la navbar, boutons) */
     --color-primary-darker: #5A359A;  /* Une nuance plus foncée du violet pour les états de survol */
     --color-link-bootstrap: #007bff;  /* Bleu des liens Bootstrap par défaut */
     --color-link-bootstrap-hover: #0056b3; /* Bleu des liens Bootstrap au survol */
