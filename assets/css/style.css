@@ -1,7 +1,7 @@
 :root {
     /* Couleurs principales du site*/
-    --color-primary: #b1cbe6;         /* pour la navbar, boutons */
-    --color-primary-darker: #64a9e2;  /* états de survol */
+    --color-primary: #64a9e2;         /* pour la navbar, boutons */
+    --color-primary-darker: #b1cbe6;  /* états de survol */
     --color-link-bootstrap: #007bff;  /* liens Bootstrap par défaut */
     --color-link-bootstrap-hover: #0056b3; /* liens Bootstrap au survol */
 
