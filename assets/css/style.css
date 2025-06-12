@@ -1,7 +1,7 @@
 :root {
     /* Couleurs principales du site*/
-    --color-primary: #9873db;         /* pour la navbar, boutons */
-    --color-primary-darker: #5A359A;  /* états de survol */
+    --color-primary: #b1cbe6;         /* pour la navbar, boutons */
+    --color-primary-darker: #64a9e2;  /* états de survol */
     --color-link-bootstrap: #007bff;  /* liens Bootstrap par défaut */
     --color-link-bootstrap-hover: #0056b3; /* liens Bootstrap au survol */
 
@@ -15,7 +15,7 @@
     --color-card-background: #ffffff;  /* les cartes */
 
     /* Couleurs de focus (pour l'accessibilité) */
-    --color-focus-outline: #007bff;   /* Contour de focus */
+    --color-focus-outline: #1a3b68;   /* Contour de focus */
 }
 
 /* --- Styles Généraux du Corps (Body) --- */
