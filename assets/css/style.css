@@ -1,232 +1,127 @@
-:root {
-    /* Couleurs principales du site*/
-    --color-primary: #64a9e2;         /* pour la navbar, boutons */
-    --color-primary-darker: #b1cbe6;  /* états de survol */
-    --color-link-bootstrap: #007bff;  /* liens Bootstrap par défaut */
-    --color-link-bootstrap-hover: #0056b3; /* liens Bootstrap au survol */
-
-    /* Couleurs de texte */
-    --color-text-dark: #222222;       /* le texte général */
-    --color-text-light: #ffffff;      /* le texte sur fonds sombres */
-    --color-text-muted: #6c757d;      /* le texte muet */
-
-    /* Couleurs de fond */
-    --color-background-light: #f8f9fa; /* corps du site */
-    --color-card-background: #ffffff;  /* les cartes */
-
-    /* Couleurs de focus (pour l'accessibilité) */
-    --color-focus-outline: #1a3b68;   /* Contour de focus */
-}
-
-/* --- Styles Généraux du Corps (Body) --- */
 body {
-    font-family: 'Open Sans', sans-serif; /* Police principale  */
-    font-size: 1rem; /* Taille de base */
-    line-height: 1.6; /* Hauteur de ligne */
-    color: var(--color-text-dark); /* **Couleur du texte général ** */
-    background-color: var(--color-background-light); /* Fond  */
+  color: #333;
+  margin: 0;
+  padding-top: 70px;
+  background-color: #f4f4f4;
 }
 
-/* --- Lien d'évitement --- */
-.sr-only-focusable {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0;
+/* Conteneur central avec marges sur les côtés */
+.container {
+  max-width: 1200px; /* Largeur maximale du contenu */
+  margin: 0 auto; /* Centrer le contenu */
+  padding: 0 20px; /* Marges internes pour éviter que le texte soit trop collé sur les bords */
 }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-    background-color: var(--color-focus-outline); /* Couleur de fond au focus */
-    color: var(--color-text-light); /* Couleur du texte au focus */
-    padding: 0.5rem 1rem;
-    z-index: 1000; /* Assurez-vous qu'il soit au-dessus de tout */
-    border-radius: 0.25rem;
-    text-decoration: none;
-    outline: 3px solid var(--color-focus-outline); /* Contour pour le focus */
-    outline-offset: 2px;
-}
-
-/* --- Navigation --- */
+/* Style de la navigation */
 .navbar {
-    background-color: var(--color-primary) !important; /* Force la couleur de fond de la nav bar */
-    padding: 1rem 0; /* Espacement vertical */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre */
+  background-color: #b203e7;
+  color: white;
+  padding: 15px 0;
+  scroll-padding: 70px;
+}
+.navbar nav{
+margin-left: auto
 }
 
-.navbar-brand img {
-    height: 75px; /* Taille fixe pour le logo, ajustez si besoin */
-    max-width: 100%;
-}
+.img {
+    display: block;
+    margin-left: 0.5rem;
+    margin-right: auto;
+    width: 35%;
+  }
 
-.nav-link {
-    color: var(--color-text-light) !important; /* Couleur des liens de la nav bar  */
-    font-weight: 700; /* Gras */
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-    background-color: rgba(255,255,255,0.2); /* Fond léger transparent au survol/focus */
-    color: var(--color-text-light) !important; /* Texte reste dans la couleur choisis dans root */
-    border-radius: 0.25rem;
-    outline: 2px solid var(--color-text-light); /* Contour visible */
-    outline-offset: 2px;
-}
-
-/* --- Header --- */
+/* Header */
 .header {
-    background-color: var(--color-text-dark); /* Fond pour le header  */
-    color: var(--color-text-light); /* Texte */
-    padding: 8rem 0 4rem; /* espace pour ne pas être caché par la nav bar fixe */
-    text-align: center;
+  background-color: #303336;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
 }
 
-.header h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem; /* Taille du titre principale */
-    margin-bottom: 0;
+.header h2 {
+  font-family: 'Arial';
+  font-size: 2.2rem;
+  margin: 0;
 }
 
-/* --- Sections de Contenu --- */
+.header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+hr{
+  padding: 20px 0;
+  background-color: white;
+  margin: 20px 0;
+}
+/* Sections */
 .section {
-    padding: 4rem 0;
+  padding: 40px 0;
+  background-color: white;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.2rem;
-    color: var(--color-primary); /* Titres de section en violet */
-    text-align: center;
-    margin-bottom: 3rem;
+  font-family: 'arial', sans-serif;
+  font-size: 1.8rem;
+  color: #303336;
+  margin-bottom: 20px;
 }
 
-/* --- Cartes pour les liens de sites --- */
-.card {
-    border: 1px solid #ddd; /* Bordure */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+.section p, .section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
-.card:hover {
-    transform: translateY(-5px); /* Effet de léger déplacement au survol */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+.section ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-.card-body {
-    padding: 1.5rem;
+/* Footer */
+.footer {
+  background-color: #303336;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-.card-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    color: var(--color-text-dark); /* Titres de carte */
-    margin-bottom: 1rem;
+.footer a{
+  color: #07b91f;
+}
+/* Changer la couleur en violet lors du survol */
+.footer a:hover {
+  color: rgb(209, 40, 209);
 }
 
-.card-text {
-    font-size: 0.95rem;
-    color: var(--color-text-dark); /* Texte descriptif des cartes */
+/* Changer la couleur en rouge après avoir visité le lien */
+.footer a:visited {
+  color: red;
 }
 
-/* --- Boutons Principaux --- */
-.btn-primary {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-text-light); /* Texte des boutons primaires sur fond */
-    font-weight: bold;
-    transition: background-color 0.3s, border-color 0.3s;
+/* Facultatif : ajouter des styles pour quand le lien est actif (cliqué) */
+.footer a:active {
+  color: rgb(183, 0, 255);
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: var(--color-primary-darker); /* Fond plus foncé au survol/focus */
-    border-color: var(--color-primary-darker);
-    color: var(--color-text-light); /* Texte reste de la couleur choisis au préalable */
-    outline: 2px solid var(--color-focus-outline); /* Contour */
-    outline-offset: 2px;
+li{
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+}
+.bouton{
+  background-color: rgb(183, 0, 255);
+  border: 2px solid #000000;
+  -webkit-text-fill-color: #f4f4f4;
+  padding: 10px;
 }
 
-/* --- Bouton "Retour en haut de page" --- */
-.btn-scroll-to-top {
-    display: inline-flex; /* aligner l'icône au centre */
-    justify-content: center;
-    align-items: center;
-    width: 50px; /* Taille du bouton */
-    height: 50px;
-    background-color: var(--color-primary); /* Fond  */
-    color: var(--color-text-light); /* Couleur de la flèche  */
-    border-radius: 50%; /* bouton circulaire */
-    text-decoration: none; /* Enlève le soulignement des liens */
-    position: fixed; /* Le rend flottant sur la page */
-    bottom: 20px; /* Distance du bas de l'écran */
-    right: 20px; /* Distance de la droite de l'écran */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre  */
-    z-index: 100; /* Assure qu'il est au-dessus des autres éléments */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition */
-}
-
-/* Forme de la flèche  */
-.btn-scroll-to-top::before {
-    content: ''; /* Nécessaire pour les pseudo-éléments */
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent; /* Moitié gauche de la flèche */
-    border-right: 10px solid transparent; /* Moitié droite de la flèche */
-    border-bottom: 15px solid var(--color-text-light); /* couleur de la flèche  */
-    transform: translateY(2px); /* Ajustement vertical pour centrer la flèche */
-}
-
-/* États au survol et au focus du bouton "Retour en haut" */
-.btn-scroll-to-top:hover,
-.btn-scroll-to-top:focus {
-    background-color: var(--color-primary-darker); /* le fond au survol/focus */
-    transform: translateY(-3px); /* mouvement vers le haut pour l'effet */
-    outline: 3px solid var(--color-focus-outline); /* Contour */
-    outline-offset: 2px;
-}
-
-/* --- Règles de Médias pour la responsivité --- */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2.5rem;
-    }
-    .section h2 {
-        font-size: 1.8rem;
-    }
-    .card-title {
-        font-size: 1.3rem;
-    }
-}
-
-/* --- Règle Générale pour le Focus Visible --- */
-*:focus {
-    outline: 3px solid var(--color-focus-outline); /* contour de focus  */
-    outline-offset: 2px; /* Espacement entre l'élément et le contour */
-}
-
-/* Classe Bootstrap pour cacher visuellement mais pas pour les lecteurs d'écran */
-.visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0,0,0,0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
+.lienfooter{
+background-color: #303336;
+border: 2px solid #000000;
+-webkit-text-fill-color: #f4f4f4;
+padding: 10px;
 }
