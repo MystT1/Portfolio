@@ -15,7 +15,7 @@ h1, h2, h5 {
 
 /* --- Couleurs Mises à Jour (Tendant vers le Rose) --- */
 :root {
-    --purple-main: #993399; /* Nouveau Violet Magenta */
+    --purple-main: #bb29bb; /* Nouveau Violet Magenta */
     --purple-dark: #7A287A; /* Version plus foncée pour le survol/accents */
     --yellow-accent: #fdd835; /* Jaune vif pour l'accentuation */
 }
@@ -207,11 +207,11 @@ h1, h2, h5 {
 }
 
 .lienfooter:hover {
-    background-color: #e0b400; 
+    background-color: #000000; 
 }
 
 .lienfooter a {
-    color: #343a40;
+    color: #313336;
     text-decoration: none;
     font-weight: bold;
 }
