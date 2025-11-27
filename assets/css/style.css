@@ -3,8 +3,8 @@
 
 /* --- Variables et Généralités --- */
 :root {
-    --purple-main: #5d4037; /* Marron/Aubergine foncé élégant */
-    --purple-dark: #3e2723; /* Plus foncé pour le survol/footer */
+    --purple-main: #d125d1; /* Marron/Aubergine foncé élégant */
+    --purple-dark: #a712d4; /* Plus foncé pour le survol/footer */
     --yellow-accent: #00ffb3; /* Jaune-Or pour l'accentuation */
     --text-color: #34495e; 
 }
