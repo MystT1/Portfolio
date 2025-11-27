@@ -13,9 +13,17 @@ h1, h2, h5 {
     font-weight: 700;
 }
 
+/* --- Couleur Violette Rétablie --- */
+/* Violet d'origine, similaire à celui de votre HTML initial */
+:root {
+    --purple-main: #6a1b9a; /* Couleur du bg-purple initial */
+    --purple-dark: #4a148c; /* Version plus foncée pour le survol/accents */
+    --yellow-accent: #fdd835; /* Jaune vif pour l'accentuation */
+}
+
 /* --- Navigation (navbar) --- */
 .bg-purple {
-    background-color: #5d369e !important; 
+    background-color: var(--purple-main) !important; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -31,13 +39,12 @@ h1, h2, h5 {
 }
 
 .bouton:hover {
-    background-color: #7b4fbe; 
+    background-color: var(--purple-dark); 
     color: #ffffff;
 }
 
 /* --- Header (Bannière d'accueil) --- */
 .header {
-    /* Mettez une image de fond pertinente dans assets/images/imgic.jpg */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/imgic.jpg') no-repeat center center; 
     background-size: cover;
     background-position: top center;
@@ -50,7 +57,7 @@ h1, h2, h5 {
 .header h1 {
     font-size: 3.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    border-bottom: 3px solid #ffc107; 
+    border-bottom: 3px solid var(--yellow-accent); 
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -65,11 +72,11 @@ h1, h2, h5 {
 }
 
 .section h2 {
-    color: #5d369e;
+    color: var(--purple-main); /* Utilisation du violet initial */
     font-size: 2rem;
     margin-bottom: 30px;
     padding-left: 15px;
-    border-left: 5px solid #ffc107; 
+    border-left: 5px solid var(--yellow-accent); 
 }
 
 /* --- Section Documents et Images --- */
@@ -86,14 +93,14 @@ h1, h2, h5 {
 
 /* Lien de téléchargement CV */
 .btn-primary {
-    background-color: #5d369e;
-    border-color: #5d369e;
+    background-color: var(--purple-main);
+    border-color: var(--purple-main);
     transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #4b2a82;
-    border-color: #4b2a82;
+    background-color: var(--purple-dark);
+    border-color: var(--purple-dark);
 }
 
 /* --- Cartes des Compétences --- */
@@ -110,7 +117,7 @@ h1, h2, h5 {
 }
 
 .card h7 {
-    color: #5d369e;
+    color: var(--purple-main); /* Utilisation du violet initial */
     font-weight: bold;
     font-size: 1.1rem;
     display: block; 
@@ -132,7 +139,7 @@ h1, h2, h5 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: #5d369e; /* Violet */
+    background-color: var(--purple-main); /* Ligne en violet initial */
     left: 10px; 
     margin-left: -2px;
 }
@@ -148,7 +155,7 @@ h1, h2, h5 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #ffc107; /* Jaune */
+    background-color: var(--yellow-accent); /* Point en jaune vif */
     border: 4px solid #fff; 
     border-radius: 50%;
     top: 5px;
@@ -170,7 +177,7 @@ h1, h2, h5 {
 }
 
 .timeline-title {
-    color: #5d369e;
+    color: var(--purple-main); /* Titre en violet initial */
     font-size: 1.2rem;
     margin-top: 0;
 }
@@ -191,7 +198,7 @@ h1, h2, h5 {
 }
 
 .lienfooter {
-    background: #ffc107;
+    background: var(--yellow-accent);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -201,7 +208,7 @@ h1, h2, h5 {
 }
 
 .lienfooter:hover {
-    background-color: #e0a800;
+    background-color: #e0b400; /* Version plus foncée du jaune */
 }
 
 .lienfooter a {
