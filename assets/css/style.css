@@ -1,10 +1,11 @@
 /* Fichier : assets/css/style.css */
+/* (Ce code est une continuation du style professionnel précédent) */
 
 /* --- Variables et Généralités --- */
 :root {
     --purple-main: #5d4037; /* Marron/Aubergine foncé élégant */
     --purple-dark: #3e2723; /* Plus foncé pour le survol/footer */
-    --yellow-accent: #ffb300; /* Jaune-Or pour l'accentuation */
+    --yellow-accent: #00ffb3; /* Jaune-Or pour l'accentuation */
     --text-color: #34495e; 
 }
 
@@ -12,7 +13,7 @@ body {
     padding-top: 70px; 
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color); 
-    background-color: #f8f9fa; /* Fond très clair */
+    background-color: #f8f9fa; 
 }
 
 h1, h2, h3, h5 {
@@ -21,7 +22,7 @@ h1, h2, h3, h5 {
 }
 
 .bg-light-gray {
-    background-color: #f0f0f0; /* Donne une alternance de couleur aux sections */
+    background-color: #f0f0f0; 
     box-shadow: none !important;
 }
 
@@ -74,13 +75,13 @@ h1, h2, h3, h5 {
 .btn-primary {
     background-color: var(--yellow-accent);
     border-color: var(--yellow-accent);
-    color: var(--purple-dark); /* Texte foncé sur le bouton accent */
+    color: var(--purple-dark); 
     font-weight: 600;
     transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #cc8000;
+    background-color: #1ef1d5;
     border-color: #cc8000;
     color: white;
 }
@@ -91,7 +92,7 @@ h1, h2, h3, h5 {
     margin-bottom: 0;
     background-color: white;
     border-radius: 0;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); /* Ombre très légère */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); 
 }
 
 .section h2 {
@@ -108,7 +109,7 @@ h1, h2, h3, h5 {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 50%; /* Rond pour le côté professionnel */
+    border-radius: 50%; 
     border: 5px solid var(--yellow-accent);
 }
 
@@ -121,7 +122,7 @@ h1, h2, h3, h5 {
     margin-bottom: 25px;
 }
 
-/* --- Section Compétences (Simplifiée) --- */
+/* --- Section Compétences (Tableau) --- */
 .competence-group-title {
     color: var(--purple-main);
     font-size: 1.6rem;
@@ -129,6 +130,16 @@ h1, h2, h3, h5 {
     padding-bottom: 5px;
     border-bottom: 2px dashed #e0e0e0;
 }
+
+/* Style pour le tableau de compétences */
+.table th {
+    background-color: var(--purple-main);
+    color: white;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #f7f7f7;
+}
+
 
 #experience ul {
     padding-left: 20px;
@@ -138,10 +149,11 @@ h1, h2, h3, h5 {
 }
 
 /* --- Ligne du Temps (Timeline) --- */
+
 .timeline {
     position: relative;
     padding: 20px 0;
-    max-width: 800px; /* Limiter la largeur de la timeline */
+    max-width: 800px; 
     margin: 0 auto;
 }
 
@@ -152,7 +164,7 @@ h1, h2, h3, h5 {
     bottom: 0;
     width: 4px;
     background-color: var(--purple-main); 
-    left: 50%; /* Centrer la ligne */
+    left: 50%; 
     margin-left: -2px;
 }
 
@@ -163,7 +175,6 @@ h1, h2, h3, h5 {
     padding: 0 40px;
 }
 
-/* Positionnement des éléments (Gauche/Droite) */
 .timeline-item:nth-child(odd) {
     left: 0;
     text-align: right;
@@ -173,7 +184,6 @@ h1, h2, h3, h5 {
     text-align: left;
 }
 
-/* Positionnement du point sur la ligne centrale */
 .timeline-dot {
     position: absolute;
     width: 20px;
@@ -182,11 +192,11 @@ h1, h2, h3, h5 {
     border: 4px solid #fff; 
     border-radius: 50%;
     top: 5px;
-    right: -10px; /* Positionnement à droite pour les impairs */
+    right: -10px; 
     z-index: 10; 
 }
 .timeline-item:nth-child(even) .timeline-dot {
-    left: -10px; /* Positionnement à gauche pour les pairs */
+    left: -10px; 
 }
 
 .timeline-content {
@@ -227,8 +237,19 @@ h1, h2, h3, h5 {
     height: 200px;
     object-fit: cover;
 }
+/* Style pour les liens annexes */
+.btn-outline-secondary {
+    color: var(--text-color);
+    border-color: #ccc;
+    transition: background-color 0.3s;
+}
+.btn-outline-secondary:hover {
+    background-color: #e9ecef;
+    border-color: var(--purple-main);
+    color: var(--purple-main);
+}
 
-/* --- Footer --- */
+/* --- Footer (Contacts) --- */
 .footer {
     background-color: var(--purple-dark); 
     color: white;
@@ -255,7 +276,7 @@ h1, h2, h3, h5 {
 }
 
 .lienfooter:hover {
-    background-color: #cc8000; 
+    background-color: #ffa200; 
 }
 
 .lienfooter a {
