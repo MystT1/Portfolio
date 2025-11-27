@@ -1,280 +1,259 @@
-        /* Nouvelle Palette de Couleurs */
-        :root {
-            --bs-violet: #9333ea;       /* Violet (Couleur principale) */
-            --bs-cyan: #22d3ee;         /* Cyan (Couleur d'accent/lien) */
-            --bs-dark-gray: #1f2937;    /* Gris Foncé (Fond important/Footer) */
-            --bs-light-gray: #f8f9fa;   /* Fond des sections claires */
-            --bs-text-color: #333333;   /* Couleur de texte standard */
-        }
+:root {
+--bs-violet: #9333ea;
+--bs-cyan: #22d3ee;
+--bs-dark-gray: #1f2937;
+--bs-light-gray: #f8f9fa;
+--bs-text-color: #333333;
+}
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            padding-top: 56px; 
-            background-color: #fff;
-            color: var(--bs-text-color);
-        }
+body {
+font-family: 'Open Sans', sans-serif;
+padding-top: 56px;
+background-color: #fff;
+color: var(--bs-text-color);
+}
 
-        h1, h2, h3 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            color: var(--bs-dark-gray);
-        }
+h1, h2, h3 {
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+color: var(--bs-dark-gray);
+}
 
-        .bg-violet {
-            background-color: var(--bs-violet) !important;
-        }
+.bg-violet {
+background-color: var(--bs-violet) !important;
+}
 
-        .text-violet {
-            color: var(--bs-violet) !important;
-        }
+.text-violet {
+color: var(--bs-violet) !important;
+}
 
-        .btn-violet {
-            background-color: var(--bs-violet);
-            border-color: var(--bs-violet);
-            color: white;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
+.btn-violet {
+background-color: var(--bs-violet);
+border-color: var(--bs-violet);
+color: white;
+transition: background-color 0.3s, border-color 0.3s;
+}
 
-        .btn-violet:hover {
-            background-color: #7c3aed; /* Un violet légèrement différent */
-            border-color: #7c3aed;
-            color: white;
-        }
+.btn-violet:hover {
+background-color: #7c3aed;
+border-color: #7c3aed;
+color: white;
+}
 
-        .btn-outline-cyan {
-            border-color: var(--bs-cyan);
-            color: var(--bs-cyan);
-        }
+.btn-outline-cyan {
+border-color: var(--bs-cyan);
+color: var(--bs-cyan);
+}
 
-        .btn-outline-cyan:hover {
-            background-color: var(--bs-cyan);
-            color: var(--bs-dark-gray) !important;
-        }
+.btn-outline-cyan:hover {
+background-color: var(--bs-cyan);
+color: var(--bs-dark-gray) !important;
+}
 
+.section {
+padding: 80px 0;
+}
 
-        .section {
-            padding: 80px 0;
-        }
+.bg-light-gray {
+background-color: var(--bs-light-gray);
+}
 
-        .bg-light-gray {
-            background-color: var(--bs-light-gray);
-        }
+.header {
+background: linear-gradient(45deg, var(--bs-violet) 0%, var(--bs-cyan) 100%);
+color: white;
+padding: 120px 0 80px 0;
+text-align: center;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        /* Header (Accueil) */
-        .header {
-            /* Gradient entre Violet et Cyan pour un look moderne */
-            background: linear-gradient(45deg, var(--bs-violet) 0%, var(--bs-cyan) 100%);
-            color: white;
-            padding: 120px 0 80px 0;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.header h1 {
+font-size: 3.5rem;
+color: white;
+margin-bottom: 10px;
+}
 
-        .header h1 {
-            font-size: 3.5rem;
-            color: white;
-            margin-bottom: 10px;
-        }
+.header .btn-light {
+color: var(--bs-violet) !important;
+}
 
-        .header .btn-light {
-            color: var(--bs-violet) !important; /* Bouton clair sur fond sombre */
-        }
+.navbar-nav .bouton {
+color: rgba(255, 255, 255, 0.8);
+margin-left: 15px;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+transition: background-color 0.3s, color 0.3s;
+text-decoration: none;
+}
 
-        /* Navbar Links */
-        .navbar-nav .bouton {
-            color: rgba(255, 255, 255, 0.8);
-            margin-left: 15px;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-            text-decoration: none;
-        }
+.navbar-nav .bouton:hover {
+color: white;
+background-color: rgba(255, 255, 255, 0.1);
+}
 
-        .navbar-nav .bouton:hover {
-            color: white;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+.profile-img {
+width: 250px;
+height: 250px;
+object-fit: cover;
+border-radius: 50%;
+border: 6px solid var(--bs-violet);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-        /* Image de profil */
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 50%;
-            /* Utilisation du Violet pour la bordure */
-            border: 6px solid var(--bs-violet); 
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+.timeline {
+position: relative;
+max-width: 1200px;
+margin: 0 auto;
+}
 
-        /* Timeline (Parcours Scolaire et Stages) */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.timeline::after {
+content: '';
+position: absolute;
+width: 4px;
+background-color: var(--bs-violet);
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -2px;
+}
 
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            /* Ligne de temps en Violet */
-            background-color: var(--bs-violet); 
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
+@media screen and (max-width: 768px) {
+.timeline::after {
+left: 30px;
+}
+.timeline-item {
+width: 100%;
+padding-left: 60px;
+}
+.timeline-content {
+text-align: left;
+}
+.timeline-item:nth-child(even) {
+left: 0%;
+}
+.timeline-item:nth-child(odd) {
+left: 0%;
+}
+}
 
-        /* Styles pour les écrans plus petits */
-        @media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 30px; 
-            }
-            .timeline-item {
-                width: 100%;
-                padding-left: 60px; 
-            }
-            .timeline-content {
-                text-align: left;
-            }
-            .timeline-item:nth-child(even) {
-                left: 0%;
-            }
-            .timeline-item:nth-child(odd) {
-                left: 0%;
-            }
-        }
+.timeline-item {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
+}
 
+.timeline-item:nth-child(even) {
+left: 50%;
+padding-left: 0;
+text-align: left;
+}
 
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
+.timeline-item:nth-child(odd) {
+left: 0;
+padding-right: 0;
+text-align: right;
+}
 
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 0;
-            text-align: left; 
-        }
+.timeline-dot {
+position: absolute;
+width: 16px;
+height: 16px;
+right: -10px;
+background-color: var(--bs-violet);
+border: 2px solid white;
+top: 30px;
+border-radius: 50%;
+z-index: 1;
+}
 
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 0;
-            text-align: right; 
-        }
+.timeline-item:nth-child(even) .timeline-dot {
+left: -8px;
+}
 
-        .timeline-dot {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            right: -10px;
-            /* Point en Violet */
-            background-color: var(--bs-violet); 
-            border: 2px solid white;
-            top: 30px;
-            border-radius: 50%;
-            z-index: 1;
-        }
+.timeline-title {
+color: var(--bs-violet);
+font-weight: 700;
+}
 
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -8px;
-        }
+.timeline-date {
+color: var(--bs-dark-gray);
+font-size: 0.9em;
+margin-bottom: 5px;
+}
 
-        .timeline-title {
-            /* Titre en Violet */
-            color: var(--bs-violet); 
-            font-weight: 700;
-        }
+.project-card {
+border: none;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+transition: transform 0.3s, box-shadow 0.3s;
+border-radius: 10px;
+}
 
-        .timeline-date {
-            color: var(--bs-dark-gray);
-            font-size: 0.9em;
-            margin-bottom: 5px;
-        }
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
-        /* Cartes de projet */
-        .project-card {
-            border: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-radius: 10px;
-        }
+.card-img-top {
+max-height: 200px;
+object-fit: cover;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
+.competence-group-title {
+color: var(--bs-violet);
+border-bottom: 2px solid var(--bs-violet);
+padding-bottom: 5px;
+margin-bottom: 20px;
+font-weight: 700;
+}
 
-        .card-img-top {
-            max-height: 200px;
-            object-fit: cover;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
+.btn-outline-primary {
+border-color: var(--bs-cyan);
+color: var(--bs-cyan);
+}
+.btn-outline-primary:hover {
+background-color: var(--bs-cyan);
+color: var(--bs-dark-gray);
+border-color: var(--bs-cyan);
+}
+.btn-outline-secondary {
+border-color: var(--bs-dark-gray);
+color: var(--bs-dark-gray);
+}
+.btn-outline-secondary:hover {
+background-color: var(--bs-dark-gray);
+color: white;
+}
 
-        .competence-group-title {
-            /* Titre de section en Violet */
-            color: var(--bs-violet); 
-            border-bottom: 2px solid var(--bs-violet);
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
+.footer {
+background-color: var(--bs-dark-gray);
+color: white;
+padding: 30px 0;
+text-align: center;
+}
 
-        /* Boutons d'action pour les projets/ressources */
-        .btn-outline-primary {
-            border-color: var(--bs-cyan);
-            color: var(--bs-cyan);
-        }
-        .btn-outline-primary:hover {
-            background-color: var(--bs-cyan);
-            color: var(--bs-dark-gray);
-            border-color: var(--bs-cyan);
-        }
-        .btn-outline-secondary {
-            border-color: var(--bs-dark-gray);
-            color: var(--bs-dark-gray);
-        }
-        .btn-outline-secondary:hover {
-            background-color: var(--bs-dark-gray);
-            color: white;
-        }
+.footer a {
+color: var(--bs-cyan);
+text-decoration: none;
+transition: color 0.3s;
+}
 
+.footer a:hover {
+color: #a967f6;
+}
 
-        /* Footer */
-        .footer {
-            /* Fond en Gris Foncé */
-            background-color: var(--bs-dark-gray); 
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
+.lienfooter {
+background: none;
+border: none;
+padding: 0;
+margin-top: 15px;
+}
 
-        .footer a {
-            /* Liens du footer en Cyan */
-            color: var(--bs-cyan); 
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+.lienfooter a {
+color: white;
+text-decoration: underline;
+}
 
-        .footer a:hover {
-            color: #a967f6; /* Cyan plus clair au survol */
-        }
-
-        .lienfooter {
-            background: none;
-            border: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-
-        .lienfooter a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        /* Mise à jour des badges de niveau */
-        .badge.bg-success { background-color: var(--bs-cyan) !important; color: var(--bs-dark-gray) !important;}
-        .badge.bg-warning { background-color: var(--bs-violet) !important; color: white !important;}
+.badge.bg-success { background-color: var(--bs-cyan) !important; color: var(--bs-dark-gray) !important;}
+.badge.bg-warning { background-color: var(--bs-violet) !important; color: white !important;}
