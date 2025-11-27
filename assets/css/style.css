@@ -1,34 +1,46 @@
-/* Fichier : assets/css/style.css */
+/* Fichier : assets/css/style.css - Optimisé */
 
-/* --- Variables et Généralités --- */
+/* --- 1. Variables et Généralités --- */
+
 :root {
-    --main-dark: #1f1f1f;       /* Noir profond pour le fond, la navigation et les titres */
-    --light-background: #f0f0f5;/* Violet très clair/Gris lavande très subtil pour les sections alternées */
-    --accent-color: #00bcd4;    /* Cyan vif pour l'accentuation et les liens */
-    --text-color: #333333;      /* Gris foncé pour la lisibilité du texte principal */
+    --main-dark: #1f1f1f;       /* Noir profond (Navigation, Footer, Titres, Ligne de temps) */
+    --light-background: #f0f0f5;/* Violet très clair/Gris lavande (Sections alternées) */
+    --accent-color: #00bcd4;    /* Cyan vif (Accents, Boutons, Points) */
+    --text-color: #333333;      /* Gris foncé pour le corps du texte */
     --light-text: #e0e0e0;      /* Texte clair sur fond foncé */
+    --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    --transition-speed: 0.3s;
 }
 
 body {
     padding-top: 70px; 
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color); 
-    background-color: #ffffff; /* Fond blanc principal */
+    background-color: #ffffff; 
 }
 
 h1, h2, h3, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    color: var(--main-dark);
+}
+
+.section {
+    padding: 60px 0;
+    margin-bottom: 0;
+    background-color: white;
+    box-shadow: var(--box-shadow); 
 }
 
 .bg-light-gray {
-    background-color: var(--light-background); /* Violet clair pour l'alternance de section */
+    background-color: var(--light-background); 
     box-shadow: none !important;
 }
 
-/* --- Navigation (navbar) --- */
+/* --- 2. Navigation (Navbar) --- */
+
 .bg-purple {
-    background-color: var(--main-dark) !important; /* Barre de navigation en Noir */
+    background-color: var(--main-dark) !important; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
@@ -41,18 +53,19 @@ h1, h2, h3, h5 {
     color: var(--light-text);
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color var(--transition-speed);
     text-transform: uppercase;
     font-size: 0.85rem;
     font-weight: 600;
 }
 
 .bouton:hover {
-    background-color: #333333; /* Noir légèrement plus clair au survol */
+    background-color: #333333; 
     color: var(--accent-color);
 }
 
-/* --- Header/Accueil --- */
+/* --- 3. Header/Accueil --- */
+
 .header {
     background: linear-gradient(rgba(31, 31, 31, 0.85), rgba(31, 31, 31, 0.85)), url('assets/images/imgic.jpg') no-repeat center center; 
     background-size: cover;
@@ -65,6 +78,7 @@ h1, h2, h3, h5 {
 .header h1 {
     font-size: 3rem; 
     margin-bottom: 10px;
+    color: white; /* Titre blanc sur fond foncé */
 }
 
 .header p.lead {
@@ -73,12 +87,14 @@ h1, h2, h3, h5 {
     color: var(--accent-color) !important;
 }
 
+/* --- 4. Boutons et Liens --- */
+
 .btn-primary {
-    background-color: var(--accent-color); /* Bouton principal en Cyan */
+    background-color: var(--accent-color); 
     border-color: var(--accent-color);
-    color: var(--main-dark); /* Texte noir sur Cyan */
+    color: var(--main-dark); 
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: background-color var(--transition-speed);
 }
 
 .btn-primary:hover {
@@ -87,24 +103,36 @@ h1, h2, h3, h5 {
     color: white;
 }
 
-/* --- Sections Générales --- */
-.section {
-    padding: 60px 0;
-    margin-bottom: 0;
-    background-color: white;
-    border-radius: 0;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); 
+.btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
 }
 
+.btn-outline-secondary {
+    color: var(--text-color);
+    border-color: var(--text-color);
+    transition: all var(--transition-speed);
+}
+.btn-outline-secondary:hover {
+    background-color: #e9ecef;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+
+/* --- 5. Titres de Section et Accents --- */
+
 .section h2 {
-    color: var(--main-dark); /* Titres en Noir */
     font-size: 2.2rem;
     margin-bottom: 40px;
-    padding-left: 0;
-    border-left: none;
     text-align: center;
 }
-/* Soulignement des titres avec Cyan */
+/* Soulignement des titres avec Cyan (sauf la présentation) */
 .section h2::after {
     content: '';
     display: block;
@@ -115,20 +143,22 @@ h1, h2, h3, h5 {
     border-radius: 2px;
 }
 
+/* --- 6. Section Présentation --- */
 
-/* --- Section Présentation (Grille/Profil) --- */
 .profile-img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%; 
-    border: 5px solid var(--accent-color); /* Bordure en Cyan */
+    border: 5px solid var(--accent-color); 
 }
 
 #présentation .col-lg-8 p {
     line-height: 1.7;
     text-align: justify;
 }
+
+/* Ajustement pour le titre de la section présentation */
 #présentation h2 {
     text-align: left;
     margin-bottom: 25px;
@@ -137,7 +167,8 @@ h1, h2, h3, h5 {
     margin: 10px 0 0 0;
 }
 
-/* --- Section Compétences (Tableau) --- */
+/* --- 7. Section Compétences et Projets --- */
+
 .competence-group-title {
     color: var(--main-dark);
     font-size: 1.6rem;
@@ -146,16 +177,38 @@ h1, h2, h3, h5 {
     border-bottom: 2px dashed #cccccc;
 }
 
-/* Style pour le tableau de compétences */
+/* Tableau de compétences */
 .table th {
     background-color: var(--main-dark);
     color: white;
 }
 .table-striped > tbody > tr:nth-of-type(odd) > * {
-    background-color: var(--light-background); /* Lignes paires en Violet Clair */
+    background-color: var(--light-background); 
 }
 
-/* --- Ligne du Temps (Timeline) --- */
+/* Listes de compétences */
+#experience ul {
+    padding-left: 20px;
+}
+#experience li {
+    margin-bottom: 10px;
+}
+
+/* Cartes de projets */
+.project-card {
+    border: 1px solid #ddd;
+    transition: transform var(--transition-speed);
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- 8. Ligne du Temps (Timeline) --- */
 
 .timeline {
     position: relative;
@@ -170,7 +223,7 @@ h1, h2, h3, h5 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: var(--main-dark); /* Ligne principale en Noir */
+    background-color: var(--main-dark); 
     left: 50%; 
     margin-left: -2px;
 }
@@ -195,12 +248,14 @@ h1, h2, h3, h5 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--accent-color); /* Point en Cyan */
+    background-color: var(--accent-color); 
     border: 4px solid #fff; 
     border-radius: 50%;
     top: 5px;
-    right: -10px; 
     z-index: 10; 
+}
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -10px; 
 }
 .timeline-item:nth-child(even) .timeline-dot {
     left: -10px; 
@@ -212,7 +267,10 @@ h1, h2, h3, h5 {
     border-radius: 8px;
     border: 1px solid #ddd;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
-    transition: all 0.3s;
+    transition: all var(--transition-speed);
+}
+.timeline-content:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-title {
@@ -223,42 +281,11 @@ h1, h2, h3, h5 {
 .timeline-content a {
     color: var(--accent-color);
 }
-.timeline-content a:hover {
-    color: var(--main-dark);
-}
 
-/* --- Section Projets --- */
-.project-card {
-    border: 1px solid #ddd;
-    transition: transform 0.3s;
-}
+/* --- 9. Footer (Contacts) --- */
 
-.btn-outline-primary {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-.btn-outline-primary:hover {
-    background-color: var(--accent-color);
-    color: white;
-    border-color: var(--accent-color);
-}
-
-/* Style pour les liens annexes */
-.btn-outline-secondary {
-    color: var(--text-color);
-    border-color: var(--text-color);
-    transition: background-color 0.3s;
-}
-.btn-outline-secondary:hover {
-    background-color: #e9ecef;
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
-
-
-/* --- Footer (Contacts) --- */
 .footer {
-    background-color: var(--main-dark); /* Footer en Noir */
+    background-color: var(--main-dark); 
     color: white;
     padding: 30px 0;
     text-align: center;
@@ -277,7 +304,7 @@ h1, h2, h3, h5 {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color var(--transition-speed);
     margin-top: 15px;
     display: inline-block;
 }
@@ -287,7 +314,7 @@ h1, h2, h3, h5 {
 }
 
 .lienfooter a {
-    color: var(--main-dark); /* Texte noir sur Cyan */
+    color: var(--main-dark); 
     text-decoration: none;
     font-weight: bold;
 }
