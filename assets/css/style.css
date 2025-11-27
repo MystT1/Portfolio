@@ -1,259 +1,108 @@
 :root {
---bs-violet: #9333ea;
---bs-cyan: #22d3ee;
---bs-dark-gray: #1f2937;
---bs-light-gray: #f8f9fa;
---bs-text-color: #333333;
+    --bs-violet: #9333ea;
+    --bs-cyan: #22d3ee;
+    --bs-dark-gray: #1f2937;
+    --bs-light-gray: #f8f9fa;
+    --bs-text-color: #333;
 }
 
 body {
-font-family: 'Open Sans', sans-serif;
-padding-top: 56px;
-background-color: #fff;
-color: var(--bs-text-color);
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 56px;
+    background: #fff;
+    color: var(--bs-text-color);
 }
 
 h1, h2, h3 {
-font-family: 'Roboto', sans-serif;
-font-weight: 700;
-color: var(--bs-dark-gray);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--bs-dark-gray);
 }
 
-.bg-violet {
-background-color: var(--bs-violet) !important;
-}
+.bg-violet { background: var(--bs-violet) !important; }
+.text-violet { color: var(--bs-violet); }
 
-.text-violet {
-color: var(--bs-violet) !important;
-}
-
-.btn-violet {
-background-color: var(--bs-violet);
-border-color: var(--bs-violet);
-color: white;
-transition: background-color 0.3s, border-color 0.3s;
-}
-
-.btn-violet:hover {
-background-color: #7c3aed;
-border-color: #7c3aed;
-color: white;
-}
-
-.btn-outline-cyan {
-border-color: var(--bs-cyan);
-color: var(--bs-cyan);
-}
-
-.btn-outline-cyan:hover {
-background-color: var(--bs-cyan);
-color: var(--bs-dark-gray) !important;
-}
-
-.section {
-padding: 80px 0;
-}
-
-.bg-light-gray {
-background-color: var(--bs-light-gray);
-}
+.section { padding: 80px 0; }
 
 .header {
-background: linear-gradient(45deg, var(--bs-violet) 0%, var(--bs-cyan) 100%);
-color: white;
-padding: 120px 0 80px 0;
-text-align: center;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, var(--bs-violet), var(--bs-cyan));
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
 }
 
-.header h1 {
-font-size: 3.5rem;
-color: white;
-margin-bottom: 10px;
+.header h1 { font-size: 3.5rem; }
+
+.bouton {
+    color: rgba(255,255,255,0.8);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+.bouton:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
 }
 
-.header .btn-light {
-color: var(--bs-violet) !important;
-}
-
-.navbar-nav .bouton {
-color: rgba(255, 255, 255, 0.8);
-margin-left: 15px;
-padding: 0.5rem 1rem;
-border-radius: 5px;
-transition: background-color 0.3s, color 0.3s;
-text-decoration: none;
-}
-
-.navbar-nav .bouton:hover {
-color: white;
-background-color: rgba(255, 255, 255, 0.1);
-}
-
+/* PHOTO PROFIL */
 .profile-img {
-width: 250px;
-height: 250px;
-object-fit: cover;
-border-radius: 50%;
-border: 6px solid var(--bs-violet);
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--bs-violet);
 }
 
+/* TIMELINE */
 .timeline {
-position: relative;
-max-width: 1200px;
-margin: 0 auto;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
 }
-
 .timeline::after {
-content: '';
-position: absolute;
-width: 4px;
-background-color: var(--bs-violet);
-top: 0;
-bottom: 0;
-left: 50%;
-margin-left: -2px;
-}
-
-@media screen and (max-width: 768px) {
-.timeline::after {
-left: 30px;
-}
-.timeline-item {
-width: 100%;
-padding-left: 60px;
-}
-.timeline-content {
-text-align: left;
-}
-.timeline-item:nth-child(even) {
-left: 0%;
-}
-.timeline-item:nth-child(odd) {
-left: 0%;
-}
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: var(--bs-violet);
+    top: 0;
+    bottom: 0;
 }
 
 .timeline-item {
-padding: 10px 40px;
-position: relative;
-background-color: inherit;
-width: 50%;
+    position: relative;
+    width: 50%;
+    padding: 0 40px;
 }
-
-.timeline-item:nth-child(even) {
-left: 50%;
-padding-left: 0;
-text-align: left;
-}
-
-.timeline-item:nth-child(odd) {
-left: 0;
-padding-right: 0;
-text-align: right;
-}
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; }
 
 .timeline-dot {
-position: absolute;
-width: 16px;
-height: 16px;
-right: -10px;
-background-color: var(--bs-violet);
-border: 2px solid white;
-top: 30px;
-border-radius: 50%;
-z-index: 1;
+    position: absolute;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    background: var(--bs-violet);
+    border-radius: 50%;
 }
+.timeline-item:nth-child(odd) .timeline-dot { right: -8px; }
+.timeline-item:nth-child(even) .timeline-dot { left: -8px; }
 
-.timeline-item:nth-child(even) .timeline-dot {
-left: -8px;
-}
-
-.timeline-title {
-color: var(--bs-violet);
-font-weight: 700;
-}
-
-.timeline-date {
-color: var(--bs-dark-gray);
-font-size: 0.9em;
-margin-bottom: 5px;
-}
-
+/* CARDS PROJETS */
 .project-card {
-border: none;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-transition: transform 0.3s, box-shadow 0.3s;
-border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: .3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
-
 .project-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.card-img-top {
-max-height: 200px;
-object-fit: cover;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-}
-
-.competence-group-title {
-color: var(--bs-violet);
-border-bottom: 2px solid var(--bs-violet);
-padding-bottom: 5px;
-margin-bottom: 20px;
-font-weight: 700;
-}
-
-.btn-outline-primary {
-border-color: var(--bs-cyan);
-color: var(--bs-cyan);
-}
-.btn-outline-primary:hover {
-background-color: var(--bs-cyan);
-color: var(--bs-dark-gray);
-border-color: var(--bs-cyan);
-}
-.btn-outline-secondary {
-border-color: var(--bs-dark-gray);
-color: var(--bs-dark-gray);
-}
-.btn-outline-secondary:hover {
-background-color: var(--bs-dark-gray);
-color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
 }
 
 .footer {
-background-color: var(--bs-dark-gray);
-color: white;
-padding: 30px 0;
-text-align: center;
+    background: var(--bs-dark-gray);
+    padding: 30px 0;
+    color: white;
+    text-align: center;
 }
-
-.footer a {
-color: var(--bs-cyan);
-text-decoration: none;
-transition: color 0.3s;
-}
-
-.footer a:hover {
-color: #a967f6;
-}
-
-.lienfooter {
-background: none;
-border: none;
-padding: 0;
-margin-top: 15px;
-}
-
-.lienfooter a {
-color: white;
-text-decoration: underline;
-}
-
-.badge.bg-success { background-color: var(--bs-cyan) !important; color: var(--bs-dark-gray) !important;}
-.badge.bg-warning { background-color: var(--bs-violet) !important; color: white !important;}
+.footer a { color: var(--bs-cyan); }
