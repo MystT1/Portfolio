@@ -1,42 +1,49 @@
 /* Fichier : assets/css/style.css */
 
-/* --- Généralités et Typographie --- */
-body {
-    padding-top: 75px; 
-    font-family: 'Open Sans', sans-serif;
-    color: #34495e; /* Gris foncé professionnel pour le texte */
-    background-color: #f8f9fa; /* Fond très léger */
-}
-
-/* Couleurs Mises à Jour (Corporate/Professionnel) */
+/* --- Variables et Généralités --- */
 :root {
-    --purple-main: #5d4037; /* Marron/Aubergine foncé élégant pour la marque */
-    --purple-dark: #3e2723; /* Plus foncé pour le survol/accents */
+    --purple-main: #5d4037; /* Marron/Aubergine foncé élégant */
+    --purple-dark: #3e2723; /* Plus foncé pour le survol/footer */
     --yellow-accent: #ffb300; /* Jaune-Or pour l'accentuation */
-    --text-color: #34495e; /* Couleur du texte principal */
+    --text-color: #34495e; 
 }
 
-h1, h2, h5 {
+body {
+    padding-top: 70px; 
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color); 
+    background-color: #f8f9fa; /* Fond très clair */
+}
+
+h1, h2, h3, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+}
+
+.bg-light-gray {
+    background-color: #f0f0f0; /* Donne une alternance de couleur aux sections */
+    box-shadow: none !important;
 }
 
 /* --- Navigation (navbar) --- */
 .bg-purple {
     background-color: var(--purple-main) !important; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre plus nette */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .bouton {
     color: #ffffff;
-    text-decoration: none;
-    padding: 8px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .bouton:hover {
@@ -44,161 +51,197 @@ h1, h2, h5 {
     color: #ffffff;
 }
 
-/* --- Header (Bannière d'accueil) --- */
+/* --- Header/Accueil --- */
 .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('assets/images/imgic.jpg') no-repeat center center; 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/imgic.jpg') no-repeat center center; 
     background-size: cover;
     background-position: top center;
     color: white;
-    padding: 140px 0; /* Plus de padding */
+    padding: 150px 0; 
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .header h1 {
-    font-size: 4rem; /* Plus grand */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    border-bottom: 4px solid var(--yellow-accent); /* Ligne accent plus épaisse */
-    display: inline-block;
-    padding-bottom: 15px;
+    font-size: 3rem; 
+    margin-bottom: 10px;
+}
+
+.header p.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: var(--yellow-accent);
+    border-color: var(--yellow-accent);
+    color: var(--purple-dark); /* Texte foncé sur le bouton accent */
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #cc8000;
+    border-color: #cc8000;
+    color: white;
 }
 
 /* --- Sections Générales --- */
 .section {
-    padding: 50px 0;
-    margin-bottom: 30px;
+    padding: 60px 0;
+    margin-bottom: 0;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); /* Ombre très légère */
 }
 
 .section h2 {
     color: var(--purple-main); 
     font-size: 2.2rem;
-    margin-bottom: 30px;
-    padding-left: 15px;
-    border-left: 6px solid var(--yellow-accent); /* Accent plus marqué */
+    margin-bottom: 40px;
+    padding-left: 0;
+    border-left: none;
+    text-align: center;
 }
 
-/* --- Présentation (Amélioration Professionnelle) --- */
-#présentation.section p {
-    max-width: 800px; /* Limite la largeur du texte pour la lisibilité */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify; /* Justifie le texte */
-    line-height: 1.6; /* Améliore la lisibilité */
+/* --- Section Présentation (Grille/Profil) --- */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Rond pour le côté professionnel */
+    border: 5px solid var(--yellow-accent);
 }
 
-/* --- Section Documents et Images --- */
-.section img {
-    max-width: 100%;
-    height: auto;
-    margin-right: 15px;
+#présentation .col-lg-8 p {
+    line-height: 1.7;
+    text-align: justify;
+}
+#présentation h2 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* --- Section Compétences (Simplifiée) --- */
+.competence-group-title {
+    color: var(--purple-main);
+    font-size: 1.6rem;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding-bottom: 5px;
+    border-bottom: 2px dashed #e0e0e0;
 }
 
-/* Lien de téléchargement CV */
-.btn-primary {
-    background-color: var(--purple-main);
-    border-color: var(--purple-main);
-    transition: background-color 0.3s;
+#experience ul {
+    padding-left: 20px;
 }
-
-.btn-primary:hover {
-    background-color: var(--purple-dark);
-    border-color: var(--purple-dark);
-}
-
-/* --- Cartes des Compétences --- */
-.card.shadow.espace {
-    height: 100%; 
-    background-color: #ffffff !important; /* Blanc pur */
-    border: 1px solid #eee;
-}
-
-.card h7 {
-    color: var(--purple-main); 
-    font-weight: bold;
-    font-size: 1.1rem;
-    display: block; 
-    margin-bottom: 5px;
+#experience li {
+    margin-bottom: 10px;
 }
 
 /* --- Ligne du Temps (Timeline) --- */
-
 .timeline {
     position: relative;
     padding: 20px 0;
-    margin-left: 20px; 
+    max-width: 800px; /* Limiter la largeur de la timeline */
+    margin: 0 auto;
 }
 
-/* La ligne verticale centrale */
 .timeline::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: var(--purple-main); /* Ligne en Aubergine */
-    left: 10px; 
+    background-color: var(--purple-main); 
+    left: 50%; /* Centrer la ligne */
     margin-left: -2px;
 }
 
 .timeline-item {
     position: relative;
-    padding-left: 50px; 
-    margin-bottom: 35px; /* Plus d'espace entre les éléments */
+    width: 50%;
+    margin-bottom: 40px;
+    padding: 0 40px;
 }
 
-/* Le point sur la ligne */
+/* Positionnement des éléments (Gauche/Droite) */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Positionnement du point sur la ligne centrale */
 .timeline-dot {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--yellow-accent); /* Point en Jaune-Or */
+    background-color: var(--yellow-accent); 
     border: 4px solid #fff; 
     border-radius: 50%;
     top: 5px;
-    left: 0;
+    right: -10px; /* Positionnement à droite pour les impairs */
     z-index: 10; 
+}
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px; /* Positionnement à gauche pour les pairs */
 }
 
 .timeline-content {
     background: #ffffff;
-    padding: 25px; /* Plus de padding */
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Ombre légère mais visible */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s;
 }
-
 .timeline-content:hover {
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-title {
     color: var(--purple-main); 
-    font-size: 1.3rem; /* Titre plus grand */
+    font-size: 1.1rem;
     margin-top: 0;
 }
 
 .timeline-date {
-    color: #888;
-    font-style: normal; /* Retirer l'italique */
-    font-weight: 500;
-    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
 }
 
+/* --- Section Projets --- */
+.project-card {
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
 
 /* --- Footer --- */
 .footer {
-    background-color: var(--purple-dark); /* Plus foncé que le corps */
+    background-color: var(--purple-dark); 
     color: white;
-    padding: 25px 0;
+    padding: 30px 0;
     text-align: center;
+}
+
+.footer a {
+    color: var(--yellow-accent);
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
 }
 
 .lienfooter {
@@ -207,21 +250,16 @@ h1, h2, h5 {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
-    margin-top: 10px;
+    margin-top: 15px;
     display: inline-block;
 }
 
 .lienfooter:hover {
-    background-color: #cc8000; /* Plus foncé pour le survol */
+    background-color: #cc8000; 
 }
 
 .lienfooter a {
-    color: var(--text-color); /* Utiliser le gris foncé pour le texte sur le jaune */
+    color: var(--text-color); 
     text-decoration: none;
     font-weight: bold;
-}
-
-hr {
-    border-top: 1px solid #e0e0e0; /* Ligne de séparation plus fine */
-    margin: 40px 0;
 }
