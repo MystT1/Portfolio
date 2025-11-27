@@ -1,127 +1,155 @@
+/* Fichier : assets/css/style.css */
+
+/* --- Généralités et Typographie --- */
 body {
-  color: #333;
-  margin: 0;
-  padding-top: 70px;
-  background-color: #f4f4f4;
+    padding-top: 75px; 
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #f4f7f9; 
 }
 
-/* Conteneur central avec marges sur les côtés */
-.container {
-  max-width: 1200px; /* Largeur maximale du contenu */
-  margin: 0 auto; /* Centrer le contenu */
-  padding: 0 20px; /* Marges internes pour éviter que le texte soit trop collé sur les bords */
+h1, h2, h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
-/* Style de la navigation */
-.navbar {
-  background-color: #b203e7;
-  color: white;
-  padding: 15px 0;
-  scroll-padding: 70px;
-}
-.navbar nav{
-margin-left: auto
+/* --- Navigation (navbar) --- */
+.bg-purple {
+    background-color: #5d369e !important; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.img {
-    display: block;
-    margin-left: 0.5rem;
-    margin-right: auto;
-    width: 35%;
-  }
+.bouton {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
 
-/* Header */
+.bouton:hover {
+    background-color: #7b4fbe; 
+    color: #ffffff;
+}
+
+/* --- Header (Bannière d'accueil) --- */
 .header {
-  background-color: #303336;
-  color: white;
-  text-align: center;
-  padding: 50px 0;
+    /* Mettez une image de fond pertinente dans assets/images/imgic.jpg */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/imgic.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: top center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.header h2 {
-  font-family: 'Arial';
-  font-size: 2.2rem;
-  margin: 0;
+.header h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    border-bottom: 3px solid #ffc107; /* Ligne jaune accent */
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-.header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-hr{
-  padding: 20px 0;
-  background-color: white;
-  margin: 20px 0;
-}
-/* Sections */
+/* --- Sections (Présentation, Parcours, Documents) --- */
 .section {
-  padding: 40px 0;
-  background-color: white;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 0;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .section h2 {
-  font-family: 'arial', sans-serif;
-  font-size: 1.8rem;
-  color: #303336;
-  margin-bottom: 20px;
+    color: #5d369e;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 5px solid #ffc107; 
 }
 
-.section p, .section ul {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
+/* --- Section Documents et Images --- */
+.section img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.section ul {
-  list-style-type: disc;
-  margin-left: 20px;
+/* Lien de téléchargement CV */
+.btn-primary {
+    background-color: #5d369e;
+    border-color: #5d369e;
+    transition: background-color 0.3s;
 }
 
-/* Footer */
+.btn-primary:hover {
+    background-color: #4b2a82;
+    border-color: #4b2a82;
+}
+
+/* --- Cartes du Parcours Scolaire --- */
+.card.shadow {
+    border-left: 4px solid #ffc107; /* Bande jaune pour l'historique */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card.shadow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* --- Cartes des Compétences --- */
+.card.shadow.espace {
+    height: 100%; 
+    background-color: #fcfcfc !important;
+}
+
+.card h7 {
+    color: #5d369e;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block; 
+    margin-bottom: 5px;
+}
+
+/* --- Footer --- */
 .footer {
-  background-color: #303336;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background-color: #343a40; 
+    color: white;
+    padding: 25px 0;
+    text-align: center;
 }
 
-.footer a{
-  color: #07b91f;
-}
-/* Changer la couleur en violet lors du survol */
-.footer a:hover {
-  color: rgb(209, 40, 209);
-}
-
-/* Changer la couleur en rouge après avoir visité le lien */
-.footer a:visited {
-  color: red;
+.lienfooter {
+    background: #ffc107;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    display: inline-block;
 }
 
-/* Facultatif : ajouter des styles pour quand le lien est actif (cliqué) */
-.footer a:active {
-  color: rgb(183, 0, 255);
+.lienfooter:hover {
+    background-color: #e0a800;
 }
 
-li{
-  margin-top: 10px;
-  margin-bottom: 25px;
-  margin-right: 10px;
-}
-.bouton{
-  background-color: rgb(183, 0, 255);
-  border: 2px solid #000000;
-  -webkit-text-fill-color: #f4f4f4;
-  padding: 10px;
+.lienfooter a {
+    color: #343a40;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.lienfooter{
-background-color: #303336;
-border: 2px solid #000000;
--webkit-text-fill-color: #f4f4f4;
-padding: 10px;
+hr {
+    border-top: 2px solid #e0e0e0;
+    margin: 40px 0;
 }
