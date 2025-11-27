@@ -13,11 +13,10 @@ h1, h2, h5 {
     font-weight: 700;
 }
 
-/* --- Couleur Violette Rétablie --- */
-/* Violet d'origine, similaire à celui de votre HTML initial */
+/* --- Couleurs Mises à Jour (Tendant vers le Rose) --- */
 :root {
-    --purple-main: #6a1b9a; /* Couleur du bg-purple initial */
-    --purple-dark: #4a148c; /* Version plus foncée pour le survol/accents */
+    --purple-main: #993399; /* Nouveau Violet Magenta */
+    --purple-dark: #7A287A; /* Version plus foncée pour le survol/accents */
     --yellow-accent: #fdd835; /* Jaune vif pour l'accentuation */
 }
 
@@ -72,7 +71,7 @@ h1, h2, h5 {
 }
 
 .section h2 {
-    color: var(--purple-main); /* Utilisation du violet initial */
+    color: var(--purple-main); /* Violet Magenta */
     font-size: 2rem;
     margin-bottom: 30px;
     padding-left: 15px;
@@ -117,7 +116,7 @@ h1, h2, h5 {
 }
 
 .card h7 {
-    color: var(--purple-main); /* Utilisation du violet initial */
+    color: var(--purple-main); /* Violet Magenta */
     font-weight: bold;
     font-size: 1.1rem;
     display: block; 
@@ -139,7 +138,7 @@ h1, h2, h5 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: var(--purple-main); /* Ligne en violet initial */
+    background-color: var(--purple-main); /* Ligne en Violet Magenta */
     left: 10px; 
     margin-left: -2px;
 }
@@ -177,7 +176,7 @@ h1, h2, h5 {
 }
 
 .timeline-title {
-    color: var(--purple-main); /* Titre en violet initial */
+    color: var(--purple-main); /* Titre en Violet Magenta */
     font-size: 1.2rem;
     margin-top: 0;
 }
@@ -208,7 +207,7 @@ h1, h2, h5 {
 }
 
 .lienfooter:hover {
-    background-color: #e0b400; /* Version plus foncée du jaune */
+    background-color: #e0b400; 
 }
 
 .lienfooter a {
