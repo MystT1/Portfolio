@@ -1,245 +1,219 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Hugo - Administrateur Systèmes & Réseaux</title>
-    <!-- Remplacement de l'icône de la page par une emoji/SVG pour un meilleur rendu -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%239333ea' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z'/%3E%3Csvg%3E">
-    
-    <!-- Bootstrap 5.1 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Hugo - Administrateur Systèmes & Réseaux</title>
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%239333ea' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z'/%3E%3Csvg%3E">
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="/assets/css/style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   
 </head>
 <body>
 
-    <!-- Barre de Navigation (utilise .bg-violet du CSS) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-violet fixed-top" aria-label="Menu principal du portfolio">
-        <div class="container">
-            <a class="navbar-brand" href="#">Hugo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="bouton" href="#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="bouton" href="#présentation">Profil</a></li>
-                    <li class="nav-item"><a class="bouton" href="#parcours_scolaire">Formation</a></li>
-                    <li class="nav-item"><a class="bouton" href="#experience">Compétences</a></li>
-                    <li class="nav-item"><a class="bouton" href="#stages">Stages</a></li>
-                    <li class="nav-item"><a class="bouton" href="#projets">Projets</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Section 1: Accueil (utilise .header et le gradient du CSS) -->
-    <header class="header" id="accueil">
-        <div class="container">
-            <h1>Hugo, Administrateur Réseaux & Systèmes</h1>
-            <p class="lead">Portfolio années 2025 - 2026 | BTS SIO</p>
-            
-            <!-- Lien du CV -->
-            <a href="download/Mon_CV_Hugo.pdf" download="Mon_CV_Hugo.pdf" class="btn btn-light btn-lg mt-4 shadow-lg">
-                Télécharger mon CV (PDF) 💾
-            </a>
-        </div>
-    </header>
-    
-    <!-- Section 2: Profil & Présentation -->
-    <section class="section" id="présentation">
-        <div class="container">
-            <div class="row align-items-center">
-                
-                <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                    <!-- Chemin de l'image de profil : assets/images/imgic.jpg -->
-                    <img src="assets/images/imgic.jpg" alt="Photo de profil de Hugo" class="img-fluid profile-img">
-                    <h3 class="mt-4 text-muted">Étudiant BTS SIO - Option SISR</h3>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-violet fixed-top" aria-label="Menu principal du portfolio">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hugo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="bouton" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="bouton" href="#présentation">Profil</a></li>
+                    <li class="nav-item"><a class="bouton" href="#parcours_scolaire">Formation</a></li>
+                    <li class="nav-item"><a class="bouton" href="#experience">Compétences</a></li>
+                    <li class="nav-item"><a class="bouton" href="#stages">Stages</a></li>
+                    <li class="nav-item"><a class="bouton" href="#projets">Projets</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+        <header class="header" id="accueil">
+        <div class="container">
+            <h1>Hugo, Administrateur Réseaux & Systèmes</h1>
+            <p class="lead">Portfolio années 2025 - 2026 | BTS SIO</p>
+            
+                        <a href="download/Mon_CV_Hugo.pdf" download="Mon_CV_Hugo.pdf" class="btn btn-light btn-lg mt-4 shadow-lg">
+                Télécharger mon CV (PDF) 💾
+            </a>
+        </div>
+    </header>
+    
+        <section class="section" id="présentation">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                                        <img src="assets/images/imgic.jpg" alt="Photo de profil de Hugo" class="img-fluid profile-img">
+                    <h3 class="mt-4 text-muted">Étudiant BTS SIO - Option SISR</h3>
+                </div>
 
-                <div class="col-lg-8">
-                    <h2 style="text-align: left;">👋 Mon Profil</h2>
-                    <p>Je suis étudiant en **BTS SIO** au lycée félix le Dantec. Mon objectif est de m'intégrer dans le domaine de l'administration des systèmes et réseaux où je pourrai mettre à profit mon **sens de l'équipe** et ma **curiosité technique**.</p>
-                    <p>Au cours de mes expériences, j'ai développé des compétences solides dans la gestion des infrastructures informatiques et la résolution de pannes complexes, tout en valorisant la **documentation claire** et l'**assistance aux utilisateurs**.</p>
-                    <p>Le travail d'équipe et la veille technologique sont pour moi des piliers essentiels pour réussir dans l'IT.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Section 3: Parcours Scolaire (utilise .bg-light-gray du CSS) -->
-    <section class="section bg-light-gray" id="parcours_scolaire">
-        <div class="container">
-            <h2 class="text-center">🎒 Parcours de Formation</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <!-- Utilise les classes Bootstrap pour l'encadrement -->
-                    <div class="timeline-content card shadow-sm p-3 border-0">
-                        <h5 class="timeline-title">BTS SIO (Option SISR)</h5>
-                        <div class="timeline-date">2024 - 2026</div>
-                        <p>Lycée Félix le Dantec. Axé sur l'administration des systèmes, la sécurité et l'architecture réseau. (Certification C1 en cours)</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <!-- Utilise les classes Bootstrap pour l'encadrement -->
-                    <div class="timeline-content card shadow-sm p-3 border-0">
-                        <h5 class="timeline-title">Baccalauréat Général</h5>
-                        <div class="timeline-date">Année d'obtention</div>
-                        <p>Nom de l'établissement. Spécialités : Mathématiques et NSI (Numérique et Sciences Informatiques).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Section 4: Compétences -->
-    <section class="section" id="experience">
-        <div class="container">
-            <h2 class="text-center">🛠 Compétences Acquises</h2>
-            
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h3 class="competence-group-title">Infrastructure & Systèmes 💻</h3>
-                    <div class="card p-4 h-100 shadow-sm border-0">
-                        <p class="lead text-muted mb-3">Maîtrise des architectures réseau et des environnements virtuels.</p>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Compétence</th>
-                                    <th>Niveau</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Utilisation des badges personnalisés via le CSS -->
-                                <tr><td>Installation/Configuration OS (Win/Linux)</td><td><span class="badge bg-success">Avancé</span></td></tr>
-                                <tr><td>Virtualisation (VMware, Hyper-V)</td><td><span class="badge bg-warning">Intermédiaire</span></td></tr>
-                                <tr><td>Gestion de réseaux (Cisco, LAN/WAN)</td><td><span class="badge bg-success">Avancé</span></td></tr>
-                                <tr><td>Sécurité des systèmes</td><td><span class="badge bg-warning">Intermédiaire</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <div class="col-lg-8">
+                    <h2 style="text-align: left;">👋 Mon Profil</h2>
+                    <p>Je suis étudiant en **BTS SIO** au lycée félix le Dantec. Mon objectif est de m'intégrer dans le domaine de l'administration des systèmes et réseaux où je pourrai mettre à profit mon **sens de l'équipe** et ma **curiosité technique**.</p>
+                    <p>Au cours de mes expériences, j'ai développé des compétences solides dans la gestion des infrastructures informatiques et la résolution de pannes complexes, tout en valorisant la **documentation claire** et l'**assistance aux utilisateurs**.</p>
+                    <p>Le travail d'équipe et la veille technologique sont pour moi des piliers essentiels pour réussir dans l'IT.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <section class="section bg-light-gray" id="parcours_scolaire">
+        <div class="container">
+            <h2 class="text-center">🎒 Parcours de Formation</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content card shadow-sm p-3 border-0">
+                        <h5 class="timeline-title">BTS SIO (Option SISR)</h5>
+                        <div class="timeline-date">2024 - 2026</div>
+                        <p>Lycée Félix le Dantec. Axé sur l'administration des systèmes, la sécurité et l'architecture réseau. (Certification C1 en cours)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content card shadow-sm p-3 border-0">
+                        <h5 class="timeline-title">Baccalauréat Général</h5>
+                        <div class="timeline-date">Année d'obtention</div>
+                        <p>Nom de l'établissement. Spécialités : Mathématiques et NSI (Numérique et Sciences Informatiques).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <section class="section" id="experience">
+        <div class="container">
+            <h2 class="text-center">🛠 Compétences Acquises</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3 class="competence-group-title">Infrastructure & Systèmes 💻</h3>
+                    <div class="card p-4 h-100 shadow-sm border-0">
+                        <p class="lead text-muted mb-3">Maîtrise des architectures réseau et des environnements virtuels.</p>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Compétence</th>
+                                    <th>Niveau</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                <tr><td>Installation/Configuration OS (Win/Linux)</td><td><span class="badge bg-success">Avancé</span></td></tr>
+                                <tr><td>Virtualisation (VMware, Hyper-V)</td><td><span class="badge bg-warning">Intermédiaire</span></td></tr>
+                                <tr><td>Gestion de réseaux (Cisco, LAN/WAN)</td><td><span class="badge bg-success">Avancé</span></td></tr>
+                                <tr><td>Sécurité des systèmes</td><td><span class="badge bg-warning">Intermédiaire</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                <div class="col-lg-6 mb-4">
-                    <h3 class="competence-group-title">Méthodologie & Relationnel 👥</h3>
-                    <div class="card p-4 h-100 shadow-sm border-0">
-                        <p class="lead text-muted mb-3">Capacité à communiquer, documenter et travailler en équipe efficacement.</p>
-                        <ul class="list-unstyled">
-                            <li class="mb-2">✔️ **Soft Skills :** Communication claire, assistance aux utilisateurs et pédagogie.</li> 
-                            <li class="mb-2">✔️ **Méthodes :** Collaboration efficace via les méthodes Agiles (Scrum).</li> 
-                            <li class="mb-2">✔️ **Documentation & Veille :** Utilisation de Wiki personnel (DokuWiki) et outils de Veille (Feedly).</li>
-                            <li class="mb-2">✔️ **Certifications :** (Ex: CISCO CCNA 1, CompTIA Network+).</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="col-lg-6 mb-4">
+                    <h3 class="competence-group-title">Méthodologie & Relationnel 👥</h3>
+                    <div class="card p-4 h-100 shadow-sm border-0">
+                        <p class="lead text-muted mb-3">Capacité à communiquer, documenter et travailler en équipe efficacement.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">✔️ **Soft Skills :** Communication claire, assistance aux utilisateurs et pédagogie.</li> 
+                            <li class="mb-2">✔️ **Méthodes :** Collaboration efficace via les méthodes Agiles (Scrum).</li> 
+                            <li class="mb-2">✔️ **Documentation & Veille :** Utilisation de Wiki personnel (DokuWiki) et outils de Veille (Feedly).</li>
+                            <li class="mb-2">✔️ **Certifications :** (Ex: CISCO CCNA 1, CompTIA Network+).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Section 5: Stages (utilise .bg-light-gray du CSS) -->
-    <section class="section bg-light-gray" id="stages">
-        <div class="container">
-            <h2 class="text-center">💼 Descriptif des Stages Effectués</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <!-- Utilise les classes Bootstrap pour l'encadrement -->
-                    <div class="timeline-content card shadow-sm p-3 border-0">
-                        <h5 class="timeline-title">Stage 1ère année - Maintenance & Support</h5>
-                        <div class="timeline-date">Mai - Juin 2025 | Entreprise [Nom de l'Entreprise]</div>
-                        <p>
-                            **Mission :** Maintenance du parc informatique (50 postes) et support technique de niveau 1.
-                            <br>
-                            **Compétences :** Dépannage rapide, gestion des tickets (GLPI), administration basique de l'AD.
-                        </p>
-                    </div>
-                </div>
+        <section class="section bg-light-gray" id="stages">
+        <div class="container">
+            <h2 class="text-center">💼 Descriptif des Stages Effectués</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content card shadow-sm p-3 border-0">
+                        <h5 class="timeline-title">Stage 1ère année - Maintenance & Support</h5>
+                        <div class="timeline-date">Mai - Juin 2025 | Entreprise [Nom de l'Entreprise]</div>
+                        <p>
+                            **Mission :** Maintenance du parc informatique (50 postes) et support technique de niveau 1.
+                            <br>
+                            **Compétences :** Dépannage rapide, gestion des tickets (GLPI), administration basique de l'AD.
+                        </p>
+                    </div>
+                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <!-- Utilise les classes Bootstrap pour l'encadrement -->
-                    <div class="timeline-content card shadow-sm p-3 border-0">
-                        <h5 class="timeline-title">Stage 2ème année - Projet Infrastructure</h5>
-                        <div class="timeline-date">Janvier - Février 2026 | Entreprise [Nom de l'Entreprise]</div>
-                        <p>
-                            **Mission :** Mise en place d'un serveur de supervision (Zabbix/Nagios) pour monitorer les équipements réseau.
-                            <br>
-                            **Compétences :** Scripting Shell, déploiement Linux, sécurisation des accès distants (VPN).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content card shadow-sm p-3 border-0">
+                        <h5 class="timeline-title">Stage 2ème année - Projet Infrastructure</h5>
+                        <div class="timeline-date">Janvier - Février 2026 | Entreprise [Nom de l'Entreprise]</div>
+                        <p>
+                            **Mission :** Mise en place d'un serveur de supervision (Zabbix/Nagios) pour monitorer les équipements réseau.
+                            <br>
+                            **Compétences :** Scripting Shell, déploiement Linux, sécurisation des accès distants (VPN).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Section 6: Projets -->
-    <section class="section" id="projets">
-        <div class="container">
-            <h2 class="text-center">💻 Mes Projets et Réalisations</h2>
-            
-            <div class="row mt-4">
-                <!-- Projet 1 : Kiosk Intranet -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <img src="assets/images/Capture d'écran 2025-11-20 124638.png" alt="Projet Kiosk LTC" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Projet 1 : Développement d'un Kiosk Intranet</h5>
-                            <p class="card-text">Création d'une interface simplifiée pour les employés de LTC, sécurisée sur un poste dédié. Technologies : HTML, CSS, JavaScript / Linux.</p>
-                            <!-- Utilise .btn-outline-primary avec couleur Cyan du CSS -->
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Documentation</a>
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Lien GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Projet 2 : Solution anti-DDoS -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <img src="assets/images/image ap 1.png" alt="Projet Sécurité Serveur" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Projet 2 : Mise en œuvre d'une solution anti-DDoS</h5>
-                            <p class="card-text">Étude et déploiement de règles de filtrage sur un pare-feu virtualisé pour prévenir les attaques par déni de service distribué.</p>
-                            <!-- Utilise .btn-outline-primary avec couleur Cyan du CSS -->
-                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Rapport Technique</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Ressources Annexes -->
-            <div class="text-center mt-5">
-                <h3 class="competence-group-title">Ressources Annexes</h3>
-                <!-- Utilise .btn-outline-secondary avec couleur Gris Foncé du CSS -->
-                <a href="URL_DU_WIKI_PERSONNEL" target="_blank" class="btn btn-lg btn-outline-secondary m-2">Wiki Personnel 📚</a>
-                <a href="URL_DE_VOTRE_VEILLE_TECHNOLOGIQUE" target="_blank" class="btn btn-lg btn-outline-secondary m-2">Veille Technologique 💡</a>
-                <a href="URL_CERTIFICATION_AZURE" target="_blank" class="btn btn-lg btn-outline-secondary m-2">Certifications 🏅</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer (utilise .footer et .bg-dark-gray du CSS) -->
-    <footer class="footer">
-        <div class="container">
-            <h5 class="text-white mb-3">Me Contacter</h5>
-            <p class="text-center mb-0">
-                Email : <a href="mailto:votre.email@exemple.com">hugo.dupont@exemple.com</a> | 
-                Téléphone : 06 XX XX XX XX 
-            </p>
-            <p>
-                Réseaux sociaux : <a href="URL_LINKEDIN" target="_blank">LinkedIn</a> | <a href="URL_GITHUB" target="_blank">GitHub</a>
-            </p>
-        </div>
-        <button class="lienfooter"><a href="https://www.onisep.fr/ressources/univers-metier/metiers/administrateur-administratrice-de-reseaux" target="_blank">En savoir plus sur le métier</a></button> 
-    </footer>
-    
-    <!-- Bootstrap 5.1 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+        <section class="section" id="projets">
+        <div class="container">
+            <h2 class="text-center">💻 Mes Projets et Réalisations</h2>
+            
+            <div class="row mt-4">
+                                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <img src="assets/images/Capture d'écran 2025-11-20 124638.png" alt="Projet Kiosk LTC" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 1 : Développement d'un Kiosk Intranet</h5>
+                            <p class="card-text">Création d'une interface simplifiée pour les employés de LTC, sécurisée sur un poste dédié. Technologies : HTML, CSS, JavaScript / Linux.</p>
+                                                        <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Documentation</a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Lien GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <img src="assets/images/image ap 1.png" alt="Projet Sécurité Serveur" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 2 : Mise en œuvre d'une solution anti-DDoS</h5>
+                            <p class="card-text">Étude et déploiement de règles de filtrage sur un pare-feu virtualisé pour prévenir les attaques par déni de service distribué.</p>
+                                                        <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">Rapport Technique</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                        <div class="text-center mt-5">
+                <h3 class="competence-group-title">Ressources Annexes</h3>
+                                <a href="URL_DU_WIKI_PERSONNEL" target="_blank" class="btn btn-lg btn-outline-secondary m-2">Wiki Personnel 📚</a>
+                <a href="URL_DE_VOTRE_VEILLE_TECHNOLOGIQUE" target="_blank" class="btn btn-lg btn-outline-secondary m-2">Veille Technologique 💡</a>
+                <a href="URL_CERTIFICATION_AZURE" target="_blank" class="btn btn-lg btn-outline-secondary m-2">Certifications 🏅</a>
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+        <div class="container">
+            <h5 class="text-white mb-3">Me Contacter</h5>
+            <p class="text-center mb-0">
+                Email : <a href="mailto:votre.email@exemple.com">hugo.dupont@exemple.com</a>
+            </p>
+            <p>
+                Réseaux sociaux : <a href="URL_LINKEDIN" target="_blank">LinkedIn</a> | <a href="URL_GITHUB" target="_blank">GitHub</a>
+            </p>
+        </div>
+        <div class="lienfooter"><a href="https://www.onisep.fr/ressources/univers-metier/metiers/administrateur-administratrice-de-reseaux" target="_blank">En savoir plus sur le métier</a></div> 
+    </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
 </body>
 </html>
