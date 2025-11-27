@@ -1,259 +1,280 @@
-/* Fichier : assets/css/style.css - Refonte Totale (Design Moderne) */
+        /* Nouvelle Palette de Couleurs */
+        :root {
+            --bs-violet: #9333ea;       /* Violet (Couleur principale) */
+            --bs-cyan: #22d3ee;         /* Cyan (Couleur d'accent/lien) */
+            --bs-dark-gray: #1f2937;    /* Gris Foncé (Fond important/Footer) */
+            --bs-light-gray: #f8f9fa;   /* Fond des sections claires */
+            --bs-text-color: #333333;   /* Couleur de texte standard */
+        }
 
-/* --- 1. Variables et Généralités --- */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 56px; 
+            background-color: #fff;
+            color: var(--bs-text-color);
+        }
 
-:root {
-    --main-purple: #9370db;       /* VIOLET CLAIR (Structure et Identité) */
-    --purple-hover: #7c5ba8;      /* Violet un peu plus foncé */
-    --main-dark-grey: #343a40;    /* GRIS FONCÉ (Texte, Titres) */
-    --light-section-bg: #f5f5f5;  /* Gris très pâle pour les sections alternées */
-    --accent-color: #00bcd4;      /* CYAN vif (Touches dynamiques) */
-    --light-text: #ffffff;        /* Texte blanc */
-    --box-shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --transition-speed: 0.3s;
-}
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: var(--bs-dark-gray);
+        }
 
-body {
-    padding-top: 80px; /* Plus d'espace sous la navbar */
-    font-family: 'Open Sans', sans-serif;
-    color: var(--main-dark-grey);
-    background-color: #ffffff; 
-    line-height: 1.6;
-}
+        .bg-violet {
+            background-color: var(--bs-violet) !important;
+        }
 
-h1, h2, h3, h5 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-}
+        .text-violet {
+            color: var(--bs-violet) !important;
+        }
 
-h2 {
-    color: var(--main-purple); 
-}
+        .btn-violet {
+            background-color: var(--bs-violet);
+            border-color: var(--bs-violet);
+            color: white;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
 
-.section {
-    padding: 80px 0; /* Plus de verticalité */
-    background-color: white;
-}
+        .btn-violet:hover {
+            background-color: #7c3aed; /* Un violet légèrement différent */
+            border-color: #7c3aed;
+            color: white;
+        }
 
-.bg-light-gray {
-    background-color: var(--light-section-bg); 
-    box-shadow: none !important;
-}
+        .btn-outline-cyan {
+            border-color: var(--bs-cyan);
+            color: var(--bs-cyan);
+        }
 
-/* --- 2. Navigation (Navbar) --- */
-
-.bg-purple {
-    background-color: var(--main-purple) !important; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Ombre plus marquée */
-    height: 80px;
-}
-
-.navbar-brand {
-    font-size: 1.8rem; /* Marque plus grande */
-    font-weight: 700;
-}
-
-.bouton {
-    color: var(--light-text);
-    padding: 10px 15px; /* Plus grand */
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.bouton:hover {
-    background-color: var(--purple-hover); 
-    color: var(--light-text);
-}
-
-/* --- 3. Header/Accueil (Bannière d'accueil) --- */
-
-.header {
-    /* Nouvelle superposition asymétrique pour un look moderne */
-    background: linear-gradient(135deg, rgba(147, 112, 219, 0.95), rgba(147, 112, 219, 0.8) 70%), url('assets/images/imgic.jpg') no-repeat right center; 
-    background-size: cover;
-    background-position: right top;
-    color: white;
-    padding: 180px 0; 
-    text-align: left; /* Texte aligné à gauche */
-}
-
-.header .container {
-    max-width: 60%; /* Pour laisser l'image d'arrière-plan visible à droite */
-}
-
-.header h1 {
-    font-size: 3.8rem; 
-    margin-bottom: 20px;
-    color: white;
-}
-
-.header p.lead {
-    font-size: 1.4rem;
-    font-weight: 300;
-    color: var(--accent-color) !important;
-    margin-bottom: 30px;
-}
-
-/* --- 4. Titres de Section --- */
-
-.section h2 {
-    font-size: 2.8rem; /* Titres plus grands */
-    margin-bottom: 15px;
-    text-align: center;
-    color: var(--main-dark-grey); /* Titres h2 en Gris Foncé */
-    border-bottom: 4px solid var(--main-purple); /* Ligne soulignée en Violet */
-    padding-bottom: 10px;
-    display: inline-block;
-    width: auto;
-}
-/* Centrage des titres (en utilisant le conteneur) */
-.section .container > h2 {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
-}
-/* Suppression du pseudo-élément h2::after (remplacé par border-bottom) */
-.section h2::after {
-    content: none;
-}
-
-/* --- 5. Section Présentation (Asymétrique) --- */
-
-#présentation .row {
-    align-items: flex-start;
-}
-
-.profile-img {
-    width: 250px; /* Image plus grande */
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px; /* Carré/Rectangle, pas rond */
-    border: 3px solid var(--accent-color); 
-    box-shadow: var(--box-shadow-subtle);
-    transform: rotate(-2deg); /* Petite inclinaison pour le dynamisme */
-}
-
-#présentation .col-lg-8 {
-    padding-left: 40px;
-}
-
-#présentation h2 {
-    text-align: left;
-    margin-bottom: 20px;
-    border-bottom: 4px solid var(--accent-color); /* Ligne sous titre en Cyan */
-}
-#présentation h3 {
-    color: var(--main-dark-grey);
-    font-weight: 400;
-    font-size: 1.4rem;
-    margin-top: 10px;
-}
-#présentation p {
-    font-size: 1.05rem;
-}
-
-/* --- 6. Section Compétences et Projets --- */
-
-.competence-group-title {
-    color: var(--main-dark-grey);
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid var(--accent-color); /* Ligne Cyan sous le titre */
-}
-
-.card {
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow-subtle);
-    transition: transform var(--transition-speed);
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
+        .btn-outline-cyan:hover {
+            background-color: var(--bs-cyan);
+            color: var(--bs-dark-gray) !important;
+        }
 
 
-/* Tableau de compétences */
-.table th {
-    background-color: var(--main-purple); 
-    color: white;
-}
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-    background-color: var(--light-section-bg); 
-}
+        .section {
+            padding: 80px 0;
+        }
 
-/* Cartes de projets */
-.project-card .card-img-top {
-    height: 250px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+        .bg-light-gray {
+            background-color: var(--bs-light-gray);
+        }
 
-/* --- 7. Ligne du Temps (Timeline) --- */
+        /* Header (Accueil) */
+        .header {
+            /* Gradient entre Violet et Cyan pour un look moderne */
+            background: linear-gradient(45deg, var(--bs-violet) 0%, var(--bs-cyan) 100%);
+            color: white;
+            padding: 120px 0 80px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.timeline {
-    padding: 40px 0; /* Plus d'espace */
-}
+        .header h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
 
-.timeline::before {
-    width: 6px; /* Ligne plus épaisse */
-    background-color: var(--main-purple); 
-}
+        .header .btn-light {
+            color: var(--bs-violet) !important; /* Bouton clair sur fond sombre */
+        }
 
-.timeline-item {
-    margin-bottom: 60px; /* Plus d'espace entre les éléments */
-}
+        /* Navbar Links */
+        .navbar-nav .bouton {
+            color: rgba(255, 255, 255, 0.8);
+            margin-left: 15px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
+        }
 
-.timeline-dot {
-    width: 24px; /* Point plus grand */
-    height: 24px;
-    background-color: var(--accent-color); 
-    border: 5px solid #fff; /* Bordure plus épaisse */
-    top: 0;
-}
+        .navbar-nav .bouton:hover {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
 
-.timeline-content {
-    background: var(--light-section-bg);
-    padding: 30px; /* Plus d'air */
-    border: none; /* Supprimer la bordure fine */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-}
+        /* Image de profil */
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            /* Utilisation du Violet pour la bordure */
+            border: 6px solid var(--bs-violet); 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
 
-.timeline-title {
-    color: var(--main-dark-grey); /* Titre en Gris Foncé */
-    font-size: 1.3rem;
-}
-.timeline-date {
-    color: var(--main-purple); /* Date en Violet Clair */
-    font-weight: 600;
-}
+        /* Timeline (Parcours Scolaire et Stages) */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-/* --- 8. Footer (Contacts) --- */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            /* Ligne de temps en Violet */
+            background-color: var(--bs-violet); 
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
 
-.footer {
-    background-color: var(--main-purple); 
-    color: white;
-    padding: 40px 0;
-}
+        /* Styles pour les écrans plus petits */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 30px; 
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 60px; 
+            }
+            .timeline-content {
+                text-align: left;
+            }
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+            .timeline-item:nth-child(odd) {
+                left: 0%;
+            }
+        }
 
-.footer a {
-    color: var(--accent-color);
-    font-weight: bold;
-}
 
-.lienfooter {
-    background: var(--accent-color);
-    padding: 12px 25px; /* Plus grand */
-    border-radius: 50px; /* Forme de pilule */
-    margin-top: 25px;
-}
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
 
-.lienfooter a {
-    color: var(--main-dark-grey); 
-    text-decoration: none;
-    font-weight: bold;
-}
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 0;
+            text-align: left; 
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 0;
+            text-align: right; 
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -10px;
+            /* Point en Violet */
+            background-color: var(--bs-violet); 
+            border: 2px solid white;
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -8px;
+        }
+
+        .timeline-title {
+            /* Titre en Violet */
+            color: var(--bs-violet); 
+            font-weight: 700;
+        }
+
+        .timeline-date {
+            color: var(--bs-dark-gray);
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        /* Cartes de projet */
+        .project-card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            max-height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .competence-group-title {
+            /* Titre de section en Violet */
+            color: var(--bs-violet); 
+            border-bottom: 2px solid var(--bs-violet);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Boutons d'action pour les projets/ressources */
+        .btn-outline-primary {
+            border-color: var(--bs-cyan);
+            color: var(--bs-cyan);
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--bs-cyan);
+            color: var(--bs-dark-gray);
+            border-color: var(--bs-cyan);
+        }
+        .btn-outline-secondary {
+            border-color: var(--bs-dark-gray);
+            color: var(--bs-dark-gray);
+        }
+        .btn-outline-secondary:hover {
+            background-color: var(--bs-dark-gray);
+            color: white;
+        }
+
+
+        /* Footer */
+        .footer {
+            /* Fond en Gris Foncé */
+            background-color: var(--bs-dark-gray); 
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            /* Liens du footer en Cyan */
+            color: var(--bs-cyan); 
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #a967f6; /* Cyan plus clair au survol */
+        }
+
+        .lienfooter {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .lienfooter a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Mise à jour des badges de niveau */
+        .badge.bg-success { background-color: var(--bs-cyan) !important; color: var(--bs-dark-gray) !important;}
+        .badge.bg-warning { background-color: var(--bs-violet) !important; color: white !important;}
