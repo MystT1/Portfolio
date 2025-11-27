@@ -1,19 +1,19 @@
 /* Fichier : assets/css/style.css */
-/* (Ce code est une continuation du style professionnel précédent) */
 
 /* --- Variables et Généralités --- */
 :root {
-    --purple-main: #d125d1; /* Marron/Aubergine foncé élégant */
-    --purple-dark: #a712d4; /* Plus foncé pour le survol/footer */
-    --yellow-accent: #00ffb3; /* Jaune-Or pour l'accentuation */
-    --text-color: #34495e; 
+    --main-dark: #1f1f1f;       /* Noir profond pour le fond, la navigation et les titres */
+    --light-background: #f0f0f5;/* Violet très clair/Gris lavande très subtil pour les sections alternées */
+    --accent-color: #00bcd4;    /* Cyan vif pour l'accentuation et les liens */
+    --text-color: #333333;      /* Gris foncé pour la lisibilité du texte principal */
+    --light-text: #e0e0e0;      /* Texte clair sur fond foncé */
 }
 
 body {
     padding-top: 70px; 
     font-family: 'Open Sans', sans-serif;
     color: var(--text-color); 
-    background-color: #f8f9fa; 
+    background-color: #ffffff; /* Fond blanc principal */
 }
 
 h1, h2, h3, h5 {
@@ -22,14 +22,14 @@ h1, h2, h3, h5 {
 }
 
 .bg-light-gray {
-    background-color: #f0f0f0; 
+    background-color: var(--light-background); /* Violet clair pour l'alternance de section */
     box-shadow: none !important;
 }
 
 /* --- Navigation (navbar) --- */
 .bg-purple {
-    background-color: var(--purple-main) !important; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    background-color: var(--main-dark) !important; /* Barre de navigation en Noir */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .navbar-brand {
@@ -38,7 +38,7 @@ h1, h2, h3, h5 {
 }
 
 .bouton {
-    color: #ffffff;
+    color: var(--light-text);
     padding: 8px 12px;
     border-radius: 4px;
     transition: background-color 0.3s;
@@ -48,13 +48,13 @@ h1, h2, h3, h5 {
 }
 
 .bouton:hover {
-    background-color: var(--purple-dark); 
-    color: #ffffff;
+    background-color: #333333; /* Noir légèrement plus clair au survol */
+    color: var(--accent-color);
 }
 
 /* --- Header/Accueil --- */
 .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/imgic.jpg') no-repeat center center; 
+    background: linear-gradient(rgba(31, 31, 31, 0.85), rgba(31, 31, 31, 0.85)), url('assets/images/imgic.jpg') no-repeat center center; 
     background-size: cover;
     background-position: top center;
     color: white;
@@ -70,19 +70,20 @@ h1, h2, h3, h5 {
 .header p.lead {
     font-size: 1.25rem;
     font-weight: 300;
+    color: var(--accent-color) !important;
 }
 
 .btn-primary {
-    background-color: var(--yellow-accent);
-    border-color: var(--yellow-accent);
-    color: var(--purple-dark); 
+    background-color: var(--accent-color); /* Bouton principal en Cyan */
+    border-color: var(--accent-color);
+    color: var(--main-dark); /* Texte noir sur Cyan */
     font-weight: 600;
     transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #1ef1d5;
-    border-color: #cc8000;
+    background-color: #00a6bb;
+    border-color: #00a6bb;
     color: white;
 }
 
@@ -96,13 +97,24 @@ h1, h2, h3, h5 {
 }
 
 .section h2 {
-    color: var(--purple-main); 
+    color: var(--main-dark); /* Titres en Noir */
     font-size: 2.2rem;
     margin-bottom: 40px;
     padding-left: 0;
     border-left: none;
     text-align: center;
 }
+/* Soulignement des titres avec Cyan */
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
 
 /* --- Section Présentation (Grille/Profil) --- */
 .profile-img {
@@ -110,7 +122,7 @@ h1, h2, h3, h5 {
     height: 200px;
     object-fit: cover;
     border-radius: 50%; 
-    border: 5px solid var(--yellow-accent);
+    border: 5px solid var(--accent-color); /* Bordure en Cyan */
 }
 
 #présentation .col-lg-8 p {
@@ -121,31 +133,26 @@ h1, h2, h3, h5 {
     text-align: left;
     margin-bottom: 25px;
 }
+#présentation h2::after {
+    margin: 10px 0 0 0;
+}
 
 /* --- Section Compétences (Tableau) --- */
 .competence-group-title {
-    color: var(--purple-main);
+    color: var(--main-dark);
     font-size: 1.6rem;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 2px dashed #e0e0e0;
+    border-bottom: 2px dashed #cccccc;
 }
 
 /* Style pour le tableau de compétences */
 .table th {
-    background-color: var(--purple-main);
+    background-color: var(--main-dark);
     color: white;
 }
 .table-striped > tbody > tr:nth-of-type(odd) > * {
-    background-color: #f7f7f7;
-}
-
-
-#experience ul {
-    padding-left: 20px;
-}
-#experience li {
-    margin-bottom: 10px;
+    background-color: var(--light-background); /* Lignes paires en Violet Clair */
 }
 
 /* --- Ligne du Temps (Timeline) --- */
@@ -163,7 +170,7 @@ h1, h2, h3, h5 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: var(--purple-main); 
+    background-color: var(--main-dark); /* Ligne principale en Noir */
     left: 50%; 
     margin-left: -2px;
 }
@@ -188,7 +195,7 @@ h1, h2, h3, h5 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--yellow-accent); 
+    background-color: var(--accent-color); /* Point en Cyan */
     border: 4px solid #fff; 
     border-radius: 50%;
     top: 5px;
@@ -203,24 +210,21 @@ h1, h2, h3, h5 {
     background: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
     transition: all 0.3s;
-}
-.timeline-content:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-title {
-    color: var(--purple-main); 
+    color: var(--main-dark); 
     font-size: 1.1rem;
     margin-top: 0;
 }
-
-.timeline-date {
-    color: var(--text-color);
-    font-weight: 600;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
+.timeline-content a {
+    color: var(--accent-color);
+}
+.timeline-content a:hover {
+    color: var(--main-dark);
 }
 
 /* --- Section Projets --- */
@@ -228,37 +232,40 @@ h1, h2, h3, h5 {
     border: 1px solid #ddd;
     transition: transform 0.3s;
 }
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+.btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
 }
 
-.project-card .card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
 /* Style pour les liens annexes */
 .btn-outline-secondary {
     color: var(--text-color);
-    border-color: #ccc;
+    border-color: var(--text-color);
     transition: background-color 0.3s;
 }
 .btn-outline-secondary:hover {
     background-color: #e9ecef;
-    border-color: var(--purple-main);
-    color: var(--purple-main);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
+
 
 /* --- Footer (Contacts) --- */
 .footer {
-    background-color: var(--purple-dark); 
+    background-color: var(--main-dark); /* Footer en Noir */
     color: white;
     padding: 30px 0;
     text-align: center;
 }
 
 .footer a {
-    color: var(--yellow-accent);
+    color: var(--accent-color);
     text-decoration: none;
 }
 .footer a:hover {
@@ -266,7 +273,7 @@ h1, h2, h3, h5 {
 }
 
 .lienfooter {
-    background: var(--yellow-accent);
+    background: var(--accent-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -276,11 +283,11 @@ h1, h2, h3, h5 {
 }
 
 .lienfooter:hover {
-    background-color: #ffa200; 
+    background-color: #00a6bb; 
 }
 
 .lienfooter a {
-    color: var(--text-color); 
+    color: var(--main-dark); /* Texte noir sur Cyan */
     text-decoration: none;
     font-weight: bold;
 }
