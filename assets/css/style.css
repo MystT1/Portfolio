@@ -1,41 +1,38 @@
-/* Fichier : assets/css/style.css - Violet Clair / Gris Foncé / Cyan */
+/* Fichier : assets/css/style.css - Refonte Totale (Design Moderne) */
 
 /* --- 1. Variables et Généralités --- */
 
 :root {
-    --main-purple: #9370db;       /* VIOLET CLAIR (MediumPurple) pour la structure */
-    --purple-hover: #7c5ba8;      /* Violet un peu plus foncé pour le survol */
-    --main-dark-grey: #343a40;    /* GRIS FONCÉ (Nouveau texte et titres) */
-    --light-section-bg: #f8f8f8;  /* Gris très pâle pour les sections alternées */
-    --accent-color: #00bcd4;      /* CYAN vif (Accents, Boutons, Points) */
+    --main-purple: #9370db;       /* VIOLET CLAIR (Structure et Identité) */
+    --purple-hover: #7c5ba8;      /* Violet un peu plus foncé */
+    --main-dark-grey: #343a40;    /* GRIS FONCÉ (Texte, Titres) */
+    --light-section-bg: #f5f5f5;  /* Gris très pâle pour les sections alternées */
+    --accent-color: #00bcd4;      /* CYAN vif (Touches dynamiques) */
     --light-text: #ffffff;        /* Texte blanc */
-    --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    --box-shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.08);
     --transition-speed: 0.3s;
 }
 
 body {
-    padding-top: 70px; 
+    padding-top: 80px; /* Plus d'espace sous la navbar */
     font-family: 'Open Sans', sans-serif;
-    color: var(--main-dark-grey); /* Couleur du corps du texte en Gris Foncé */
+    color: var(--main-dark-grey);
     background-color: #ffffff; 
+    line-height: 1.6;
 }
 
 h1, h2, h3, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    color: var(--main-dark-grey); /* Titres en Gris Foncé */
 }
 
-/* Les titres de section H2 utilisent le Violet Clair pour l'identification */
 h2 {
     color: var(--main-purple); 
 }
 
 .section {
-    padding: 60px 0;
-    margin-bottom: 0;
+    padding: 80px 0; /* Plus de verticalité */
     background-color: white;
-    box-shadow: var(--box-shadow); 
 }
 
 .bg-light-gray {
@@ -46,23 +43,21 @@ h2 {
 /* --- 2. Navigation (Navbar) --- */
 
 .bg-purple {
-    background-color: var(--main-purple) !important; /* Barre de navigation en Violet Clair */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: var(--main-purple) !important; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Ombre plus marquée */
+    height: 80px;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Marque plus grande */
     font-weight: 700;
-    color: var(--light-text) !important;
 }
 
 .bouton {
     color: var(--light-text);
-    padding: 8px 12px;
+    padding: 10px 15px; /* Plus grand */
     border-radius: 4px;
-    transition: background-color var(--transition-speed);
-    text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
@@ -71,243 +66,194 @@ h2 {
     color: var(--light-text);
 }
 
-/* --- 3. Header/Accueil --- */
+/* --- 3. Header/Accueil (Bannière d'accueil) --- */
 
 .header {
-    /* Utilisation du violet clair avec une forte opacité pour l'arrière-plan */
-    background: linear-gradient(rgba(147, 112, 219, 0.85), rgba(147, 112, 219, 0.85)), url('assets/images/imgic.jpg') no-repeat center center; 
+    /* Nouvelle superposition asymétrique pour un look moderne */
+    background: linear-gradient(135deg, rgba(147, 112, 219, 0.95), rgba(147, 112, 219, 0.8) 70%), url('assets/images/imgic.jpg') no-repeat right center; 
     background-size: cover;
-    background-position: top center;
+    background-position: right top;
     color: white;
-    padding: 150px 0; 
-    text-align: center;
+    padding: 180px 0; 
+    text-align: left; /* Texte aligné à gauche */
+}
+
+.header .container {
+    max-width: 60%; /* Pour laisser l'image d'arrière-plan visible à droite */
 }
 
 .header h1 {
-    font-size: 3rem; 
-    margin-bottom: 10px;
+    font-size: 3.8rem; 
+    margin-bottom: 20px;
     color: white;
 }
 
 .header p.lead {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 300;
     color: var(--accent-color) !important;
+    margin-bottom: 30px;
 }
 
-/* --- 4. Boutons et Liens --- */
-
-.btn-primary {
-    background-color: var(--accent-color); 
-    border-color: var(--accent-color);
-    color: var(--main-dark-grey); /* Texte en Gris Foncé sur Cyan */
-    font-weight: 600;
-    transition: background-color var(--transition-speed);
-}
-
-.btn-primary:hover {
-    background-color: #00a6bb;
-    border-color: #00a6bb;
-    color: white;
-}
-
-.btn-outline-primary {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-.btn-outline-primary:hover {
-    background-color: var(--accent-color);
-    color: white;
-    border-color: var(--accent-color);
-}
-
-/* Autres liens (Veille, Wiki) */
-.btn-outline-secondary {
-    color: var(--main-dark-grey);
-    border-color: var(--main-dark-grey);
-    transition: all var(--transition-speed);
-}
-.btn-outline-secondary:hover {
-    background-color: #e9ecef;
-    border-color: var(--main-purple);
-    color: var(--main-purple);
-}
-
-
-/* --- 5. Titres de Section et Accents --- */
+/* --- 4. Titres de Section --- */
 
 .section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+    font-size: 2.8rem; /* Titres plus grands */
+    margin-bottom: 15px;
     text-align: center;
-    color: var(--main-purple); /* Titres h2 en Violet Clair */
+    color: var(--main-dark-grey); /* Titres h2 en Gris Foncé */
+    border-bottom: 4px solid var(--main-purple); /* Ligne soulignée en Violet */
+    padding-bottom: 10px;
+    display: inline-block;
+    width: auto;
 }
-/* Soulignement des titres avec Cyan */
-.section h2::after {
-    content: '';
+/* Centrage des titres (en utilisant le conteneur) */
+.section .container > h2 {
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--accent-color);
-    margin: 10px auto 0;
-    border-radius: 2px;
+    text-align: center;
+}
+/* Suppression du pseudo-élément h2::after (remplacé par border-bottom) */
+.section h2::after {
+    content: none;
 }
 
-/* --- 6. Section Présentation --- */
+/* --- 5. Section Présentation (Asymétrique) --- */
+
+#présentation .row {
+    align-items: flex-start;
+}
 
 .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 250px; /* Image plus grande */
+    height: 250px;
     object-fit: cover;
-    border-radius: 50%; 
-    border: 5px solid var(--accent-color); 
+    border-radius: 8px; /* Carré/Rectangle, pas rond */
+    border: 3px solid var(--accent-color); 
+    box-shadow: var(--box-shadow-subtle);
+    transform: rotate(-2deg); /* Petite inclinaison pour le dynamisme */
 }
 
-#présentation .col-lg-8 p {
-    line-height: 1.7;
-    text-align: justify;
+#présentation .col-lg-8 {
+    padding-left: 40px;
 }
 
-/* Ajustement pour le titre de la section présentation */
 #présentation h2 {
     text-align: left;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--accent-color); /* Ligne sous titre en Cyan */
 }
-#présentation h2::after {
-    margin: 10px 0 0 0;
+#présentation h3 {
+    color: var(--main-dark-grey);
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+#présentation p {
+    font-size: 1.05rem;
 }
 
-/* --- 7. Section Compétences et Projets --- */
+/* --- 6. Section Compétences et Projets --- */
 
 .competence-group-title {
-    color: var(--main-dark-grey); /* Titres de groupe en Gris Foncé */
-    font-size: 1.6rem;
+    color: var(--main-dark-grey);
+    font-size: 1.8rem;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 2px dashed #cccccc;
+    border-bottom: 3px solid var(--accent-color); /* Ligne Cyan sous le titre */
 }
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-subtle);
+    transition: transform var(--transition-speed);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Tableau de compétences */
 .table th {
-    background-color: var(--main-purple); /* En-tête de tableau en Violet Clair */
+    background-color: var(--main-purple); 
     color: white;
 }
 .table-striped > tbody > tr:nth-of-type(odd) > * {
     background-color: var(--light-section-bg); 
 }
 
-/* Listes de compétences */
-#experience ul {
-    padding-left: 20px;
-}
-#experience li {
-    margin-bottom: 10px;
+/* Cartes de projets */
+.project-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-/* --- 8. Ligne du Temps (Timeline) --- */
+/* --- 7. Ligne du Temps (Timeline) --- */
 
 .timeline {
-    position: relative;
-    padding: 20px 0;
-    max-width: 800px; 
-    margin: 0 auto;
+    padding: 40px 0; /* Plus d'espace */
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: var(--main-purple); /* Ligne principale en Violet Clair */
-    left: 50%; 
-    margin-left: -2px;
+    width: 6px; /* Ligne plus épaisse */
+    background-color: var(--main-purple); 
 }
 
 .timeline-item {
-    position: relative;
-    width: 50%;
-    margin-bottom: 40px;
-    padding: 0 40px;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-.timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
+    margin-bottom: 60px; /* Plus d'espace entre les éléments */
 }
 
 .timeline-dot {
-    position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 24px; /* Point plus grand */
+    height: 24px;
     background-color: var(--accent-color); 
-    border: 4px solid #fff; 
-    border-radius: 50%;
-    top: 5px;
-    z-index: 10; 
-}
-.timeline-item:nth-child(odd) .timeline-dot {
-    right: -10px; 
-}
-.timeline-item:nth-child(even) .timeline-dot {
-    left: -10px; 
+    border: 5px solid #fff; /* Bordure plus épaisse */
+    top: 0;
 }
 
 .timeline-content {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
-    transition: all var(--transition-speed);
+    background: var(--light-section-bg);
+    padding: 30px; /* Plus d'air */
+    border: none; /* Supprimer la bordure fine */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .timeline-title {
-    color: var(--main-purple); 
-    font-size: 1.1rem;
-    margin-top: 0;
+    color: var(--main-dark-grey); /* Titre en Gris Foncé */
+    font-size: 1.3rem;
 }
-.timeline-content a {
-    color: var(--accent-color);
+.timeline-date {
+    color: var(--main-purple); /* Date en Violet Clair */
+    font-weight: 600;
 }
 
-/* --- 9. Footer (Contacts) --- */
+/* --- 8. Footer (Contacts) --- */
 
 .footer {
-    background-color: var(--main-purple); /* Footer en Violet Clair */
+    background-color: var(--main-purple); 
     color: white;
-    padding: 30px 0;
-    text-align: center;
+    padding: 40px 0;
 }
 
 .footer a {
     color: var(--accent-color);
-    text-decoration: none;
-}
-.footer a:hover {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .lienfooter {
     background: var(--accent-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color var(--transition-speed);
-    margin-top: 15px;
-    display: inline-block;
-}
-
-.lienfooter:hover {
-    background-color: #00a6bb; 
+    padding: 12px 25px; /* Plus grand */
+    border-radius: 50px; /* Forme de pilule */
+    margin-top: 25px;
 }
 
 .lienfooter a {
-    color: var(--main-dark-grey); /* Texte en Gris Foncé sur Cyan */
+    color: var(--main-dark-grey); 
     text-decoration: none;
     font-weight: bold;
 }
