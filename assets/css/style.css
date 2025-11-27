@@ -1,13 +1,13 @@
-/* Fichier : assets/css/style.css - Violet Clair Dominant */
+/* Fichier : assets/css/style.css - Violet Clair / Gris Foncé / Cyan */
 
 /* --- 1. Variables et Généralités --- */
 
 :root {
-    --main-purple: #9370db;       /* NOUVEAU VIOLET CLAIR pour la structure (MediumPurple) */
+    --main-purple: #9370db;       /* VIOLET CLAIR (MediumPurple) pour la structure */
     --purple-hover: #7c5ba8;      /* Violet un peu plus foncé pour le survol */
-    --dark-text: #1f1f1f;         /* Noir/Gris très foncé pour le texte principal */
-    --light-section-bg: #f8f8f8;  /* Gris très pâle pour les sections alternées (Violet très très clair) */
-    --accent-color: #00bcd4;      /* Cyan vif (Accents, Boutons, Points) */
+    --main-dark-grey: #343a40;    /* GRIS FONCÉ (Nouveau texte et titres) */
+    --light-section-bg: #f8f8f8;  /* Gris très pâle pour les sections alternées */
+    --accent-color: #00bcd4;      /* CYAN vif (Accents, Boutons, Points) */
     --light-text: #ffffff;        /* Texte blanc */
     --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     --transition-speed: 0.3s;
@@ -16,16 +16,17 @@
 body {
     padding-top: 70px; 
     font-family: 'Open Sans', sans-serif;
-    color: var(--dark-text); 
+    color: var(--main-dark-grey); /* Couleur du corps du texte en Gris Foncé */
     background-color: #ffffff; 
 }
 
 h1, h2, h3, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    color: var(--main-dark-grey); /* Titres en Gris Foncé */
 }
 
-/* Les titres de section utilisent le Violet Clair pour la couleur, mais le texte général est Noir */
+/* Les titres de section H2 utilisent le Violet Clair pour l'identification */
 h2 {
     color: var(--main-purple); 
 }
@@ -66,7 +67,7 @@ h2 {
 }
 
 .bouton:hover {
-    background-color: var(--purple-hover); /* Violet légèrement plus foncé au survol */
+    background-color: var(--purple-hover); 
     color: var(--light-text);
 }
 
@@ -99,7 +100,7 @@ h2 {
 .btn-primary {
     background-color: var(--accent-color); 
     border-color: var(--accent-color);
-    color: var(--dark-text); /* Texte noir sur Cyan */
+    color: var(--main-dark-grey); /* Texte en Gris Foncé sur Cyan */
     font-weight: 600;
     transition: background-color var(--transition-speed);
 }
@@ -122,8 +123,8 @@ h2 {
 
 /* Autres liens (Veille, Wiki) */
 .btn-outline-secondary {
-    color: var(--dark-text);
-    border-color: var(--dark-text);
+    color: var(--main-dark-grey);
+    border-color: var(--main-dark-grey);
     transition: all var(--transition-speed);
 }
 .btn-outline-secondary:hover {
@@ -179,7 +180,7 @@ h2 {
 /* --- 7. Section Compétences et Projets --- */
 
 .competence-group-title {
-    color: var(--dark-text); /* Titres de groupe en Noir */
+    color: var(--main-dark-grey); /* Titres de groupe en Gris Foncé */
     font-size: 1.6rem;
     margin-bottom: 15px;
     padding-bottom: 5px;
@@ -193,6 +194,14 @@ h2 {
 }
 .table-striped > tbody > tr:nth-of-type(odd) > * {
     background-color: var(--light-section-bg); 
+}
+
+/* Listes de compétences */
+#experience ul {
+    padding-left: 20px;
+}
+#experience li {
+    margin-bottom: 10px;
 }
 
 /* --- 8. Ligne du Temps (Timeline) --- */
@@ -258,7 +267,7 @@ h2 {
 }
 
 .timeline-title {
-    color: var(--main-purple); /* Titre d'étape en Violet Clair */
+    color: var(--main-purple); 
     font-size: 1.1rem;
     margin-top: 0;
 }
@@ -298,7 +307,7 @@ h2 {
 }
 
 .lienfooter a {
-    color: var(--dark-text); /* Texte noir sur Cyan */
+    color: var(--main-dark-grey); /* Texte en Gris Foncé sur Cyan */
     text-decoration: none;
     font-weight: bold;
 }
