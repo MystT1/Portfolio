@@ -115,32 +115,30 @@ h1, h2, h3 {
 
 .glass-window {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1400px; /* PLUS LARGE */
+    margin: 0 auto;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
 }
 
 .glass-window__header {
     padding: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.glass-window__eyebrow {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.8;
+    text-align: center; /* CENTRÉ */
 }
 
 .pdf-viewer {
-    height: 650px;
+    display: flex;
+    justify-content: center; /* CENTRAGE HORIZONTAL */
+    align-items: center;
+    height: 80vh; /* TRÈS GRAND */
+    padding: 1rem;
 }
 
 .pdf-viewer iframe {
     width: 100%;
     height: 100%;
+    max-width: 1200px; /* PDF BIEN LARGE */
     border: none;
 }
