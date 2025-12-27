@@ -108,37 +108,31 @@ h1, h2, h3 {
 .footer a { color: var(--bs-cyan); }
 
 .table-section {
-    padding: 4rem 1rem;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    display: block;
 }
 
+/* Conteneur principal */
 .glass-window {
     width: 100%;
-    max-width: 1400px; /* PLUS LARGE */
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1600px;   /* TRÈS LARGE */
+    margin: 0 auto;      /* CENTRAGE */
 }
 
-.glass-window__header {
-    padding: 1.5rem;
-    text-align: center; /* CENTRÉ */
-}
-
+/* Zone du PDF */
 .pdf-viewer {
-    display: flex;
-    justify-content: center; /* CENTRAGE HORIZONTAL */
-    align-items: center;
-    height: 80vh; /* TRÈS GRAND */
-    padding: 1rem;
+    width: 100%;
+    display: block;
+    padding: 2rem 0;
 }
 
+/* IFRAME — LE PLUS IMPORTANT */
 .pdf-viewer iframe {
-    width: 100%;
-    height: 100%;
-    max-width: 1200px; /* PDF BIEN LARGE */
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 95vw;         /* PREND PRESQUE TOUT L’ÉCRAN */
+    max-width: 1400px;
+    height: 85vh;
     border: none;
 }
