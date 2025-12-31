@@ -24,6 +24,8 @@ h1, h2, h3 {
 
 .section { padding: 80px 0; }
 
+/* ================= HEADER ================= */
+
 .header {
     background: linear-gradient(45deg, var(--bs-violet), var(--bs-cyan));
     color: white;
@@ -33,17 +35,21 @@ h1, h2, h3 {
 
 .header h1 { font-size: 3.5rem; }
 
+/* ================= NAV ================= */
+
 .bouton {
     color: rgba(255,255,255,0.8);
     padding: .5rem 1rem;
     border-radius: 5px;
+    text-decoration: none;
 }
 .bouton:hover {
     color: #fff;
     background: rgba(255,255,255,0.1);
 }
 
-/* PHOTO PROFIL */
+/* ================= PHOTO PROFIL ================= */
+
 .profile-img {
     width: 250px;
     height: 250px;
@@ -52,12 +58,14 @@ h1, h2, h3 {
     border: 6px solid var(--bs-violet);
 }
 
-/* TIMELINE */
+/* ================= TIMELINE DESKTOP ================= */
+
 .timeline {
     position: relative;
     margin: 0 auto;
     max-width: 1200px;
 }
+
 .timeline::after {
     content: '';
     position: absolute;
@@ -72,9 +80,17 @@ h1, h2, h3 {
     position: relative;
     width: 50%;
     padding: 0 40px;
+    margin-bottom: 50px;
 }
-.timeline-item:nth-child(odd) { left: 0; text-align: right; }
-.timeline-item:nth-child(even) { left: 50%; }
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
 
 .timeline-dot {
     position: absolute;
@@ -84,20 +100,86 @@ h1, h2, h3 {
     background: var(--bs-violet);
     border-radius: 50%;
 }
-.timeline-item:nth-child(odd) .timeline-dot { right: -8px; }
-.timeline-item:nth-child(even) .timeline-dot { left: -8px; }
 
-/* CARDS PROJETS */
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px;
+}
+
+/* ================= TIMELINE MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 0 15px 0 40px;
+        left: 0 !important;
+        text-align: left !important;
+        margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+        left: 12px !important;
+        right: auto !important;
+        top: 25px;
+    }
+}
+
+/* ================= CARDS PROJETS ================= */
+
 .project-card {
     border: none;
     border-radius: 10px;
     transition: .3s;
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,.15);
 }
+
+/* ================= PDF TABLEAU ================= */
+
+.table-section {
+    width: 100%;
+    display: block;
+}
+
+.glass-window {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.pdf-viewer {
+    width: 100%;
+    display: block;
+    padding: 2rem 0;
+}
+
+.pdf-viewer iframe {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 95vw;
+    max-width: 1400px;
+    height: 85vh;
+    border: none;
+}
+
+/* ================= FOOTER ================= */
 
 .footer {
     background: var(--bs-dark-gray);
@@ -105,34 +187,7 @@ h1, h2, h3 {
     color: white;
     text-align: center;
 }
-.footer a { color: var(--bs-cyan); }
 
-.table-section {
-    width: 100%;
-    display: block;
-}
-
-/* Conteneur principal */
-.glass-window {
-    width: 100%;
-    max-width: 1600px;   /* TRÈS LARGE */
-    margin: 0 auto;      /* CENTRAGE */
-}
-
-/* Zone du PDF */
-.pdf-viewer {
-    width: 100%;
-    display: block;
-    padding: 2rem 0;
-}
-
-/* IFRAME — LE PLUS IMPORTANT */
-.pdf-viewer iframe {
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 95vw;         /* PREND PRESQUE TOUT L’ÉCRAN */
-    max-width: 1400px;
-    height: 85vh;
-    border: none;
+.footer a {
+    color: var(--bs-cyan);
 }
