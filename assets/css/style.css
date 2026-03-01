@@ -18,54 +18,29 @@ body {
     padding-top: 56px;
     background: var(--bs-light-gray);
     color: var(--bs-text-color);
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: var(--bs-dark-gray);
-}
-
-/* =========================
-   MODE SOMBRE
-========================= */
-body.dark-mode {
-    background: #121212;
-    color: #ddd;
-}
-
-body.dark-mode .card {
-    background: #1e1e1e;
-    color: #ddd;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-body.dark-mode .navbar {
-    background: #1f1f1f !important;
-}
-
-body.dark-mode .pdf-viewer iframe {
-    border: 2px solid #333;
-}
-
-body.dark-mode .footer {
-    background: #1f1f1f;
+    transition: color 0.3s ease;
 }
 
 /* =========================
    NAVBAR
 ========================= */
 .navbar {
-    transition: background 0.3s;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bouton {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.85);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .bouton:hover {
@@ -85,6 +60,7 @@ body.dark-mode .footer {
 
 .header h1 {
     font-size: 3rem;
+    color: white;
 }
 
 /* =========================
@@ -92,6 +68,7 @@ body.dark-mode .footer {
 ========================= */
 .section {
     padding: 80px 0;
+    transition: background 0.3s ease;
 }
 
 .bg-light-gray {
@@ -172,18 +149,22 @@ body.dark-mode .footer {
 }
 
 /* =========================
-   CARDS PROJETS
+   CARDS
 ========================= */
-.project-card {
+.card {
     border: none;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card {
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+    box-shadow: 0 8px 18px rgba(0,0,0,.15);
 }
 
 /* =========================
@@ -212,8 +193,9 @@ body.dark-mode .footer {
     max-width: 1400px;
     height: 85vh;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
 }
 
 /* =========================
@@ -228,7 +210,7 @@ body.dark-mode .footer {
 
 .footer a {
     color: var(--bs-cyan);
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .footer a:hover {
@@ -260,4 +242,79 @@ body.dark-mode .footer {
     background-color: var(--bs-violet);
     border-color: var(--bs-violet);
     color: white;
+}
+
+/* =========================
+   MODE SOMBRE COMPLET
+========================= */
+
+body.dark-mode {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+    color: #ffffff;
+}
+
+body.dark-mode .section {
+    background: #111827;
+}
+
+body.dark-mode .bg-light-gray {
+    background: #0f172a;
+}
+
+body.dark-mode .navbar {
+    background: #111827 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .card {
+    background: #1e293b;
+    color: #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .timeline::after {
+    background: var(--bs-cyan);
+}
+
+body.dark-mode .timeline-dot {
+    background: var(--bs-cyan);
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .pdf-viewer iframe {
+    border: 1px solid #334155;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .footer {
+    background: #0f172a;
+}
+
+body.dark-mode a {
+    color: var(--bs-cyan);
+}
+
+body.dark-mode a:hover {
+    color: var(--bs-violet);
+}
+
+body.dark-mode .btn-outline-light {
+    border-color: var(--bs-cyan);
+    color: var(--bs-cyan);
+}
+
+body.dark-mode .btn-outline-light:hover {
+    background: var(--bs-cyan);
+    color: #0f172a;
 }
