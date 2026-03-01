@@ -3,7 +3,7 @@
 ========================= */
 :root {
     --bs-violet: #9333ea;
-    --bs-violet-dark: #6b21a8; /* violet plus foncé pour dark mode */
+    --bs-violet-dark: #6b21a8; /* violet foncé pour dark mode */
     --bs-cyan: #22d3ee;
     --bs-dark-gray: #1f2937;
     --bs-light-gray: #f8f9fa;
@@ -26,7 +26,6 @@ h1, h2, h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: var(--bs-dark-gray);
-    transition: color 0.3s;
 }
 
 /* =========================
@@ -36,7 +35,6 @@ h1, h2, h3, h4, h5 {
     transition: background 0.3s;
 }
 
-/* Violet normal */
 .bg-violet {
     background-color: var(--bs-violet) !important;
 }
@@ -244,20 +242,18 @@ h1, h2, h3, h4, h5 {
 }
 
 /* =========================
-   MODE SOMBRE
+   MODE SOMBRE (AJOUTÉ)  
 ========================= */
 body.dark-mode {
     background: #0f172a;
     color: #e5e7eb;
 }
 
-/* Navbar plus sombre */
 body.dark-mode .navbar.bg-violet {
     background-color: var(--bs-violet-dark) !important;
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
-/* Sections */
 body.dark-mode .section {
     background: #111827;
 }
@@ -266,14 +262,12 @@ body.dark-mode .bg-light-gray {
     background: #0f172a;
 }
 
-/* Cards */
 body.dark-mode .card {
     background: #1e293b;
     color: #e5e7eb;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-/* Timeline */
 body.dark-mode .timeline::after {
     background: var(--bs-cyan);
 }
@@ -286,18 +280,15 @@ body.dark-mode .project-card:hover {
     box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
-/* PDF */
 body.dark-mode .pdf-viewer iframe {
     border: 1px solid #334155;
     box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
-/* Footer */
 body.dark-mode .footer {
     background: #0f172a;
 }
 
-/* Liens */
 body.dark-mode a {
     color: var(--bs-cyan);
 }
@@ -306,7 +297,6 @@ body.dark-mode a:hover {
     color: var(--bs-violet);
 }
 
-/* Bouton dark mode */
 body.dark-mode .btn-outline-light {
     border-color: var(--bs-cyan);
     color: var(--bs-cyan);
