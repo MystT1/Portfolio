@@ -3,7 +3,7 @@
 ========================= */
 :root {
     --bs-violet: #9333ea;
-    --bs-violet-dark: #7c3aed; /* violet pour dark mode */
+    --bs-violet-dark: #7c3aed; /* violet plus clair pour dark mode */
     --bs-cyan: #22d3ee;
     --bs-dark-gray: #1f2937;
     --bs-light-gray: #f8f9fa;
@@ -253,23 +253,19 @@ body.dark-mode {
     color: #f1f5f9; /* texte clair */
 }
 
-/* Navbar mode sombre */
 body.dark-mode .navbar.bg-violet {
     background-color: #7c3aed; /* violet plus clair */
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
-/* Texte navbar mode sombre */
 body.dark-mode .navbar .bouton {
-    color: #f1f5f9; /* texte clair lisible */
+    color: #ffffff; /* texte navbar blanc en dark mode */
 }
 
-body.dark-mode .navbar .bouton:hover {
-    color: #fff;
+body.dark-mode .section {
+    background: #1e293b;
 }
 
-/* Sections, cards, etc. */
-body.dark-mode .section,
 body.dark-mode .bg-light-gray {
     background: #1e293b;
 }
@@ -280,9 +276,12 @@ body.dark-mode .card {
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-body.dark-mode .timeline::after,
+body.dark-mode .timeline::after {
+    background: #38bdf8; /* cyan plus lumineux */
+}
+
 body.dark-mode .timeline-dot {
-    background: #38bdf8; /* cyan lumineux */
+    background: #38bdf8;
 }
 
 body.dark-mode .project-card:hover {
@@ -316,7 +315,13 @@ body.dark-mode .btn-outline-light:hover {
     color: #1e293b;
 }
 
-/* H2 mode sombre */
+/* =========================
+   H2 et H5 EN MODE SOMBRE
+========================= */
 body.dark-mode h2 {
+    color: #38bdf8;
+}
+
+body.dark-mode h5 {
     color: #38bdf8;
 }
