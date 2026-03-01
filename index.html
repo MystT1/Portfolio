@@ -14,10 +14,9 @@
     <!-- Polices Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Ton fichier CSS -->
+    <!-- CSS Séparé -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
     <!-- NAVBAR -->
@@ -36,7 +35,7 @@
                     <li class="nav-item"><a class="bouton" href="#stages">Stages</a></li>
                     <li class="nav-item"><a class="bouton" href="#projets">Projets</a></li>
                     <li class="nav-item"><a class="bouton" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><button id="darkModeToggle" class="btn btn-light btn-sm ms-2">🌙 Mode Sombre</button></li>
+                    <li class="nav-item"><a class="bouton" href="#veille">Veille</a></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +43,7 @@
 
     <!-- HEADER -->
     <header class="header" id="accueil">
-        <div class="container text-center">
+        <div class="container">
             <h1>Étudiant BTS SIO - SISR Hugo, Administrateur Réseaux & Systèmes</h1>
             <p class="lead">Portfolio années 2025 - 2026 | BTS SIO</p>
         </div>
@@ -55,8 +54,7 @@
         <div class="container text-center">
             <h2>👋 Mon Profil</h2>
             <div class="timeline-content card p-3 shadow-sm mx-auto" style="max-width: 800px;">
-                <p>Je suis étudiant au lycée Félix le Dantec dans le BTS SIO option SISR. J'aime travailler
-                en équipe et j'ai plusieurs qualités : perfectionnisme, curiosité et dynamisme.</p>
+                <p>Je suis étudiant au lycée Félix le Dantec dans le BTS SIO option SISR. J'aime travailler en équipe et j'ai plusieurs qualités : perfectionnisme, curiosité et dynamisme.</p>
             </div>
             <a href="assets/documents/Cv Hugo 2026.pdf" download class="btn btn-light btn-lg mt-4 shadow-lg">
                 Télécharger mon CV (PDF) 💾
@@ -80,33 +78,33 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
-                        <h5>Première année en BTS SIO</h5>
-                        <div class="timeline-date">Année 2023-2024</div>
-                        <p>BTS SIO avec choix SISR</p>
+                        <h5>Première année BTS SIO</h5>
+                        <div class="timeline-date">2023 - 2024</div>
+                        <p>Option SISR</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
-                        <h5>Deuxième année en BTS SIO</h5>
+                        <h5>Deuxième année BTS SIO</h5>
                         <div class="timeline-date">2024 - 2025</div>
-                        <p>BTS SIO SISR</p>
+                        <p>Option SISR</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMPETENCES TABLEAU PDF -->
+    <!-- COMPETENCES -->
     <section class="table-section" id="experience">
         <section class="glass-window">
             <div class="glass-window__header">
-                <h2 class="text-center" id="experience">Tableau de Synthèse</h2>
+                <h2 class="text-center">📊 Tableau de Synthèse</h2>
             </div>
             <div class="pdf-viewer">
                 <iframe 
                     src="./assets/documents/Tableau de synthese - Epreuve E5 - BTS SIO 2026.pdf#zoom=page-fit"
-                    title="Tableau PDF"
+                    title="Tableau Synthèse"
                     loading="lazy">
                 </iframe>
             </div>
@@ -118,7 +116,6 @@
         <div class="container">
             <h2 class="text-center">💼 Stages</h2>
             <div class="timeline">
-                <!-- Stage 1ère année -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
@@ -126,27 +123,24 @@
                         <p>LTC - Lannion Trégor Communauté</p>
                         <h5 class="mt-3">Projet Kiosk Intranet</h5>
                         <p>Développement d'une interface simplifiée.</p>
-                        <img src="assets/images/Capture d'écran 2025-11-20 084844.png"
-                             class="img-fluid rounded shadow-sm mt-3"
-                             alt="Projet Kiosk Intranet">
+                        <img src="assets/images/Capture d'écran 2025-11-20 084844.png" class="img-fluid rounded shadow-sm mt-3" alt="Projet Kiosk Intranet">
                     </div>
                 </div>
-
-                <!-- Stage 2ème année -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
                         <h5>Stage 2ème année</h5>
-                        <p>Projet principal : mise en place d'un serveur de supervision d'appareil mobile (Mobile Device Manager Plus). Création de procédures d'enrôlement et configuration de l'interface web pour tous les services nécessaires au MDM.</p>
+                        <p>Mise en place d'un serveur de supervision de mobiles avec Mobile Device Manager Plus, procédures d’enrôlement et configuration de l’interface web.</p>
                     </div>
                     <div class="timeline-content card p-3 shadow-sm">
-                        <p>Projets secondaires :</p>
-                        <ul>
-                            <li>Référencement du parc informatique</li>
-                            <li>Création d'ateliers pour les agents de LTC</li>
-                            <li>Animation des ateliers</li>
-                            <li>Gestion de tickets et ajout d'un plugin "champs supplémentaires" sur GLPI</li>
-                        </ul>
+                        <p>Projets secondaires :
+                            <ul>
+                                <li>Référencement du parc informatique</li>
+                                <li>Création d'ateliers pour les agents de LTC</li>
+                                <li>Animation des ateliers Linux</li>
+                                <li>Gestion des tickets GLPI avec plugin "champs supplémentaires"</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -158,56 +152,31 @@
         <div class="container">
             <h2 class="text-center">💻 Projets</h2>
             <div class="row">
-                <!-- Projet Egnaro -->
                 <div class="col-md-6 mb-4">
                     <div class="card project-card">
-                        <img src="assets/images/image ap 1.png" class="card-img-top">
+                        <img src="assets/images/image ap 1.png" class="card-img-top" alt="Projet Egnaro">
                         <div class="card-body">
                             <h5>Projet Egnaro</h5>
-                            <p>Création d’un réseau pour l’entreprise fictive Egnaro : 2 routeurs, 1 switch administrable, 1 switch non administrable, un client léger Axel, un point d’accès WiFi, 6 machines virtuelles : 3 serveurs Web apache2, un RDP, un serveur DHCP et un client.</p>
+                            <p>Création d'un réseau pour l'entreprise fictive Egnaro : 2 routeurs, 2 switches, client léger Axel, point d'accès WiFi, 6 machines virtuelles dont 3 serveurs Web avec Apache2, un RDP, un serveur DHCP et un client.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Projet Geltram -->
                 <div class="col-md-6 mb-4">
                     <div class="card project-card">
-                        <img src="assets/images/Capture d'écran 2025-11-20 124638.png" class="card-img-top">
+                        <img src="assets/images/Capture d'écran 2025-11-20 124638.png" class="card-img-top" alt="Projet Geltram">
                         <div class="card-body">
                             <h5>Projet Geltram</h5>
-                            <p>Infrastructure complète répartie sur 3 VLANs : serveur WEB, HoneyPot, WSUS, AD avec DNS/DHCP, Wiki, GLPI, FOG, PfSense + Snort.</p>
+                            <p>Infrastructure complète pour entreprise : serveur WEB, HoneyPot, WSUS, AD avec DNS/DHCP, Wiki, GLPI, FOG, PfSense + Snort répartis sur 3 VLANs.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Projet GSB -->
                 <div class="col-md-12 mb-4">
                     <div class="card project-card">
-                        <img src="assets/documents/p3a.png" class="card-img-top">
-                        <img src="assets/documents/p3b.png" class="card-img-top">
+                        <img src="assets/documents/p3a.png" class="card-img-top" alt="Projet GSB 1">
+                        <img src="assets/documents/p3b.png" class="card-img-top" alt="Projet GSB 2">
                         <div class="card-body">
                             <h5>Projet GSB</h5>
-                            <p>Galaxy Swiss Bourdin : haute disponibilité et réplication des services. Répartition de charge, défense en profondeur, supervision, gestion des logs et alertes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projet création site Web individuel -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5>Projet création de site Web</h5>
-                            <p>Création d'un site Web avec HTML, CSS, Bootstrap et un peu de Javascript pour rendre le site interactif. Intégré dans le projet réseau pour consultation depuis le site de l'entreprise.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projet création site Web en groupe -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5>Projet création de site Web en groupe</h5>
-                            <p>Amélioration d’un site web existant en groupe. Définition d’un cahier des charges et contact avec le propriétaire pour validation des modifications.</p>
+                            <p>Projet Galaxy Swiss Bourdin (GSB) : haute disponibilité, réplication de services, défense en profondeur, supervision, gestion des logs, alertes et réponses aux incidents, VPN, Bastion, téléphonie IP.</p>
                         </div>
                     </div>
                 </div>
@@ -218,56 +187,39 @@
     <!-- CERTIFICATIONS -->
     <section class="section bg-light-gray" id="certifications">
         <div class="container">
-            <h2 class="text-center">📜 Certifications</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>Certification atelier RGPD</h5>
-                        <p>Obtention : 2023</p>
-                        <a href="assets/documents/Certificat_.pdf" download class="btn btn-violet btn-sm mt-2">
-                            Télécharger le certificat
-                        </a>
+            <h2 class="text-center">🎖️ Certifications</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 shadow-sm text-center">
+                        <h5>CCNA Routing & Switching</h5>
+                        <p>Certification Cisco sur les réseaux.</p>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>Certification atelier RGPD</h5>
-                        <p>Obtention : 2023</p>
-                        <a href="assets/documents/Attestation_de_suivi.pdf" download class="btn btn-violet btn-sm mt-2">
-                            Télécharger le certificat
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>Certification atelier RGPD</h5>
-                        <p>Obtention : 2024</p>
-                        <a href="assets/documents/Certificat_DPO et les outils de la conformité.pdf" download class="btn btn-violet btn-sm mt-2">
-                            Télécharger le certificat
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>Certification atelier RGPD</h5>
-                        <p>Obtention : 2023</p>
-                        <a href="assets/documents/Certificat_resposabilité des acteurs.pdf" download class="btn btn-violet btn-sm mt-2">
-                            Télécharger le certificat
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>Certification MOOC SecNumacadémie</h5>
-                        <p>Obtention : 2024</p>
-                        <a href="assets/documents/X5EWIootym34PL3u4e92w7r8Y24ivIQqR5g3wRj2AwopTtXcyM9btrb0lCsW_161817_01032026.pdf" download class="btn btn-violet btn-sm mt-2">
-                            Télécharger le certificat
-                        </a>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 shadow-sm text-center">
+                        <h5>Microsoft Azure Fundamentals</h5>
+                        <p>Certification Cloud Microsoft.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- VEILLE TECHNOLOGIQUE -->
+    <section class="section" id="veille">
+        <div class="container">
+            <h2 class="text-center">🧠 Veille Technologique</h2>
+            <p>Je suis les dernières tendances IT et cybersécurité grâce à des sources comme :</p>
+            <ul>
+                <li>Microonde (YouTube)</li>
+                <li>Micro Tique (YouTube)</li>
+                <li>Cookie Connecté (YouTube)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BOUTON MODE SOMBRE -->
+    <button class="btn btn-violet mode-btn" id="modeToggle">🌙 Mode Sombre</button>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -277,13 +229,12 @@
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JS Mode Sombre -->
+    <!-- JS Mode sombre -->
     <script>
-        const toggle = document.getElementById('darkModeToggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
+        const toggleBtn = document.getElementById('modeToggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
         });
     </script>
-
 </body>
 </html>
