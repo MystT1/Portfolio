@@ -310,3 +310,10 @@ body.dark-mode .btn-outline-light:hover {
     background: #38bdf8;
     color: #1e293b;
 }
+
+/* =========================
+   H2 EN MODE SOMBRE
+========================= */
+body.dark-mode h2 {
+    color: #38bdf8;
+}
