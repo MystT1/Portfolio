@@ -1,193 +1,72 @@
-:root {
-    --bs-violet: #9333ea;
-    --bs-cyan: #22d3ee;
-    --bs-dark-gray: #1f2937;
-    --bs-light-gray: #f8f9fa;
-    --bs-text-color: #333;
-}
-
 body {
-    font-family: 'Open Sans', sans-serif;
-    padding-top: 56px;
-    background: #fff;
-    color: var(--bs-text-color);
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: var(--bs-dark-gray);
+/* Sections */
+.section-padding {
+    padding: 80px 0;
 }
 
-.bg-violet { background: var(--bs-violet) !important; }
-.text-violet { color: var(--bs-violet); }
-
-.section { padding: 80px 0; }
-
-/* ================= HEADER ================= */
-
-.header {
-    background: linear-gradient(45deg, var(--bs-violet), var(--bs-cyan));
+/* Hero */
+.hero {
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #8c2fd8, #1cc88a);
     color: white;
-    padding: 120px 0 80px;
     text-align: center;
 }
 
-.header h1 { font-size: 3.5rem; }
-
-/* ================= NAV ================= */
-
-.bouton {
-    color: rgba(255,255,255,0.8);
-    padding: .5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-}
-.bouton:hover {
-    color: #fff;
-    background: rgba(255,255,255,0.1);
+/* Bouton personnalisé */
+.btn-custom {
+    background: #7b39e6;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: none;
 }
 
-/* ================= PHOTO PROFIL ================= */
-
-.profile-img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid var(--bs-violet);
+.btn-custom:hover {
+    background: #8c2ed9;
+    color: white;
 }
 
-/* ================= TIMELINE DESKTOP ================= */
-
-.timeline {
-    position: relative;
-    margin: 0 auto;
-    max-width: 1200px;
+/* Cartes */
+.card {
+    border: none;
+    border-radius: 15px;
 }
 
-.timeline::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 4px;
-    background: var(--bs-violet);
-    top: 0;
-    bottom: 0;
+/* Footer */
+footer {
+    padding: 20px;
 }
 
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 0 40px;
-    margin-bottom: 50px;
+/* ===== MODE SOMBRE ===== */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
 }
 
-.timeline-item:nth-child(even) {
-    left: 50%;
+.dark-mode .navbar {
+    background-color: #000 !important;
 }
 
-.timeline-dot {
-    position: absolute;
-    top: 30px;
-    width: 16px;
-    height: 16px;
-    background: var(--bs-violet);
-    border-radius: 50%;
+.dark-mode .bg-light {
+    background-color: #1a1a1a !important;
 }
 
-.timeline-item:nth-child(odd) .timeline-dot {
-    right: -8px;
+.dark-mode footer {
+    background-color: #000 !important;
 }
 
-.timeline-item:nth-child(even) .timeline-dot {
-    left: -8px;
-}
-
-/* ================= TIMELINE MOBILE ================= */
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-
-    .timeline {
-        padding-left: 20px;
+    .hero {
+        padding: 80px 15px;
     }
-
-    .timeline::after {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding: 0 15px 0 40px;
-        left: 0 !important;
-        text-align: left !important;
-        margin-bottom: 40px;
-    }
-
-    .timeline-dot {
-        left: 12px !important;
-        right: auto !important;
-        top: 25px;
-    }
-}
-
-/* ================= CARDS PROJETS ================= */
-
-.project-card {
-    border: none;
-    border-radius: 10px;
-    transition: .3s;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,.15);
-}
-
-/* ================= PDF TABLEAU ================= */
-
-.table-section {
-    width: 100%;
-    display: block;
-}
-
-.glass-window {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.pdf-viewer {
-    width: 100%;
-    display: block;
-    padding: 2rem 0;
-}
-
-.pdf-viewer iframe {
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 95vw;
-    max-width: 1400px;
-    height: 85vh;
-    border: none;
-}
-
-/* ================= FOOTER ================= */
-
-.footer {
-    background: var(--bs-dark-gray);
-    padding: 30px 0;
-    color: white;
-    text-align: center;
-}
-
-.footer a {
-    color: var(--bs-cyan);
 }
