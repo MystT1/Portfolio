@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Hugo - Administrateur Systèmes & Réseaux</title>
 
     <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%239333ea' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%239333ea' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z'/%3E%3C/svg%3E">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Polices Google -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS personnalisé -->
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- AOS animations -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-violet fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Hugo</a>
+            <a class="navbar-brand" href="#">Hugo</a>
+            <button class="btn btn-sm btn-light me-2" id="toggle-dark">🌙 Mode sombre</button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="bouton" href="#accueil">Accueil</a></li>
@@ -43,42 +38,37 @@
                     <li class="nav-item"><a class="bouton" href="#experience">Compétences</a></li>
                     <li class="nav-item"><a class="bouton" href="#stages">Stages</a></li>
                     <li class="nav-item"><a class="bouton" href="#projets">Projets</a></li>
-                    <li class="nav-item ms-3">
-                        <button onclick="toggleDarkMode()" class="btn btn-outline-light btn-sm">🌙</button>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- HEADER -->
-    <header class="header text-center" id="accueil">
-        <div class="container">
-            <h1 data-aos="fade-up">Étudiant BTS SIO - SISR Hugo, Administrateur Réseaux & Systèmes</h1>
-            <p class="lead mt-3" data-aos="fade-up" data-aos-delay="200">Portfolio années 2025 - 2026 | BTS SIO</p>
+    <header class="header" id="accueil">
+        <div class="container text-center" data-aos="fade-up">
+            <h1>Étudiant BTS SIO - SISR Hugo, Administrateur Réseaux & Systèmes</h1>
+            <p class="lead">Portfolio années 2025 - 2026 | BTS SIO</p>
         </div>
     </header>
 
     <!-- PROFIL -->
-    <section class="section text-center" id="présentation" data-aos="fade-up">
-        <div class="container">
+    <section class="section" id="présentation">
+        <div class="container text-center" data-aos="fade-up">
             <h2>👋 Mon Profil</h2>
-            <div class="timeline-content card p-3 shadow-sm mx-auto mt-4" style="max-width: 800px;">
-                <p>Je suis étudiant au lycée Félix Le Dantec dans le BTS SIO option SISR.
-                    J'aime travailler en équipe et j'ai plusieurs qualités : perfectionnisme,
-                    curiosité et dynamisme.</p>
+            <div class="timeline-content card p-3 shadow-sm mx-auto" style="max-width: 800px;">
+                <p>Je suis étudiant au lycée Félix le Dantec dans le BTS SIO option SISR. J'aime travailler en équipe et j'ai plusieurs qualités : perfectionnisme, curiosité et dynamisme.</p>
             </div>
-            <a href="assets/documents/Cv Hugo 2026.pdf" download
-                class="btn btn-light btn-lg mt-4 shadow-lg">Télécharger mon CV (PDF) 💾</a>
+            <a href="assets/documents/Cv Hugo 2026.pdf" download class="btn btn-light btn-lg mt-4 shadow-lg">
+                Télécharger mon CV (PDF) 💾
+            </a>
         </div>
     </section>
 
     <!-- FORMATION -->
     <section class="section bg-light-gray" id="parcours_scolaire" data-aos="fade-up">
         <div class="container">
-            <h2 class="text-center mb-5">🎒 Parcours de Formation</h2>
+            <h2 class="text-center">🎒 Parcours de Formation</h2>
             <div class="timeline">
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
@@ -87,38 +77,34 @@
                         <p>Lycée Félix Le Dantec</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
-                        <h5>Première année en BTS SIO</h5>
+                        <h5>Première année BTS SIO SISR</h5>
                         <div class="timeline-date">2023 - 2024</div>
-                        <p>BTS SIO avec choix SISR</p>
+                        <p>BTS SIO option SISR</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
-                        <h5>Deuxième année en BTS SIO</h5>
+                        <h5>Deuxième année BTS SIO SISR</h5>
                         <div class="timeline-date">2024 - 2025</div>
-                        <p>BTS SIO SISR</p>
+                        <p>BTS SIO option SISR</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- COMPETENCES PDF -->
+    <!-- COMPETENCES -->
     <section class="table-section" id="experience" data-aos="fade-up">
         <section class="glass-window">
-            <div class="glass-window__header text-center">
-                <h2>Tableau de Synthese</h2>
+            <div class="glass-window__header">
+                <h2 class="text-center">Tableau de Synthèse</h2>
             </div>
             <div class="pdf-viewer">
-                <iframe src="./assets/documents/Tableau de synthese - Epreuve E5 - BTS SIO 2026.pdf#zoom=page-fit"
-                    title="Tab PDF" loading="lazy"></iframe>
+                <iframe src="./assets/documents/Tableau de synthese - Epreuve E5 - BTS SIO 2026.pdf#zoom=page-fit" title="Tableau PDF" loading="lazy"></iframe>
             </div>
         </section>
     </section>
@@ -126,8 +112,7 @@
     <!-- STAGES -->
     <section class="section bg-light-gray" id="stages" data-aos="fade-up">
         <div class="container">
-            <h2 class="text-center mb-5">💼 Stages</h2>
-
+            <h2 class="text-center">💼 Stages</h2>
             <div class="timeline">
 
                 <!-- Stage 1ère année -->
@@ -137,9 +122,8 @@
                         <h5>Stage 1ère année</h5>
                         <p>LTC - Lannion Trégor Communauté</p>
                         <h5 class="mt-3">Projet Kiosk Intranet</h5>
-                        <p>Développement d'une interface simplifiée.</p>
-                        <img src="assets/images/Capture d'écran 2025-11-20 084844.png" class="img-fluid rounded shadow-sm mt-3"
-                            alt="Projet Kiosk Intranet">
+                        <p>Développement d'une interface simplifiée pour les agents.</p>
+                        <img src="assets/images/Capture d'écran 2025-11-20 084844.png" class="img-fluid rounded shadow-sm mt-3" alt="Projet Kiosk Intranet">
                     </div>
                 </div>
 
@@ -148,16 +132,8 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card p-3 shadow-sm">
                         <h5>Stage 2ème année</h5>
-                        <p>Projet principal : mise en place d'un serveur de supervision d'appareil mobile.
-                            Configuration MDM et procédures d'enrôlement.</p>
-                    </div>
-                    <div class="timeline-content card p-3 shadow-sm">
-                        <p>Projet secondaire :</p>
-                        <ul>
-                            <li>Référencement du parc informatique</li>
-                            <li>Création et animation d'ateliers Linux</li>
-                            <li>Gestion des tickets et plugin "champs supplémentaires" sur GLPI</li>
-                        </ul>
+                        <p>Principale : mise en place d'un serveur de supervision Mobile Device Manager Plus. Création de procédures d'enrôlement et configuration complète de l'interface web.</p>
+                        <p>Secondaire : référencement du parc informatique, création d'atelier pour les agents de LTC, animation des ateliers, gestion de tickets GLPI et ajout d'un plugin "champs supplémentaires".</p>
                     </div>
                 </div>
 
@@ -168,36 +144,64 @@
     <!-- PROJETS -->
     <section class="section" id="projets" data-aos="fade-up">
         <div class="container">
-            <h2 class="text-center mb-5">💻 Projets</h2>
+            <h2 class="text-center">💻 Projets</h2>
             <div class="row">
 
+                <!-- Projet EGNARO -->
                 <div class="col-md-6 mb-4">
-                    <div class="card project-card">
+                    <div class="card project-card" data-aos="fade-up">
                         <img src="assets/images/image ap 1.png" class="card-img-top" alt="Projet Egnaro">
                         <div class="card-body">
                             <h5>Projet Egnaro</h5>
-                            <p>Création d’un réseau complet pour l'entreprise fictive Egnaro : 2 routeurs, 2 switches, 1 client léger, 1 WiFi, 6 VM dont 3 serveurs web, RDP et DHCP.</p>
+                            <p>Premier projet BTS SIO SISR : Création d’un réseau pour l’entreprise fictive Egnaro.  
+                            Infrastructure : 2 routeurs, 1 switch administrable, 1 switch non administrable, client léger Axel, point d’accès WiFi, 6 machines virtuelles : 3 serveurs Web Apache2, RDP, DHCP et client.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Projet GELTRAM -->
                 <div class="col-md-6 mb-4">
-                    <div class="card project-card">
+                    <div class="card project-card" data-aos="fade-up">
                         <img src="assets/images/Capture d'écran 2025-11-20 124638.png" class="card-img-top" alt="Projet Geltram">
                         <div class="card-body">
                             <h5>Projet Geltram</h5>
-                            <p>Infrastructure complète avec Active Directory, VLAN, sauvegardes, GLPI, FOG, PfSense + Snort pour une entreprise simulée.</p>
+                            <p>Deuxième projet BTS SIO SISR : création d’une infrastructure globale pour une entreprise fictive.  
+                            Comprend plusieurs serveurs, clients et services répartis dans 3 VLANs. Serveurs WEB, HoneyPot, WSUS, AD avec DNS/DHCP, Wiki, GLPI, FOG, PfSense + Snort.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Projet GSB Partie 1 -->
                 <div class="col-md-12 mb-4">
-                    <div class="card project-card">
-                        <img src="assets/documents/p3a.png" class="card-img-top" alt="GSB Part 1">
-                        <img src="assets/documents/p3b.png" class="card-img-top" alt="GSB Part 2">
+                    <div class="card project-card" data-aos="fade-up">
+                        <img src="assets/documents/p3a.png" class="card-img-top" alt="Projet GSB - Haute disponibilité">
+                        <img src="assets/documents/p3b.png" class="card-img-top" alt="Projet GSB - Supervision">
                         <div class="card-body">
                             <h5>Projet GSB</h5>
-                            <p>Galaxy Swiss Bourdin : haute disponibilité, réplication SQL, supervision et défense en profondeur.</p>
+                            <p>Projet BTS SIO SISR : Galaxy Swiss Bourdin.  
+                            Partie 1 : haute disponibilité et réplication des services SQL, DNS, WEB, protection DDOS, confidentialité avec autorité de certification.  
+                            Partie 2 : répartition de charge, défense en profondeur, supervision, gestion des logs et alertes incidents.  
+                            Partie 3 : authentification, VPN, bastion administration, téléphonie IP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet création site web -->
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card" data-aos="fade-up">
+                        <div class="card-body">
+                            <h5>Création de site Web</h5>
+                            <p>Premier projet BTS SIO développement : création d’un site web responsive avec HTML, CSS, Bootstrap et un peu de JS pour l’interactivité. Intégration dans l’infrastructure réseau pour consultation en entreprise.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet amélioration site web -->
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card" data-aos="fade-up">
+                        <div class="card-body">
+                            <h5>Amélioration site Web en groupe</h5>
+                            <p>Deuxième projet BTS SIO développement : amélioration d’un site existant proposé par un élève volontaire, travail en groupe, cahier des charges établi, retour au propriétaire du site.</p>
                         </div>
                     </div>
                 </div>
@@ -207,23 +211,29 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <p>Email : <a href="mailto:hleflem.ledantec@gmail.com">hleflem.ledantec@gmail.com</a></p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Script interne pour mode sombre et AOS -->
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
+        // Mode sombre
+        const toggleDark = document.getElementById('toggle-dark');
+        toggleDark.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggleDark.textContent = document.body.classList.contains('dark') ? '☀️ Mode clair' : '🌙 Mode sombre';
         });
 
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
+        // AOS initialization
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 
 </body>
