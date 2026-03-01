@@ -3,6 +3,7 @@
 ========================= */
 :root {
     --bs-violet: #9333ea;
+    --bs-violet-dark: #6b21a8;
     --bs-cyan: #22d3ee;
     --bs-dark-gray: #1f2937;
     --bs-light-gray: #f8f9fa;
@@ -31,6 +32,12 @@ h1, h2, h3, h4, h5 {
 /* =========================
    NAVBAR
 ========================= */
+
+/* Navbar violet par défaut */
+.bg-violet {
+    background-color: var(--bs-violet) !important;
+}
+
 .navbar {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -218,19 +225,6 @@ h1, h2, h3, h4, h5 {
 }
 
 /* =========================
-   ANIMATIONS
-========================= */
-[data-aos] {
-    opacity: 0;
-    transition-property: opacity, transform;
-    transition-duration: 1s;
-}
-
-[data-aos].aos-animate {
-    opacity: 1;
-}
-
-/* =========================
    BOUTON MODE SOMBRE
 ========================= */
 .btn-outline-light {
@@ -269,9 +263,10 @@ body.dark-mode .bg-light-gray {
     background: #0f172a;
 }
 
-body.dark-mode .navbar {
-    background: #111827 !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+/* Navbar plus sombre en dark mode */
+body.dark-mode .navbar.bg-violet {
+    background-color: var(--bs-violet-dark) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
 body.dark-mode .card {
