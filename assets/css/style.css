@@ -3,7 +3,7 @@
 ========================= */
 :root {
     --bs-violet: #9333ea;
-    --bs-violet-dark: #6b21a8; /* pour dark mode */
+    --bs-violet-dark: #7c3aed; /* violet plus clair pour dark mode */
     --bs-cyan: #22d3ee;
     --bs-dark-gray: #1f2937;
     --bs-light-gray: #f8f9fa;
@@ -22,7 +22,7 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-h1,h2,h3,h4,h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: var(--bs-dark-gray);
@@ -34,9 +34,11 @@ h1,h2,h3,h4,h5 {
 .navbar {
     transition: background 0.3s;
 }
+
 .bg-violet {
     background-color: var(--bs-violet) !important;
 }
+
 .bouton {
     color: rgba(255,255,255,0.8);
     padding: 0.5rem 1rem;
@@ -44,6 +46,7 @@ h1,h2,h3,h4,h5 {
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
 }
+
 .bouton:hover {
     color: #fff;
     background: rgba(255,255,255,0.1);
@@ -58,6 +61,7 @@ h1,h2,h3,h4,h5 {
     padding: 120px 0 80px;
     text-align: center;
 }
+
 .header h1 {
     font-size: 3rem;
 }
@@ -68,74 +72,241 @@ h1,h2,h3,h4,h5 {
 .section {
     padding: 80px 0;
 }
-.bg-light-gray { background: var(--bs-light-gray); }
+
+.bg-light-gray {
+    background: var(--bs-light-gray);
+}
 
 /* =========================
    TIMELINE
 ========================= */
-.timeline { position: relative; margin: 0 auto; max-width: 1200px; }
-.timeline::after { content: ''; position: absolute; left:50%; width:4px; background: var(--bs-violet); top:0; bottom:0; }
-.timeline-item { position: relative; width:50%; padding:0 40px; margin-bottom:50px; }
-.timeline-item:nth-child(odd){ left:0; text-align:right; }
-.timeline-item:nth-child(even){ left:50%; }
-.timeline-dot { position:absolute; top:30px; width:16px; height:16px; background: var(--bs-violet); border-radius:50%; }
-.timeline-item:nth-child(odd) .timeline-dot { right:-8px; }
-.timeline-item:nth-child(even) .timeline-dot { left:-8px; }
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: var(--bs-violet);
+    top: 0;
+    bottom: 0;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 40px;
+    margin-bottom: 50px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    background: var(--bs-violet);
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -8px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px;
+}
 
 /* MOBILE TIMELINE */
-@media (max-width:768px){
-  .timeline::after{ left:20px; }
-  .timeline-item{ width:100%; padding:0 15px 0 40px !important; left:0 !important; text-align:left !important; margin-bottom:40px; }
-  .timeline-dot{ left:12px !important; right:auto !important; top:25px; }
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 0 15px 0 40px !important;
+        left: 0 !important;
+        text-align: left !important;
+        margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+        left: 12px !important;
+        right: auto !important;
+        top: 25px;
+    }
 }
 
 /* =========================
    CARDS PROJETS
 ========================= */
-.project-card { border:none; border-radius:10px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,.08);}
-.project-card:hover { transform: translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,.15); }
+.project-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
 
 /* =========================
    PDF TABLEAU
 ========================= */
-.table-section { width:100%; }
-.glass-window { width:100%; max-width:1600px; margin:0 auto; }
-.pdf-viewer { width:100%; display:block; padding:2rem 0; }
-.pdf-viewer iframe { display:block !important; margin:0 auto !important; width:95vw; max-width:1400px; height:85vh; border:none; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+.table-section {
+    width: 100%;
+}
+
+.glass-window {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.pdf-viewer {
+    width: 100%;
+    display: block;
+    padding: 2rem 0;
+}
+
+.pdf-viewer iframe {
+    display: block !important;
+    margin: 0 auto !important;
+    width: 95vw;
+    max-width: 1400px;
+    height: 85vh;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
 /* =========================
    FOOTER
 ========================= */
-.footer { background: var(--bs-dark-gray); padding:30px 0; color: var(--bs-text-light); text-align:center; }
-.footer a { color: var(--bs-cyan); transition:color 0.3s; }
-.footer a:hover{ color: var(--bs-violet); }
+.footer {
+    background: var(--bs-dark-gray);
+    padding: 30px 0;
+    color: var(--bs-text-light);
+    text-align: center;
+}
+
+.footer a {
+    color: var(--bs-cyan);
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--bs-violet);
+}
 
 /* =========================
    BOUTON MODE SOMBRE
 ========================= */
-.btn-outline-light{ border-color: var(--bs-light-gray); color: var(--bs-light-gray); }
-.btn-outline-light:hover{ background-color: var(--bs-violet); border-color: var(--bs-violet); color:white; }
+.btn-outline-light {
+    border-color: var(--bs-light-gray);
+    color: var(--bs-light-gray);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--bs-violet);
+    border-color: var(--bs-violet);
+    color: white;
+}
 
 /* =========================
    ANIMATIONS
 ========================= */
-[data-aos]{ opacity:0; transition-property: opacity, transform; transition-duration:1s; }
-[data-aos].aos-animate{ opacity:1; }
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
 
 /* =========================
-   MODE SOMBRE
+   MODE SOMBRE OPTIMISÉ
 ========================= */
-body.dark-mode{ background:#0f172a; color:#e5e7eb; }
-body.dark-mode .navbar.bg-violet{ background-color:var(--bs-violet-dark) !important; box-shadow:0 4px 15px rgba(0,0,0,0.6);}
-body.dark-mode .section{ background:#111827; }
-body.dark-mode .bg-light-gray{ background:#0f172a; }
-body.dark-mode .card{ background:#1e293b; color:#e5e7eb; box-shadow:0 8px 20px rgba(0,0,0,0.5);}
-body.dark-mode .timeline::after{ background: var(--bs-cyan); }
-body.dark-mode .timeline-dot{ background: var(--bs-cyan); }
-body.dark-mode .project-card:hover{ box-shadow:0 12px 25px rgba(0,0,0,0.6);}
-body.dark-mode .pdf-viewer iframe{ border:1px solid #334155; box-shadow:0 8px 25px rgba(0,0,0,0.6);}
-body.dark-mode .footer{ background:#0f172a; }
-body.dark-mode a{ color: var(--bs-cyan);}
-body.dark-mode a:hover{ color: var(--bs-violet);}
-body.dark-mode .btn-outline-light{ border-color: var(--bs-cyan); color: var(--bs-cyan);}
-body.dark-mode .btn-outline-light:hover{ background: var(--bs-cyan); color:#0f172a;}
+body.dark-mode {
+    background: #1e293b; /* bleu foncé doux */
+    color: #f1f5f9; /* texte clair */
+}
+
+body.dark-mode .navbar.bg-violet {
+    background-color: #7c3aed; /* violet plus clair */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .section {
+    background: #1e293b;
+}
+
+body.dark-mode .bg-light-gray {
+    background: #1e293b;
+}
+
+body.dark-mode .card {
+    background: #2c2f42;
+    color: #f1f5f9;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .timeline::after {
+    background: #38bdf8; /* cyan plus lumineux */
+}
+
+body.dark-mode .timeline-dot {
+    background: #38bdf8;
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .pdf-viewer iframe {
+    border: 1px solid #334155;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .footer {
+    background: #1e293b;
+}
+
+body.dark-mode a {
+    color: #38bdf8;
+}
+
+body.dark-mode a:hover {
+    color: #7c3aed;
+}
+
+body.dark-mode .btn-outline-light {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+body.dark-mode .btn-outline-light:hover {
+    background: #38bdf8;
+    color: #1e293b;
+}
