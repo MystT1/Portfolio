@@ -3,7 +3,7 @@
 ========================= */
 :root {
     --bs-violet: #9333ea;
-    --bs-violet-dark: #6b21a8;
+    --bs-violet-dark: #6b21a8; /* violet plus foncé pour dark mode */
     --bs-cyan: #22d3ee;
     --bs-dark-gray: #1f2937;
     --bs-light-gray: #f8f9fa;
@@ -19,35 +19,34 @@ body {
     padding-top: 56px;
     background: var(--bs-light-gray);
     color: var(--bs-text-color);
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s, color 0.3s;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: var(--bs-dark-gray);
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 /* =========================
    NAVBAR
 ========================= */
+.navbar {
+    transition: background 0.3s;
+}
 
-/* Navbar violet par défaut */
+/* Violet normal */
 .bg-violet {
     background-color: var(--bs-violet) !important;
 }
 
-.navbar {
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
 .bouton {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.8);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s, color 0.3s;
 }
 
 .bouton:hover {
@@ -67,7 +66,6 @@ h1, h2, h3, h4, h5 {
 
 .header h1 {
     font-size: 3rem;
-    color: white;
 }
 
 /* =========================
@@ -75,7 +73,6 @@ h1, h2, h3, h4, h5 {
 ========================= */
 .section {
     padding: 80px 0;
-    transition: background 0.3s ease;
 }
 
 .bg-light-gray {
@@ -156,22 +153,18 @@ h1, h2, h3, h4, h5 {
 }
 
 /* =========================
-   CARDS
+   CARDS PROJETS
 ========================= */
-.card {
-    border: none;
-    border-radius: 12px;
-    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
 .project-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0,0,0,.15);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
 }
 
 /* =========================
@@ -200,9 +193,8 @@ h1, h2, h3, h4, h5 {
     max-width: 1400px;
     height: 85vh;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
 }
 
 /* =========================
@@ -217,7 +209,7 @@ h1, h2, h3, h4, h5 {
 
 .footer a {
     color: var(--bs-cyan);
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .footer a:hover {
@@ -239,22 +231,33 @@ h1, h2, h3, h4, h5 {
 }
 
 /* =========================
-   MODE SOMBRE COMPLET
+   ANIMATIONS
 ========================= */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+}
 
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* =========================
+   MODE SOMBRE
+========================= */
 body.dark-mode {
     background: #0f172a;
     color: #e5e7eb;
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5 {
-    color: #ffffff;
+/* Navbar plus sombre */
+body.dark-mode .navbar.bg-violet {
+    background-color: var(--bs-violet-dark) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
+/* Sections */
 body.dark-mode .section {
     background: #111827;
 }
@@ -263,18 +266,14 @@ body.dark-mode .bg-light-gray {
     background: #0f172a;
 }
 
-/* Navbar plus sombre en dark mode */
-body.dark-mode .navbar.bg-violet {
-    background-color: var(--bs-violet-dark) !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-}
-
+/* Cards */
 body.dark-mode .card {
     background: #1e293b;
     color: #e5e7eb;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
+/* Timeline */
 body.dark-mode .timeline::after {
     background: var(--bs-cyan);
 }
@@ -287,15 +286,18 @@ body.dark-mode .project-card:hover {
     box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
+/* PDF */
 body.dark-mode .pdf-viewer iframe {
     border: 1px solid #334155;
     box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
+/* Footer */
 body.dark-mode .footer {
     background: #0f172a;
 }
 
+/* Liens */
 body.dark-mode a {
     color: var(--bs-cyan);
 }
@@ -304,6 +306,7 @@ body.dark-mode a:hover {
     color: var(--bs-violet);
 }
 
+/* Bouton dark mode */
 body.dark-mode .btn-outline-light {
     border-color: var(--bs-cyan);
     color: var(--bs-cyan);
