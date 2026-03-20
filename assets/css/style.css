@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5 {
 .bouton:hover { color: #fff; background: rgba(255,255,255,0.1); }
 
 /* =========================
-   HEADER (Fixé pour garder les couleurs)
+   HEADER (BLOQUÉ EN BLANC)
 ========================= */
 .header {
     background: linear-gradient(45deg, var(--bs-violet), var(--bs-cyan)) !important;
@@ -52,7 +52,8 @@ h1, h2, h3, h4, h5 {
     padding: 120px 0 80px;
     text-align: center;
 }
-.header h1, .header .lead {
+/* On force h1 et p en blanc même si le dark mode dit le contraire */
+.header h1, .header .lead, .header p {
     color: white !important;
 }
 
@@ -90,7 +91,7 @@ h1, h2, h3, h4, h5 {
     background: white;
 }
 .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,.15); }
-.project-card img { cursor: pointer; width: 100%; }
+.project-card img { cursor: zoom-in; width: 100%; }
 
 /* =========================
    PDF TABLEAU
