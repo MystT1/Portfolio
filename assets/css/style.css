@@ -9,6 +9,8 @@
     --bs-light-gray: #f8f9fa;
     --bs-text-color: #333;
     --bs-text-light: #fff;
+    --lightbox-bg: rgba(255, 255, 255, 0.95); /* Fond clair pour Lightbox */
+    --lightbox-text: #000;
 }
 
 /* =========================
@@ -33,6 +35,7 @@ h1, h2, h3, h4, h5 {
 ========================= */
 .navbar {
     transition: background 0.3s;
+    z-index: 1050; /* S'assure de passer au-dessus des images normales */
 }
 
 .bg-violet {
@@ -162,11 +165,86 @@ h1, h2, h3, h4, h5 {
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    overflow: hidden;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
+
+/* CURSEUR ZOOM SUR LES IMAGES PROJETS (AJOUTÉ ICI) */
+.project-card img {
+    cursor: zoom-in;
+    transition: opacity 0.3s;
+}
+
+.project-card img:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   STYLE DE LA LIGHTBOX (AJOUTÉ ICI)
+========================= */
+.modal-lightbox {
+    display: none; 
+    position: fixed;
+    z-index: 2000; /* Passe au-dessus de tout, même de la navbar */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permet le scroll si l'image est trop grande */
+    background-color: var(--lightbox-bg); /* Couleur de fond adaptable */
+    cursor: zoom-out; /* Indique qu'on ferme au clic */
+    transition: background-color 0.3s;
+}
+
+.modal-content-lightbox {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Prend 90% de la largeur de l'écran */
+    max-height: 85vh; /* Prend 85% de la hauteur de l'écran */
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: zoomAnim 0.3s; /* Petite animation d'ouverture */
+}
+
+@keyframes zoomAnim {
+    from {transform: scale(0.7); opacity: 0;} 
+    to {transform: scale(1); opacity: 1;}
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: var(--lightbox-text);
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-lightbox:hover {
+    color: var(--bs-violet);
+}
+
+/* RESPONSIVE LIGHTBOX */
+@media (max-width: 768px) {
+    .modal-content-lightbox {
+        max-width: 95%;
+        margin-top: 50px;
+    }
+    .close-lightbox {
+        top: 10px;
+        right: 20px;
+        font-size: 50px;
+    }
 }
 
 /* =========================
@@ -233,24 +311,13 @@ h1, h2, h3, h4, h5 {
 }
 
 /* =========================
-   ANIMATIONS
-========================= */
-[data-aos] {
-    opacity: 0;
-    transition-property: opacity, transform;
-    transition-duration: 1s;
-}
-
-[data-aos].aos-animate {
-    opacity: 1;
-}
-
-/* =========================
    MODE SOMBRE OPTIMISÉ
 ========================= */
 body.dark-mode {
     background: #1e293b; /* bleu foncé doux */
     color: #f1f5f9; /* texte clair */
+    --lightbox-bg: rgba(0, 0, 0, 0.9); /* Fond noir transparent en mode sombre */
+    --lightbox-text: #fff;
 }
 
 body.dark-mode .navbar.bg-violet {
