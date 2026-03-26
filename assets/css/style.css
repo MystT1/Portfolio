@@ -1,264 +1,70 @@
-/* =========================
-   VARIABLES CSS
-========================= */
+/* VARIABLES */
 :root {
     --bs-violet: #9333ea;
-    --bs-violet-dark: #7c3aed;
     --bs-cyan: #22d3ee;
     --bs-dark-gray: #1f2937;
     --bs-light-gray: #f8f9fa;
-    --bs-text-color: #333;
-    --bs-text-light: #fff;
 }
 
-/* =========================
-   BODY & TYPOGRAPHIE
-========================= */
 body {
     font-family: 'Open Sans', sans-serif;
     padding-top: 56px;
     background: var(--bs-light-gray);
-    color: var(--bs-text-color);
-    transition: background 0.3s, color 0.3s;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: var(--bs-dark-gray);
-}
-
-/* =========================
-   NAVBAR
-========================= */
-.navbar { 
-    transition: background 0.3s; 
-    z-index: 1050; 
-}
-
-.bg-violet { 
-    background-color: var(--bs-violet) !important; 
-}
-
-.bouton {
-    color: rgba(255,255,255,0.8);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
     transition: 0.3s;
-    display: inline-block;
 }
 
-.bouton:hover { 
-    color: #fff; 
-    background: rgba(255,255,255,0.1); 
-}
+h1, h2, h5 { font-family: 'Roboto', sans-serif; font-weight: 700; color: var(--bs-dark-gray); }
 
-/* =========================
-   HEADER (BLOQUÉ EN BLANC SUR DÉGRADÉ)
-========================= */
-/* On force ces styles même en mode sombre pour la lisibilité */
-.header {
-    background: linear-gradient(45deg, var(--bs-violet), var(--bs-cyan)) !important;
-    padding: 120px 0 80px;
-    text-align: center;
-}
+/* NAVBAR */
+.bg-violet { background-color: var(--bs-violet) !important; }
+.bouton { color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; text-decoration: none; transition: 0.3s; }
+.bouton:hover { color: #fff; background: rgba(255,255,255,0.1); border-radius: 5px; }
 
-.header h1, 
-.header .lead, 
-.header p {
-    color: white !important; /* Reste blanc quoi qu'il arrive */
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
+/* HEADER */
+.header { background: linear-gradient(45deg, var(--bs-violet), var(--bs-cyan)); padding: 120px 0 80px; color: white; text-align: center; }
 
-/* =========================
-   SECTIONS & TIMELINE
-========================= */
-.section { 
-    padding: 80px 0; 
-}
+/* SECTIONS & TIMELINE */
+.section { padding: 80px 0; }
+.timeline { position: relative; max-width: 1200px; margin: 0 auto; }
+.timeline::after { content: ''; position: absolute; left: 50%; width: 4px; background: var(--bs-violet); top: 0; bottom: 0; }
+.timeline-item { position: relative; width: 50%; padding: 0 40px; margin-bottom: 50px; }
+.timeline-item:nth-child(even) { left: 50%; }
+.timeline-dot { position: absolute; top: 30px; width: 16px; height: 16px; background: var(--bs-violet); border-radius: 50%; }
 
-.bg-light-gray { 
-    background: var(--bs-light-gray); 
-}
+/* CERTIFICATIONS (NOUVEAU STYLE) */
+.certif-card { border: none !important; transition: 0.3s; border-top: 4px solid var(--bs-violet) !important; }
+.certif-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+.certif-icon { font-size: 2.5rem; margin-bottom: 10px; }
 
-.timeline { 
-    position: relative; 
-    max-width: 1200px; 
-    margin: 0 auto; 
+/* Boutons de téléchargement raffinés */
+.btn-certif {
+    display: inline-block; background: var(--bs-violet); color: white !important;
+    text-decoration: none; padding: 6px 20px; border-radius: 50px;
+    font-size: 0.85rem; font-weight: 600; margin-top: 15px; transition: 0.3s; border: 2px solid transparent;
 }
+.btn-certif:hover { background: transparent; border-color: var(--bs-violet); color: var(--bs-violet) !important; }
 
-.timeline::after {
-    content: ''; 
-    position: absolute; 
-    left: 50%; 
-    width: 4px;
-    background: var(--bs-violet); 
-    top: 0; 
-    bottom: 0;
-}
+/* PROJETS */
+.project-card { border: none; border-radius: 10px; overflow: hidden; transition: 0.3s; background: white; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+.project-card img { cursor: zoom-in; width: 100%; transition: 0.3s; display: block; }
+.project-card:hover { transform: translateY(-5px); }
 
-.timeline-item { 
-    position: relative; 
-    width: 50%; 
-    padding: 0 40px; 
-    margin-bottom: 50px; 
-}
+/* PDF */
+.pdf-viewer iframe { width: 95vw; max-width: 1400px; height: 85vh; border-radius: 10px; border: none; display: block; margin: 0 auto; }
 
-.timeline-item:nth-child(odd) { 
-    left: 0; 
-    text-align: right; 
-}
+/* FOOTER */
+.footer { background: var(--bs-dark-gray); padding: 30px 0; color: #fff; text-align: center; }
+.footer a { color: var(--bs-cyan); text-decoration: none; }
 
-.timeline-item:nth-child(even) { 
-    left: 50%; 
-}
+/* DARK MODE */
+body.dark-mode { background: #1e293b; color: #f1f5f9; }
+body.dark-mode .card { background: #2c2f42; color: #f1f5f9; }
+body.dark-mode h2, body.dark-mode h5 { color: #38bdf8; }
+body.dark-mode .btn-certif { background: var(--bs-cyan); color: #1e293b !important; }
+body.dark-mode .btn-certif:hover { background: transparent; border-color: var(--bs-cyan); color: var(--bs-cyan) !important; }
+body.dark-mode .certif-card { border-top-color: var(--bs-cyan) !important; }
 
-.timeline-dot {
-    position: absolute; 
-    top: 30px; 
-    width: 16px; 
-    height: 16px;
-    background: var(--bs-violet); 
-    border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-    .timeline::after { left: 20px; }
-    .timeline-item { 
-        width: 100%; 
-        padding: 0 15px 0 40px !important; 
-        left: 0 !important; 
-        text-align: left !important; 
-    }
-    .timeline-dot { left: 12px !important; }
-}
-
-/* =========================
-   CARDS PROJETS
-========================= */
-.project-card {
-    border: none; 
-    border-radius: 10px; 
-    overflow: hidden;
-    transition: 0.3s; 
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
-    background: white;
-}
-
-.project-card:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 16px rgba(0,0,0,.15); 
-}
-
-.project-card img { 
-    cursor: zoom-in; 
-    width: 100%; 
-    transition: opacity 0.3s;
-}
-
-.project-card img:hover {
-    opacity: 0.9;
-}
-
-/* =========================
-   PDF TABLEAU
-========================= */
-.pdf-viewer iframe {
-    width: 95vw; 
-    max-width: 1400px; 
-    height: 85vh;
-    border: none; 
-    border-radius: 10px; 
-    display: block; 
-    margin: 0 auto;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer { 
-    background: var(--bs-dark-gray); 
-    padding: 30px 0; 
-    color: #fff; 
-    text-align: center; 
-}
-
-.footer a { 
-    color: var(--bs-cyan); 
-    text-decoration: none;
-}
-
-/* =========================
-   MODE SOMBRE (DARK MODE)
-========================= */
-body.dark-mode { 
-    background: #1e293b; 
-    color: #f1f5f9; 
-}
-
-body.dark-mode .card, 
-body.dark-mode .project-card { 
-    background: #2c2f42; 
-    color: #f1f5f9; 
-}
-
-body.dark-mode h2, 
-body.dark-mode h5 { 
-    color: #38bdf8; 
-}
-
-body.dark-mode .bg-light-gray { 
-    background: #1e293b; 
-}
-
-/* =========================
-   SECTION POPUP (AGRANDISSEMENT MAX)
-========================= */
-.popup-container {
-    display: none; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95); 
-    z-index: 2500; 
-    align-items: center; 
-    justify-content: center;
-    cursor: pointer;
-}
-
-.popup-image {
-    max-width: 98%;   /* Utilise presque toute la largeur */
-    max-height: 96vh; /* Utilise presque toute la hauteur */
-    border-radius: 4px;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
-    animation: popupFade 0.25s ease-out;
-    object-fit: contain; /* Garde les proportions de l'image */
-}
-
-.popup-close { 
-    position: absolute; 
-    top: 10px; 
-    right: 20px; 
-    color: white; 
-    font-size: 60px; 
-    font-weight: bold;
-    cursor: pointer; 
-    line-height: 1;
-    z-index: 2600;
-}
-
-@keyframes popupFade { 
-    from { transform: scale(0.9); opacity: 0; } 
-    to { transform: scale(1); opacity: 1; } 
-}
-
-/* Optimisation Mobile pour le Popup */
-@media (max-width: 768px) {
-    .popup-image {
-        max-width: 100%;
-        max-height: 100vh;
-    }
-}
+/* POPUP AGANDISSEMENT */
+.popup-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); z-index: 2500; align-items: center; justify-content: center; }
+.popup-image { max-width: 98%; max-height: 96vh; object-fit: contain; }
+.popup-close { position: absolute; top: 10px; right: 20px; color: white; font-size: 60px; cursor: pointer; }
