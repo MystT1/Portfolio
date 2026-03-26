@@ -2,18 +2,21 @@
     --bs-violet: #9333ea;
     --bs-cyan: #22d3ee;
     --bs-dark-gray: #1f2937;
-    --bs-light-gray: #eef2f6; /* Fond bleu-gris doux */
-    --card-bg: #ffffff;
-    --border-color: #cbd5e1; 
+    --bg-main: #f1f5f9;      /* Gris bleu très doux pour le fond du body (anti-fatigue) */
+    --bg-alt: #f8fafc;       /* Gris encore plus clair pour l'alternance de sections */
+    --card-bg: #ffffff;      /* Cartes blanches en mode clair */
+    --text-main: #334155;    /* Texte anthracite doux */
+    --text-muted: #64748b;
+    --border-color: #cbd5e1; /* Bordure grise subtile */
     --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 body { 
     font-family: 'Open Sans', sans-serif; 
     padding-top: 56px; 
-    background-color: var(--bs-light-gray); 
-    color: #334155; 
-    transition: 0.3s; 
+    background-color: var(--bg-main); 
+    color: var(--text-main); 
+    transition: background-color 0.3s, color 0.3s; 
     overflow-x: hidden; 
 }
 
@@ -22,19 +25,27 @@ body {
 .bouton-nav { color: rgba(255,255,255,0.8); padding: 0.8rem 1rem; text-decoration: none; display: block; transition: 0.3s; font-weight: 500; }
 .bouton-nav:hover { color: white; background: rgba(255,255,255,0.1); }
 
-/* SECTIONS */
+/* SECTIONS AVEC ALTERNANCE (Mode Clair) */
 .section { padding: 80px 0; border-bottom: 1px solid var(--border-color); }
-.section-white { background-color: #f8fafc; }
-.text-violet { color: var(--bs-violet) !important; }
+.section-white { background-color: var(--bg-alt); }
+.section-gray { background-color: var(--bg-main); }
+.bg-dark-gray { background-color: var(--bs-dark-gray); }
 
-/* CARTES & IMAGES */
+/* TEXTES & TITRES */
+.text-violet { color: var(--bs-violet) !important; }
+.text-cyan { color: var(--bs-cyan) !important; }
+.text-muted { color: var(--text-muted) !important; }
+
+/* CARTES ET IMAGES */
 .card { background-color: var(--card-bg); border: 1px solid var(--border-color) !important; box-shadow: var(--shadow-soft); border-radius: 12px; overflow: hidden; }
+.bg-white-pure { background-color: #ffffff; }
+
 .certif-img-container { height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color); }
-.certif-preview-img, .project-img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: 0.3s; }
+.certif-preview-img, .project-img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: 0.3s ease; }
 .project-img { height: 220px; }
 .certif-preview-img:hover, .project-img:hover { opacity: 0.85; transform: scale(1.02); }
 
-/* BADGES SISR VIOLETS */
+/* BADGES (RÉTABLIS) */
 .badge-custom {
     display: inline-block;
     padding: 6px 14px;
@@ -43,13 +54,15 @@ body {
     border-radius: 50px;
     text-transform: uppercase;
 }
+
+/* SISR Violets (Rétablis) */
 .bg-violet-light {
     background-color: rgba(147, 51, 234, 0.1);
-    color: var(--bs-violet);
+    color: var(--bs-violet) !important;
     border: 1px solid rgba(147, 51, 234, 0.3);
 }
 
-/* BADGES VEILLE BLEUS */
+/* Veille Bleus */
 .bg-info-light {
     background-color: rgba(34, 211, 238, 0.1);
     color: #0891b2;
@@ -61,7 +74,7 @@ body {
 .timeline::after { content: ''; position: absolute; left: 50%; width: 4px; background: var(--bs-violet); top: 0; bottom: 0; transform: translateX(-50%); }
 .timeline-item { position: relative; width: 50%; padding: 10px 40px; margin-bottom: 20px; z-index: 1; }
 .timeline-item:nth-child(even) { left: 50%; }
-.timeline-dot { position: absolute; top: 25px; width: 20px; height: 20px; background: var(--bs-violet); border: 4px solid white; border-radius: 50%; z-index: 10; }
+.timeline-dot { position: absolute; top: 25px; width: 20px; height: 20px; background: var(--bs-violet); border: 4px solid white; border-radius: 50%; z-index: 10; box-shadow: 0 0 5px rgba(0,0,0,0.2); }
 .timeline-item:nth-child(odd) .timeline-dot { right: -10px; }
 .timeline-item:nth-child(even) .timeline-dot { left: -10px; }
 
@@ -76,15 +89,63 @@ body {
 .btn-custom { display: inline-block; background: var(--bs-violet); color: white !important; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 0px #6b21a8; transition: 0.2s; border: none; }
 .btn-custom:hover { transform: translateY(2px); box-shadow: 0 2px 0px #6b21a8; }
 
-/* DARK MODE */
-body.dark-mode { background: #0f172a; color: #e2e8f0; --border-color: #1e293b; }
-body.dark-mode .card, body.dark-mode .section-white { background: #1e293b !important; }
-body.dark-mode .text-violet { color: #38bdf8 !important; }
-body.dark-mode .bg-violet-light { background-color: rgba(56, 189, 248, 0.1); color: #38bdf8; border-color: #38bdf8; }
+/* ==========================================================
+   DARK MODE OPTIMISÉ (Fonds Gris Foncé/Clair rétablis)
+   ========================================================== */
+body.dark-mode { 
+    background-color: #0f172a; /* Fond du body TRÈS foncé (Gris Foncé) */
+    color: #e2e8f0; 
+    --border-color: #1e293b; 
+}
 
-/* POPUP */
+/* Alternance des sections en Dark Mode */
+body.dark-mode .section-white { 
+    background-color: #1e293b !important; /* Gris un peu plus clair pour l'alternance */
+}
+body.dark-mode .section-gray { 
+    background-color: #0f172a !important; /* Gris très foncé (identique au body) */
+}
+
+/* Cartes en Dark Mode (Gris plus clair pour ressortir) */
+body.dark-mode .card { 
+    background-color: #1e293b !important; 
+    border-color: #334155 !important;
+}
+
+/* PDF Viewer en Dark Mode (Pour éviter le flash blanc) */
+body.dark-mode .pdf-viewer {
+    background-color: #1e293b !important;
+}
+
+/* Textes et Titres en Dark Mode */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h4, body.dark-mode h5, body.dark-mode .text-violet { 
+    color: #38bdf8 !important; /* Cyan pour les titres importants */
+}
+body.dark-mode .text-muted { 
+    color: #94a3b8 !important; 
+}
+
+/* Badges SISR en Dark Mode (Adaptation des couleurs) */
+body.dark-mode .bg-violet-light { 
+    background-color: rgba(56, 189, 248, 0.1); 
+    color: #38bdf8 !important; 
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Badges Veille en Dark Mode */
+body.dark-mode .bg-info-light {
+    background-color: rgba(34, 211, 238, 0.15) !important;
+    color: #22d3ee !important;
+}
+
+/* Popup en Dark Mode (Plus opaque) */
+body.dark-mode .popup-container { background: rgba(2, 6, 23, 0.98); }
+
+/* ========================================================== */
+
+/* POPUP ET FOOTER */
 .popup-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 3000; align-items: center; justify-content: center; }
-.popup-image { max-width: 90%; max-height: 85vh; border: 3px solid white; }
+.popup-image { max-width: 90%; max-height: 85vh; border: 3px solid white; border-radius: 8px; }
 .popup-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
 
-.footer { background: var(--bs-dark-gray); padding: 40px 0; }
+.footer { padding: 40px 0; }
