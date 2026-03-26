@@ -6,15 +6,15 @@
     <title>Portfolio Hugo - Administrateur Systèmes & Réseaux</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-violet fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-violet fixed-top shadow">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">HUGO<span class="text-cyan">.</span></a>
+            <a class="navbar-brand fw-bold" href="#">HUGO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,10 +24,11 @@
                     <li class="nav-item"><a class="bouton-nav" href="#présentation">Profil</a></li>
                     <li class="nav-item"><a class="bouton-nav" href="#parcours_scolaire">Formation</a></li>
                     <li class="nav-item"><a class="bouton-nav" href="#certificat">Certificats</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#experience">Tableau E5</a></li>
                     <li class="nav-item"><a class="bouton-nav" href="#projets">Projets</a></li>
                     <li class="nav-item"><a class="bouton-nav" href="#veille">Veille</a></li>
                     <li class="nav-item">
-                        <button id="darkModeToggle" class="btn btn-link nav-link text-white fs-5">🌙</button>
+                        <button id="darkModeToggle" class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0">🌙</button>
                     </li>
                 </ul>
             </div>
@@ -36,149 +37,169 @@
 
     <header class="header" id="accueil">
         <div class="container">
-            <div class="badge-custom bg-white-transparent mb-3">Disponible pour alternance 2026</div>
-            <h1 class="display-3 fw-bold mb-2">Expertise Systèmes <span class="text-cyan">&</span> Réseaux</h1>
-            <h2 class="h4 fw-light opacity-75">Hugo • Étudiant BTS SIO option SISR</h2>
-            <div class="mt-4">
-                <a href="#projets" class="btn-custom me-2">Voir mes projets</a>
-                <a href="assets/documents/Cv Hugo 2026.pdf" download class="btn-outline-custom">Mon CV (PDF) 💾</a>
-            </div>
+            <h1 class="display-4 fw-bold">Étudiant BTS SIO - SISR</h1>
+            <h2 class="h3 text-light-50">Hugo, Administrateur Réseaux & Systèmes</h2>
+            <p class="lead mt-3">Portfolio années 2025 - 2026</p>
         </div>
     </header>
 
-    <section class="section" id="présentation">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="title-section">Mon Profil</h2>
-                    <div class="card card-modern p-4 shadow-sm">
-                        <p class="fs-5 mb-0 leading-relaxed">
-                            Actuellement au lycée <strong>Félix Le Dantec</strong>, je me spécialise dans la gestion des infrastructures et la cybersécurité. Mon parcours, débuté en Bac Pro Systèmes Numériques, m'a permis d'acquérir une vision concrète du terrain et une forte capacité d'adaptation aux nouvelles technologies.
-                        </p>
-                    </div>
-                </div>
+    <section class="section section-gray" id="présentation">
+        <div class="container text-center">
+            <h2 class="mb-4 text-violet">👋 Mon Profil</h2>
+            <div class="card p-4 shadow-sm mx-auto mb-4 border-fine" style="max-width:850px;">
+                <p class="fs-5">
+                    Je suis étudiant au lycée Félix Le Dantec dans le BTS SIO option SISR en 2ème année.
+                    Avant d'arriver en BTS SIO, j'ai effectué un Bac Pro Systèmes Numériques.
+                    Je suis passionné par les infrastructures réseaux, la virtualisation et la cybersécurité.
+                </p>
             </div>
+            <a href="assets/documents/Cv Hugo 2026.pdf" download class="btn-custom">
+                Télécharger mon CV (PDF) 💾
+            </a>
         </div>
     </section>
 
-    <section class="section bg-alt" id="parcours_scolaire">
+    <section class="section section-white" id="parcours_scolaire">
         <div class="container">
-            <h2 class="title-section">Parcours de Formation</h2>
+            <h2 class="text-center mb-5 text-violet">🎒 Parcours de Formation</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content card-modern shadow-sm">
-                        <span class="timeline-date">2024 - 2025</span>
-                        <h5 class="fw-bold">Deuxième année BTS SIO SISR</h5>
-                        <p class="mb-0 text-muted">Spécialisation Réseaux & Cybersécurité</p>
+                    <div class="timeline-content card p-3 shadow-sm border-fine">
+                        <h5 class="fw-bold">Bac Pro Systèmes Numériques Option RISC</h5>
+                        <div class="timeline-date text-violet fw-bold mb-2">2021 - 2022</div>
+                        <p class="mb-0">Lycée Félix Le Dantec</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content card-modern shadow-sm">
-                        <span class="timeline-date">2023 - 2024</span>
-                        <h5 class="fw-bold">Première année BTS SIO</h5>
-                        <p class="mb-0 text-muted">Lycée Félix Le Dantec</p>
+                    <div class="timeline-content card p-3 shadow-sm border-fine">
+                        <h5 class="fw-bold">Première année en BTS SIO</h5>
+                        <div class="timeline-date text-violet fw-bold mb-2">2023 - 2024</div>
+                        <p class="mb-0">BTS SIO Option SISR</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content card-modern shadow-sm">
-                        <span class="timeline-date">2021 - 2022</span>
-                        <h5 class="fw-bold">Bac Pro Systèmes Numériques</h5>
-                        <p class="mb-0 text-muted">Option RISC - Mention Bien</p>
+                    <div class="timeline-content card p-3 shadow-sm border-fine">
+                        <h5 class="fw-bold">Deuxième année en BTS SIO</h5>
+                        <div class="timeline-date text-violet fw-bold mb-2">2024 - 2025</div>
+                        <p class="mb-0">BTS SIO Option SISR</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="certificat">
+    <section class="section section-gray" id="certificat">
         <div class="container">
-            <h2 class="title-section">Mes Certifications</h2>
-            <div class="row g-4">
-                <div class="col-6 col-md-4 col-lg-2-4"> <div class="card card-modern h-100 text-center p-2">
-                        <div class="certif-img-container mb-2">
-                            <img src="assets/images/Capture d'écran 5.png" class="certif-preview-img">
+            <h2 class="text-center mb-5 text-violet">🏅 Mes Certifications</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-fine shadow-sm">
+                        <div class="certif-img-container"><img src="assets/images/Capture d'écran 5.png" class="certif-preview-img"></div>
+                        <div class="p-3 text-center">
+                            <h6 class="fw-bold">SecNum académie ANSSI</h6>
+                            <a href="assets/documents/X5EWIootym34PL3u4e92w7r8Y24ivIQqR5g3wRj2AwopTtXcyM9btrb0lCsW_161817_01032026.pdf" download class="btn-custom py-1 px-3 fs-small">PDF 💾</a>
                         </div>
-                        <h6 class="small fw-bold">SecNum ANSSI</h6>
-                        <a href="assets/documents/X5EWIootym...pdf" download class="btn-small mt-auto">PDF</a>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2-4">
-                    <div class="card card-modern h-100 text-center p-2">
-                        <div class="certif-img-container mb-2"><img src="assets/images/Capture d'écran 1.png" class="certif-preview-img"></div>
-                        <h6 class="small fw-bold">Atelier RGPD</h6>
-                        <a href="#" class="btn-small mt-auto">PDF</a>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-fine shadow-sm">
+                        <div class="certif-img-container"><img src="assets/images/Capture d'écran 1.png" class="certif-preview-img"></div>
+                        <div class="p-3 text-center">
+                            <h6 class="fw-bold">Atelier RGPD</h6>
+                            <a href="assets/documents/Certificat_.pdf" download class="btn-custom py-1 px-3 fs-small">PDF 💾</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2-4">
-                    <div class="card card-modern h-100 text-center p-2">
-                        <div class="certif-img-container mb-2"><img src="assets/images/Capture d'écran 2.png" class="certif-preview-img"></div>
-                        <h6 class="small fw-bold">Formation Suivi</h6>
-                        <a href="#" class="btn-small mt-auto">PDF</a>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-fine shadow-sm">
+                        <div class="certif-img-container"><img src="assets/images/Capture d'écran 2.png" class="certif-preview-img"></div>
+                        <div class="p-3 text-center">
+                            <h6 class="fw-bold">Suivi de formation</h6>
+                            <a href="assets/documents/Attestation_de_suivi.pdf" download class="btn-custom py-1 px-3 fs-small">PDF 💾</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2-4">
-                    <div class="card card-modern h-100 text-center p-2">
-                        <div class="certif-img-container mb-2"><img src="assets/images/Capture d'écran 3.png" class="certif-preview-img"></div>
-                        <h6 class="small fw-bold">Cyber Protection</h6>
-                        <a href="#" class="btn-small mt-auto">PDF</a>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-fine shadow-sm">
+                        <div class="certif-img-container"><img src="assets/images/Capture d'écran 3.png" class="certif-preview-img"></div>
+                        <div class="p-3 text-center">
+                            <h6 class="fw-bold">Cyber Protection</h6>
+                            <a href="#" class="btn-custom py-1 px-3 fs-small">PDF 💾</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2-4">
-                    <div class="card card-modern h-100 text-center p-2">
-                        <div class="certif-img-container mb-2"><img src="assets/images/Capture d'écran 4.png" class="certif-preview-img"></div>
-                        <h6 class="small fw-bold">Réseaux Cisco</h6>
-                        <a href="#" class="btn-small mt-auto">PDF</a>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 border-fine shadow-sm">
+                        <div class="certif-img-container"><img src="assets/images/Capture d'écran 4.png" class="certif-preview-img"></div>
+                        <div class="p-3 text-center">
+                            <h6 class="fw-bold">Réseaux Avancés</h6>
+                            <a href="#" class="btn-custom py-1 px-3 fs-small">PDF 💾</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-alt" id="projets">
+    <section class="section section-white" id="experience">
         <div class="container">
-            <h2 class="title-section">Projets Réalisés</h2>
+            <div class="glass-window shadow-lg w-100">
+                <div class="glass-window__header bg-violet"><h2 class="h4 text-center mb-0 text-white p-2 fw-bold">Tableau de Synthèse E5</h2></div>
+                <div class="pdf-viewer p-2">
+                    <iframe src="./assets/documents/Tableau de synthese - Epreuve E5 - BTS SIO 2026.pdf#zoom=page-fit" title="Tableau PDF" style="width:100%; height:75vh; border:none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gray" id="projets">
+        <div class="container">
+            <h2 class="text-center mb-5 text-violet">💻 Mes Projets</h2>
             <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card project-card-modern h-100">
-                        <img src="assets/images/image ap 1.png" class="project-img-modern">
-                        <div class="p-4">
-                            <h5 class="fw-bold text-violet">Projet Egnaro</h5>
-                            <p class="small text-muted mb-3">Thématique : Patrimoine & Présence Web</p>
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 border-fine shadow-sm">
+                        <img src="assets/images/image ap 1.png" class="card-img-top project-img">
+                        <div class="card-body">
+                            <h5 class="text-violet fw-bold">Projet Egnaro</h5>
+                            <p class="small text-muted mb-3"><strong>Thématique :</strong> Présence en ligne & Patrimoine informatique</p>
+                            <h6 class="small fw-bold mb-2">Compétences SISR :</h6>
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge-skill">Patrimoine</span>
-                                <span class="badge-skill">Mode Projet</span>
+                                <span class="badge-custom bg-violet-light">Gérer le patrimoine</span>
+                                <span class="badge-custom bg-violet-light">Mode projet</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card project-card-modern h-100">
-                        <img src="assets/images/Capture d'écran 2025-11-20 124638.png" class="project-img-modern">
-                        <div class="p-4">
-                            <h5 class="fw-bold text-violet">Projet Geltram</h5>
-                            <p class="small text-muted mb-3">Thématique : Surveillance & Maintenance</p>
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 border-fine shadow-sm">
+                        <img src="assets/images/Capture d'écran 2025-11-20 124638.png" class="card-img-top project-img">
+                        <div class="card-body">
+                            <h5 class="text-violet fw-bold">Projet Geltram</h5>
+                            <p class="small text-muted mb-3"><strong>Thématique :</strong> Surveillance & Incidents SI</p>
+                            <h6 class="small fw-bold mb-2">Compétences SISR :</h6>
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge-skill">Incidents SI</span>
-                                <span class="badge-skill">Support</span>
+                                <span class="badge-custom bg-violet-light">Répondre aux incidents</span>
+                                <span class="badge-custom bg-violet-light">Support utilisateur</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="card project-card-modern">
+                    <div class="card border-fine shadow-sm">
                         <div class="row g-0">
-                            <div class="col-md-7">
-                                <img src="assets/documents/p3a.png" class="w-100 h-100 project-img-modern">
-                            </div>
-                            <div class="col-md-5 p-4">
-                                <h5 class="fw-bold text-violet">Projet GSB</h5>
-                                <p class="small text-muted mb-3">Thématique : Infrastructure Haute Disponibilité</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge-skill">Défense profonde</span>
-                                    <span class="badge-skill">Virtualisation</span>
+                            <div class="col-md-7"><img src="assets/documents/p3a.png" class="img-fluid h-100 w-100 project-img" style="object-fit:cover;"></div>
+                            <div class="col-md-5">
+                                <div class="card-body">
+                                    <h5 class="text-violet fw-bold">Projet GSB</h5>
+                                    <p class="small text-muted mb-3"><strong>Thématique :</strong> Haute disponibilité & Sécurité réseaux</p>
+                                    <h6 class="small fw-bold mb-2">Compétences SISR :</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge-custom bg-violet-light">Mise à disposition services</span>
+                                        <span class="badge-custom bg-violet-light">Défense en profondeur</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -188,25 +209,25 @@
         </div>
     </section>
 
-    <section class="section" id="veille">
+    <section class="section section-white" id="veille">
         <div class="container text-center">
-            <h2 class="title-section">Veille Technologique</h2>
-            <div class="glass-panel p-5 mx-auto" style="max-width: 800px;">
-                <h4 class="fw-bold mb-3">Cybersécurité & Réseaux</h4>
-                <p class="text-muted mb-4">Focus sur le Zero Trust Architecture et les nouvelles vulnérabilités zero-day.</p>
+            <h2 class="mb-5 text-violet">🕵️ Veille Technologique</h2>
+            <div class="card border-fine shadow-sm mx-auto p-4" style="max-width: 800px;">
+                <h4 class="fw-bold text-violet">Cybersécurité & Réseaux</h4>
+                <p class="text-muted mb-4">Suivi des menaces émergentes et des solutions d'infrastructure SI.</p>
                 <div class="d-flex justify-content-center gap-3">
-                    <span class="badge-veille">📺 Micode</span>
-                    <span class="badge-veille">📺 CookieConnecté</span>
+                    <span class="badge-custom bg-info-light">📺 CookieConnecté</span>
+                    <span class="badge-custom bg-info-light">📺 Micode</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container text-center">
-            <p class="mb-2 fw-bold text-white">Hugo Le Flem</p>
-            <p class="text-light opacity-50 small mb-3">BTS SIO SISR - 2026</p>
-            <a href="https://www.linkedin.com/in/hugo-le-flem-b01415240/" target="_blank" class="linkedin-link">Mon profil LinkedIn</a>
+    <footer class="footer mt-5 bg-dark-gray text-center text-white">
+        <div class="container">
+            <p>Email : hleflem.ledantec@gmail.com</p>
+            <a href="https://www.linkedin.com/in/hugo-le-flem-b01415240/" target="_blank" class="btn-custom">Mon LinkedIn 🔗</a>
+            <p class="mt-4 small text-muted">&copy; 2026 - Portfolio Hugo</p>
         </div>
     </footer>
 
@@ -218,10 +239,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const darkToggle = document.getElementById('darkModeToggle');
-        if (localStorage.getItem("darkMode") === "enabled") { 
-            document.body.classList.add("dark-mode"); 
-            darkToggle.textContent = "☀️"; 
-        }
+        if (localStorage.getItem("darkMode") === "enabled") { document.body.classList.add("dark-mode"); darkToggle.textContent = "☀️"; }
         darkToggle.addEventListener('click', () => {
             document.body.classList.toggle("dark-mode");
             const isDark = document.body.classList.contains("dark-mode");
@@ -231,7 +249,7 @@
 
         const popup = document.getElementById("popupModal");
         const popupImg = document.getElementById("imgPopup");
-        document.querySelectorAll(".project-img-modern, .certif-preview-img").forEach(img => {
+        document.querySelectorAll(".project-img, .certif-preview-img").forEach(img => {
             img.addEventListener("click", () => { popup.style.display = "flex"; popupImg.src = img.src; });
         });
         popup.addEventListener("click", () => { popup.style.display = "none"; });
