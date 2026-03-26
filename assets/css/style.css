@@ -10,7 +10,11 @@ body { font-family: 'Open Sans', sans-serif; padding-top: 56px; background: var(
 
 /* NAVBAR */
 .bg-violet { background-color: var(--bs-violet) !important; }
-.bouton-nav { color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; text-decoration: none; display: inline-block; }
+.bouton-nav { color: rgba(255,255,255,0.8); padding: 0.5rem 1rem; text-decoration: none; display: inline-block; transition: 0.3s; }
+.bouton-nav:hover { color: #fff; background: rgba(255,255,255,0.1); border-radius: 8px; }
+
+/* HEADER */
+.header { background: linear-gradient(45deg, var(--bs-violet), var(--bs-cyan)); padding: 100px 0; color: white; text-align: center; }
 
 /* BOUTON PILULE */
 .btn-custom {
@@ -29,7 +33,7 @@ body { font-family: 'Open Sans', sans-serif; padding-top: 56px; background: var(
 
 /* TABLEAU SYNTHESE (ORIGINAL) */
 .table-section { padding: 60px 0; display: flex; justify-content: center; align-items: center; }
-.glass-window { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border-radius: 15px; overflow: hidden; width: 90%; max-width: 1200px; }
+.glass-window { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border-radius: 15px; overflow: hidden; width: 95%; max-width: 1200px; }
 .glass-window__header { background: var(--bs-violet); color: white; padding: 15px; }
 .pdf-viewer iframe { width: 100%; height: 80vh; border: none; }
 
@@ -39,12 +43,13 @@ body { font-family: 'Open Sans', sans-serif; padding-top: 56px; background: var(
 .certif-img-container { height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color); }
 .certif-preview-img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
 .certif-icon-small { font-size: 1.5rem; margin-bottom: 5px; }
+.text-violet { color: var(--bs-violet); font-weight: 700; }
 .gsb-separator { border: 0; height: 1px; background: var(--border-color); margin: 20px 0; }
 
 /* DARK MODE */
 body.dark-mode { background: #0f172a; color: #f1f5f9; --border-color: rgba(255,255,255,0.1); }
 body.dark-mode .card, body.dark-mode .glass-window { background: #1e293b; }
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h5 { color: #38bdf8; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h5, body.dark-mode .text-violet { color: #38bdf8; }
 body.dark-mode .btn-custom { background: var(--bs-cyan); border-color: var(--bs-cyan); color: #0f172a !important; }
 
 /* POPUP */
