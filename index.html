@@ -20,13 +20,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="bouton" href="#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="bouton" href="#présentation">Profil</a></li>
-                    <li class="nav-item"><a class="bouton" href="#parcours_scolaire">Formation</a></li>
-                    <li class="nav-item"><a class="bouton" href="#certificat">Certificat</a></li>
-                    <li class="nav-item"><a class="bouton" href="#stages">Stages</a></li>
-                    <li class="nav-item"><a class="bouton" href="#experience">Compétences</a></li>
-                    <li class="nav-item"><a class="bouton" href="#projets">Projets</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#présentation">Profil</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#parcours_scolaire">Formation</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#certificat">Certificat</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#stages">Stages</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#experience">Compétences</a></li>
+                    <li class="nav-item"><a class="bouton-nav" href="#projets">Projets</a></li>
                     <li class="nav-item">
                         <button id="darkModeToggle" class="btn btn-outline-light ms-3">🌙</button>
                     </li>
@@ -45,14 +45,14 @@
     <section class="section" id="présentation">
         <div class="container text-center">
             <h2>👋 Mon Profil</h2>
-            <div class="timeline-content card p-3 shadow-sm mx-auto" style="max-width:800px;">
+            <div class="timeline-content card p-3 shadow-sm mx-auto mb-4" style="max-width:800px;">
                 <p>
                     Je suis étudiant au lycée Félix Le Dantec dans le BTS SIO option SISR en 2ème année.
                     Avant d'arriver en BTS SIO, j'ai effectué un Bac Pro Systèmes Numériques.
                     Je suis attiré par les nouvelles technologies et la cybersécurité.
                 </p>
             </div>
-            <a href="assets/documents/Cv Hugo 2026.pdf" download class="btn btn-light btn-lg mt-4 shadow-lg">
+            <a href="assets/documents/Cv Hugo 2026.pdf" download class="btn-custom btn-lg">
                 Télécharger mon CV (PDF) 💾
             </a>
         </div>
@@ -94,77 +94,77 @@
         <div class="container">
             <h2 class="text-center mb-5">🏅 Mes Certifications</h2>
             <div class="row g-4 justify-content-center">
-                
                 <div class="col-md-4">
                     <div class="card h-100 p-0 shadow-sm text-center certif-card">
                         <div class="certif-img-container">
-                            <img src="assets/documents/X5EWIootym34PL3u4e92w7r8Y24ivIQqR5g3wRj2AwopTtXcyM9btrb0lCsW_161817_01032026.png" class="img-fluid certif-preview-img" alt="Aperçu SecNum académie">
+                            <img src="assets/documents/X5EWIootym34PL3u4e92w7r8Y24ivIQqR5g3wRj2AwopTtXcyM9btrb0lCsW_161817_01032026.png" class="certif-preview-img">
                         </div>
                         <div class="p-4">
+                            <div class="certif-icon-small">🛡️</div>
                             <h5>SecNum académie ANSSI</h5>
                             <p class="small text-muted">Cybersécurité</p>
-                            <a href="assets/documents/X5EWIootym34PL3u4e92w7r8Y24ivIQqR5g3wRj2AwopTtXcyM9btrb0lCsW_161817_01032026.pdf" download class="btn-certif">
-                                <span>Télécharger PDF</span> 💾
+                            <a href="assets/documents/X5EWIootym34PL3u4e92w7r8Y24ivIQqR5g3wRj2AwopTtXcyM9btrb0lCsW_161817_01032026.pdf" download class="btn-custom">
+                                Télécharger PDF 💾
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="card h-100 p-0 shadow-sm text-center certif-card">
                         <div class="certif-img-container">
-                            <img src="assets/documents/Certificat_.png" class="img-fluid certif-preview-img" alt="Aperçu Atelier RGPD">
+                            <img src="assets/documents/Certificat_.png" class="certif-preview-img">
                         </div>
                         <div class="p-4">
+                            <div class="certif-icon-small">⚖️</div>
                             <h5>Atelier RGPD</h5>
                             <p class="small text-muted">Protection des données</p>
-                            <a href="assets/documents/Certificat_.pdf" download class="btn-certif">
-                                <span>Télécharger PDF</span> 💾
+                            <a href="assets/documents/Certificat_.pdf" download class="btn-custom">
+                                Télécharger PDF 💾
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-4">
                     <div class="card h-100 p-0 shadow-sm text-center certif-card">
                         <div class="certif-img-container">
-                            <img src="assets/documents/Attestation_de_suivi.png" class="img-fluid certif-preview-img" alt="Aperçu Suivi RGPD">
+                            <img src="assets/documents/Attestation_de_suivi.png" class="certif-preview-img">
                         </div>
                         <div class="p-4">
+                            <div class="certif-icon-small">📋</div>
                             <h5>Atelier RGPD</h5>
                             <p class="small text-muted">Suivi de formation</p>
-                            <a href="assets/documents/Attestation_de_suivi.pdf" download class="btn-certif">
-                                <span>Télécharger PDF</span> 💾
+                            <a href="assets/documents/Attestation_de_suivi.pdf" download class="btn-custom">
+                                Télécharger PDF 💾
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-6">
                     <div class="card h-100 p-0 shadow-sm text-center certif-card">
-                        <div class="certif-img-container certif-img-container-large">
-                            <img src="assets/documents/Certificat_DPO et les outils de la conformité.png" class="img-fluid certif-preview-img" alt="Aperçu Outils conformité">
+                        <div class="certif-img-container-large">
+                            <img src="assets/documents/Certificat_DPO et les outils de la conformité.png" class="certif-preview-img">
                         </div>
                         <div class="p-4">
+                            <div class="certif-icon-small">🛠️</div>
                             <h5>Outils de conformité</h5>
                             <p class="small text-muted">DPO & RGPD</p>
-                            <a href="assets/documents/Certificat_DPO et les outils de la conformité.pdf" download class="btn-certif">
-                                <span>Télécharger PDF</span> 💾
+                            <a href="assets/documents/Certificat_DPO et les outils de la conformité.pdf" download class="btn-custom">
+                                Télécharger PDF 💾
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-md-6">
                     <div class="card h-100 p-0 shadow-sm text-center certif-card">
-                        <div class="certif-img-container certif-img-container-large">
-                            <img src="assets/documents/Certificat_responsabilité des acteurs.png" class="img-fluid certif-preview-img" alt="Aperçu Responsabilité acteurs">
+                        <div class="certif-img-container-large">
+                            <img src="assets/documents/Certificat_responsabilité des acteurs.png" class="certif-preview-img">
                         </div>
                         <div class="p-4">
+                            <div class="certif-icon-small">🤝</div>
                             <h5>Responsabilité des acteurs</h5>
                             <p class="small text-muted">Cadre juridique RGPD</p>
-                            <a href="assets/documents/Certificat_responsabilité des acteurs.pdf" download class="btn-certif">
-                                <span>Télécharger PDF</span> 💾
+                            <a href="assets/documents/Certificat_responsabilité des acteurs.pdf" download class="btn-custom">
+                                Télécharger PDF 💾
                             </a>
                         </div>
                     </div>
@@ -235,32 +235,20 @@
                 <div class="col-md-12 mb-4">
                     <div class="card project-card">
                       <img src="assets/documents/p3a.png" class="card-img-top">
-                      
                       <hr class="gsb-separator">
-                      
                       <img src="assets/documents/p3b.png" class="card-img-top">
-                      
                       <div class="card-body">
                         <h5>Projet GSB</h5>
                         <p>Haute disponibilité et réplication des services pour Galaxy Swiss Bourdin.</p>
                         <ul class="list-unstyled">
                           <li>• Gérer le patrimoine informatique</li>
-                          <li>• Répondre aux incidents et aux demandes d’assistance et d’évolution</li>
+                          <li>• Répondre aux incidents</li>
                           <li>• Travailler en mode projet</li>
-                          <li>• Mettre à disposition des utilisateurs un service informatique</li>
+                          <li>• Mettre à disposition des services informatiques</li>
                         </ul>
                       </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="présentation_veille">
-        <div class="container text-center">
-            <h2>🧠 Veille Technologique</h2>
-            <div class="timeline-content card p-3 shadow-sm mx-auto" style="max-width:800px;">
-                <p>Abonné à <a href="https://www.youtube.com/@Cookieconnecté" target="_blank">Cookie Connecté</a> et <a href="https://www.youtube.com/@mikrotik" target="_blank">Mikrotik</a>.</p>
             </div>
         </div>
     </section>
@@ -287,11 +275,9 @@
             darkToggle.textContent = isDark ? "☀️" : "🌙";
         });
         
-        // Popup Images (Projets ET Certifications)
+        // Popup
         const popup = document.getElementById("popupModal");
         const popupImg = document.getElementById("imgPopup");
-        
-        // Cible toutes les images cliquables (projets et aperçus certifs)
         document.querySelectorAll(".project-card img, .certif-preview-img").forEach(img => {
             img.addEventListener("click", () => { popup.style.display = "flex"; popupImg.src = img.src; });
         });
