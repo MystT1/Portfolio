@@ -14,7 +14,7 @@ body {
     transition: 0.3s;
 }
 
-h1, h2, h5 { font-family: 'Roboto', sans-serif; font-weight: 700; color: var(--bs-dark-gray); }
+h1, h2, h3, h5 { font-family: 'Roboto', sans-serif; font-weight: 700; color: var(--bs-dark-gray); }
 
 /* NAVBAR */
 .bg-violet { background-color: var(--bs-violet) !important; }
@@ -32,57 +32,55 @@ h1, h2, h5 { font-family: 'Roboto', sans-serif; font-weight: 700; color: var(--b
     transition: 0.3s;
 }
 
-/* BOUTON UNIQUE (PILULE) */
+/* LE BOUTON PILULE HARMONISÉ */
 .btn-custom {
     display: inline-block;
     background: var(--bs-violet);
     color: white !important;
     text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 50px;
-    font-size: 0.9rem;
+    padding: 12px 30px;
+    border-radius: 50px; /* Effet pilule */
+    font-size: 0.95rem;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 2px solid var(--bs-violet);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.2);
+    cursor: pointer;
 }
 .btn-custom:hover {
     background: transparent;
     color: var(--bs-violet) !important;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(147, 51, 234, 0.3);
 }
 
 /* CERTIFICATIONS */
-.certif-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
-.certif-img-container { height: 160px; overflow: hidden; background: #eee; border-bottom: 1px solid var(--border-color); }
-.certif-img-container-large { height: 200px; overflow: hidden; border-bottom: 1px solid var(--border-color); }
+.certif-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important; }
+.certif-img-container { height: 180px; overflow: hidden; background: #eee; border-bottom: 1px solid var(--border-color); }
 .certif-preview-img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
 .certif-icon-small { font-size: 1.5rem; margin-bottom: 5px; }
 
 /* PROJETS */
 .project-card img { cursor: zoom-in; width: 100%; transition: 0.3s; display: block; }
-.gsb-separator { border: 0; height: 1px; background: var(--border-color); margin: 15px 0; }
-
-/* TIMELINE */
-.section { padding: 80px 0; }
-.timeline::after { content: ''; position: absolute; left: 50%; width: 2px; background: var(--bs-violet); top: 0; bottom: 0; }
-.timeline-dot { position: absolute; top: 30px; width: 14px; height: 14px; background: var(--bs-violet); border-radius: 50%; left: -7px; }
-
-/* PDF */
-.pdf-viewer iframe { width: 95vw; max-width: 1400px; height: 85vh; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto; }
+.gsb-separator { border: 0; height: 1px; background: var(--border-color); margin: 20px 0; }
 
 /* FOOTER */
-.footer { background: var(--bs-dark-gray); padding: 40px 0; color: #fff; text-align: center; }
-.footer a { color: var(--bs-cyan); text-decoration: none; }
+.footer { background: var(--bs-dark-gray); padding: 60px 0; color: #fff; border-top: 1px solid var(--border-color); }
+.footer h3 { color: white; margin-bottom: 20px; }
+.text-cyan { color: var(--bs-cyan); text-decoration: none; }
 
 /* DARK MODE */
 body.dark-mode { background: #0f172a; color: #f1f5f9; --border-color: rgba(255,255,255,0.1); }
 body.dark-mode .card { background: #1e293b; }
-body.dark-mode h2, body.dark-mode h5 { color: #38bdf8; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h5 { color: #38bdf8; }
 body.dark-mode .btn-custom { background: var(--bs-cyan); border-color: var(--bs-cyan); color: #0f172a !important; }
-body.dark-mode .btn-custom:hover { background: transparent; color: var(--bs-cyan) !important; }
+body.dark-mode .btn-custom:hover { background: transparent; color: var(--bs-cyan) !important; box-shadow: 0 6px 20px rgba(34, 211, 238, 0.3); }
 
 /* POPUP */
 .popup-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 2500; align-items: center; justify-content: center; }
-.popup-image { max-width: 95%; max-height: 95vh; border-radius: 8px; }
+.popup-image { max-width: 95%; max-height: 90vh; border-radius: 8px; }
 .popup-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 50px; cursor: pointer; }
+
+/* TIMELINE ADJUST */
+.timeline::after { background: var(--bs-violet); width: 2px; }
+.timeline-dot { background: var(--bs-violet); }
