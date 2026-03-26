@@ -31,16 +31,23 @@ h1, h2, h5 { font-family: 'Roboto', sans-serif; font-weight: 700; color: var(--b
 .timeline-item:nth-child(even) { left: 50%; }
 .timeline-dot { position: absolute; top: 30px; width: 16px; height: 16px; background: var(--bs-violet); border-radius: 50%; }
 
-/* CERTIFICATIONS (NOUVEAU STYLE) */
-.certif-card { border: none !important; transition: 0.3s; border-top: 4px solid var(--bs-violet) !important; }
+/* CERTIFICATIONS (STYLE AVEC APERÇU IMAGE) */
+.certif-card { border: none !important; transition: 0.3s; overflow: hidden; }
 .certif-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
-.certif-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* Conteneur de l'image d'aperçu */
+.certif-img-container { height: 180px; overflow: hidden; background: #eee; border-bottom: 3px solid var(--bs-violet); }
+.certif-img-container-large { height: 220px; } /* Pour les cartes col-md-6 */
+
+/* L'image d'aperçu elle-même */
+.certif-preview-img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: 0.3s; }
+.certif-preview-img:hover { opacity: 0.8; }
 
 /* Boutons de téléchargement raffinés */
 .btn-certif {
     display: inline-block; background: var(--bs-violet); color: white !important;
     text-decoration: none; padding: 6px 20px; border-radius: 50px;
-    font-size: 0.85rem; font-weight: 600; margin-top: 15px; transition: 0.3s; border: 2px solid transparent;
+    font-size: 0.85rem; font-weight: 600; margin-top: 5px; transition: 0.3s; border: 2px solid transparent;
 }
 .btn-certif:hover { background: transparent; border-color: var(--bs-violet); color: var(--bs-violet) !important; }
 
@@ -48,6 +55,12 @@ h1, h2, h5 { font-family: 'Roboto', sans-serif; font-weight: 700; color: var(--b
 .project-card { border: none; border-radius: 10px; overflow: hidden; transition: 0.3s; background: white; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
 .project-card img { cursor: zoom-in; width: 100%; transition: 0.3s; display: block; }
 .project-card:hover { transform: translateY(-5px); }
+
+/* Séparation pour le projet GSB */
+.gsb-separator {
+    border: 0; height: 3px; background-image: linear-gradient(to right, transparent, var(--bs-violet), transparent);
+    margin: 20px 0; opacity: 0.7;
+}
 
 /* PDF */
 .pdf-viewer iframe { width: 95vw; max-width: 1400px; height: 85vh; border-radius: 10px; border: none; display: block; margin: 0 auto; }
@@ -62,7 +75,8 @@ body.dark-mode .card { background: #2c2f42; color: #f1f5f9; }
 body.dark-mode h2, body.dark-mode h5 { color: #38bdf8; }
 body.dark-mode .btn-certif { background: var(--bs-cyan); color: #1e293b !important; }
 body.dark-mode .btn-certif:hover { background: transparent; border-color: var(--bs-cyan); color: var(--bs-cyan) !important; }
-body.dark-mode .certif-card { border-top-color: var(--bs-cyan) !important; }
+body.dark-mode .certif-img-container { border-bottom-color: var(--bs-cyan); }
+body.dark-mode .gsb-separator { background-image: linear-gradient(to right, transparent, var(--bs-cyan), transparent); }
 
 /* POPUP AGANDISSEMENT */
 .popup-container { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); z-index: 2500; align-items: center; justify-content: center; }
