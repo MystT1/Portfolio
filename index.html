@@ -44,7 +44,7 @@
     <section class="section" id="présentation">
         <div class="container text-center">
             <h2>👋 Mon Profil</h2>
-            <div class="card p-4 shadow-sm mx-auto mb-4 border-fine" style="max-width:800px;">
+            <div class="card p-3 shadow-sm mx-auto mb-4 border-fine" style="max-width:800px;">
                 <p>
                     Je suis étudiant au lycée Félix Le Dantec dans le BTS SIO option SISR en 2ème année.
                     Avant d'arriver en BTS SIO, j'ai effectué un Bac Pro Systèmes Numériques.
@@ -59,34 +59,30 @@
 
     <section class="section bg-light-gray" id="parcours_scolaire">
         <div class="container">
-            <h2 class="text-center mb-5">🎒 Parcours de Formation</h2>
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-item left">
+            <h2 class="text-center">🎒 Parcours de Formation</h2>
+            <div class="timeline">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="card p-3 shadow-sm border-fine">
+                    <div class="timeline-content card p-3 shadow-sm border-fine">
+                        <h5>Bac Pro Systèmes Numériques Option RISC</h5>
                         <div class="timeline-date">2021 - 2022</div>
-                        <h5>Bac Pro Systèmes Numériques</h5>
-                        <p>Option RISC - Lycée Félix Le Dantec</p>
+                        <p>Lycée Félix Le Dantec</p>
                     </div>
                 </div>
-
-                <div class="timeline-item right">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="card p-3 shadow-sm border-fine">
-                        <div class="timeline-date">2023 - 2024</div>
-                        <h5>Première année BTS SIO</h5>
-                        <p>Option SISR</p>
+                    <div class="timeline-content card p-3 shadow-sm border-fine">
+                        <h5>Première année en BTS SIO</h5>
+                        <div class="timeline-date">2023-2024</div>
+                        <p>BTS SIO SISR</p>
                     </div>
                 </div>
-
-                <div class="timeline-item left">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="card p-3 shadow-sm border-fine">
+                    <div class="timeline-content card p-3 shadow-sm border-fine">
+                        <h5>Deuxième année en BTS SIO</h5>
                         <div class="timeline-date">2024 - 2025</div>
-                        <h5>Deuxième année BTS SIO</h5>
-                        <p>Option SISR</p>
+                        <p>BTS SIO SISR</p>
                     </div>
                 </div>
             </div>
@@ -137,22 +133,15 @@
         </div>
     </section>
 
-    <section class="section bg-light-gray" id="experience">
-        <div class="container">
-            <h2 class="text-center mb-5">📑 Tableau de Synthèse</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <div class="glass-window shadow-lg border-fine">
-                        <div class="glass-window__header">
-                            <h5 class="text-center m-0 text-white">Compétences Epreuve E5</h5>
-                        </div>
-                        <div class="pdf-viewer">
-                            <iframe src="./assets/documents/Tableau de synthese - Epreuve E5 - BTS SIO 2026.pdf#zoom=page-fit" title="Tableau PDF"></iframe>
-                        </div>
-                    </div>
-                </div>
+    <section class="table-section" id="experience">
+        <section class="glass-window shadow-lg border-fine">
+            <div class="glass-window__header">
+                <h2 class="text-center">Tableau de Synthèse</h2>
             </div>
-        </div>
+            <div class="pdf-viewer">
+                <iframe src="./assets/documents/Tableau de synthese - Epreuve E5 - BTS SIO 2026.pdf#zoom=page-fit" title="Tableau PDF"></iframe>
+            </div>
+        </section>
     </section>
 
     <section class="section" id="projets">
@@ -176,10 +165,7 @@
                       <img src="assets/documents/p3a.png" class="card-img-top">
                       <hr class="gsb-separator">
                       <img src="assets/documents/p3b.png" class="card-img-top">
-                      <div class="card-body">
-                        <h5>Projet GSB</h5>
-                        <p>Haute disponibilité et réplication Galaxy Swiss Bourdin.</p>
-                      </div>
+                      <div class="card-body"><h5>Projet GSB</h5><p>Haute disponibilité.</p></div>
                     </div>
                 </div>
             </div>
@@ -193,7 +179,6 @@
             <div class="mt-4">
                 <a href="https://www.linkedin.com/in/hugo-le-flem-b01415240/" target="_blank" class="btn-custom">Mon LinkedIn 🔗</a>
             </div>
-            <p class="mt-4 small opacity-75">© 2026 Hugo - BTS SIO SISR</p>
         </div>
     </footer>
 
