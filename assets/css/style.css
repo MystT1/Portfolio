@@ -31,7 +31,7 @@ body { font-family: 'Open Sans', sans-serif; padding-top: 56px; background: var(
 .timeline-item:nth-child(even) { left: 50%; }
 .timeline-dot { position: absolute; top: 30px; width: 16px; height: 16px; background: var(--bs-violet); border-radius: 50%; }
 
-/* TABLEAU SYNTHESE (ORIGINAL) */
+/* TABLEAU SYNTHESE (RETOUR AU CENTRAGE ORIGINAL) */
 .table-section { padding: 60px 0; display: flex; justify-content: center; align-items: center; }
 .glass-window { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border-radius: 15px; overflow: hidden; width: 95%; max-width: 1200px; }
 .glass-window__header { background: var(--bs-violet); color: white; padding: 15px; }
